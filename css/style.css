@@ -183,3 +183,8 @@ main {
   margin: 0;
   padding: 0;
 }
+
+.container {
+  width: auto;
+  max-width: 1044px;
+}
