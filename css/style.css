@@ -3,6 +3,10 @@
 body {
   font-weight: 300;
   background-color: #ffffff;
+  font-size: 15px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .max-width {
@@ -79,10 +83,11 @@ figure>img {
 nav ul a,
 nav .brand-logo {
   color: #444;
+  font-size: 16px;
 }
 
 p {
-  line-height: 2rem;
+  line-height: 1.5;
 }
 
 .sidenav-trigger {
@@ -138,12 +143,6 @@ footer.page-footer {
 
 a {
   color: #3949ab;
-}
-
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
 }
 
 main {
