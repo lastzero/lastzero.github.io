@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/</link>
+    <description>Recent content in Tags on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Mon, 28 Feb 2011 17:29:13 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Acm</title>
+      <link>https://blog.liquidbytes.net/tags/acm/</link>
+      <pubDate>Mon, 28 Feb 2011 17:29:13 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/acm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ai</title>
+      <link>https://blog.liquidbytes.net/tags/ai/</link>
+      <pubDate>Mon, 28 Feb 2011 23:07:10 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ajax</title>
+      <link>https://blog.liquidbytes.net/tags/ajax/</link>
+      <pubDate>Fri, 03 Sep 2010 20:20:41 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/ajax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apache</title>
+      <link>https://blog.liquidbytes.net/tags/apache/</link>
+      <pubDate>Tue, 23 Oct 2012 19:10:12 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/apache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apple</title>
+      <link>https://blog.liquidbytes.net/tags/apple/</link>
+      <pubDate>Thu, 18 Oct 2012 07:32:04 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/apple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Art</title>
+      <link>https://blog.liquidbytes.net/tags/art/</link>
+      <pubDate>Mon, 20 Jun 2011 17:16:59 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/art/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Berlin</title>
+      <link>https://blog.liquidbytes.net/tags/berlin/</link>
+      <pubDate>Thu, 26 Apr 2012 14:55:55 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/berlin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Best Practices</title>
+      <link>https://blog.liquidbytes.net/tags/best-practices/</link>
+      <pubDate>Thu, 15 Jul 2010 09:36:32 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/best-practices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beta</title>
+      <link>https://blog.liquidbytes.net/tags/beta/</link>
+      <pubDate>Mon, 01 Sep 2008 23:10:55 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/beta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Browser</title>
+      <link>https://blog.liquidbytes.net/tags/browser/</link>
+      <pubDate>Thu, 08 May 2008 16:56:30 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/browser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bug</title>
+      <link>https://blog.liquidbytes.net/tags/bug/</link>
+      <pubDate>Fri, 31 Oct 2008 21:10:25 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/bug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chrome</title>
+      <link>https://blog.liquidbytes.net/tags/chrome/</link>
+      <pubDate>Sun, 06 Sep 2009 22:26:37 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cisco</title>
+      <link>https://blog.liquidbytes.net/tags/cisco/</link>
+      <pubDate>Mon, 21 Jun 2010 19:03:39 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/cisco/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clean Code</title>
+      <link>https://blog.liquidbytes.net/tags/clean-code/</link>
+      <pubDate>Sat, 05 May 2012 09:56:12 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/clean-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing</title>
+      <link>https://blog.liquidbytes.net/tags/cloud-computing/</link>
+      <pubDate>Thu, 17 Nov 2011 13:40:59 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/cloud-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud9</title>
+      <link>https://blog.liquidbytes.net/tags/cloud9/</link>
+      <pubDate>Thu, 20 Jun 2013 14:18:02 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/cloud9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conference</title>
+      <link>https://blog.liquidbytes.net/tags/conference/</link>
+      <pubDate>Mon, 15 Sep 2008 18:30:40 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/conference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>David Parnas</title>
+      <link>https://blog.liquidbytes.net/tags/david-parnas/</link>
+      <pubDate>Sat, 27 Oct 2012 18:00:25 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/david-parnas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dbmail</title>
+      <link>https://blog.liquidbytes.net/tags/dbmail/</link>
+      <pubDate>Sun, 11 May 2008 13:25:11 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/dbmail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dc13</title>
+      <link>https://blog.liquidbytes.net/tags/dc13/</link>
+      <pubDate>Tue, 05 Nov 2013 09:04:03 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/dc13/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dns</title>
+      <link>https://blog.liquidbytes.net/tags/dns/</link>
+      <pubDate>Tue, 23 Oct 2012 19:10:12 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Documentation</title>
+      <link>https://blog.liquidbytes.net/tags/documentation/</link>
+      <pubDate>Thu, 08 Nov 2012 16:49:38 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dolphin</title>
+      <link>https://blog.liquidbytes.net/tags/dolphin/</link>
+      <pubDate>Thu, 04 Sep 2008 12:48:59 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/dolphin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Email</title>
+      <link>https://blog.liquidbytes.net/tags/email/</link>
+      <pubDate>Wed, 21 May 2008 16:46:28 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/email/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Filesystem</title>
+      <link>https://blog.liquidbytes.net/tags/filesystem/</link>
+      <pubDate>Fri, 18 Nov 2011 16:57:24 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/filesystem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Firefox</title>
+      <link>https://blog.liquidbytes.net/tags/firefox/</link>
+      <pubDate>Sun, 06 Sep 2009 22:26:37 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/firefox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flot</title>
+      <link>https://blog.liquidbytes.net/tags/flot/</link>
+      <pubDate>Wed, 04 May 2011 15:52:10 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/flot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Froscon</title>
+      <link>https://blog.liquidbytes.net/tags/froscon/</link>
+      <pubDate>Thu, 04 Sep 2008 19:31:21 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/froscon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fun Stuff</title>
+      <link>https://blog.liquidbytes.net/tags/fun-stuff/</link>
+      <pubDate>Tue, 24 Aug 2010 01:36:06 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/fun-stuff/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Geek</title>
+      <link>https://blog.liquidbytes.net/tags/geek/</link>
+      <pubDate>Thu, 04 Sep 2008 12:48:59 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/geek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gfs</title>
+      <link>https://blog.liquidbytes.net/tags/gfs/</link>
+      <pubDate>Fri, 18 Nov 2011 16:57:24 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/gfs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://blog.liquidbytes.net/tags/git/</link>
+      <pubDate>Wed, 04 May 2011 15:52:10 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google</title>
+      <link>https://blog.liquidbytes.net/tags/google/</link>
+      <pubDate>Fri, 18 Nov 2011 16:57:24 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hardware Amp Gadgets</title>
+      <link>https://blog.liquidbytes.net/tags/hardware-amp-gadgets/</link>
+      <pubDate>Sat, 19 Jun 2010 13:08:06 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/hardware-amp-gadgets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Howto</title>
+      <link>https://blog.liquidbytes.net/tags/howto/</link>
+      <pubDate>Mon, 21 Jun 2010 19:03:39 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/howto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Html</title>
+      <link>https://blog.liquidbytes.net/tags/html/</link>
+      <pubDate>Wed, 29 Oct 2008 11:58:57 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ieee</title>
+      <link>https://blog.liquidbytes.net/tags/ieee/</link>
+      <pubDate>Fri, 18 Nov 2011 16:57:24 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/ieee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intel</title>
+      <link>https://blog.liquidbytes.net/tags/intel/</link>
+      <pubDate>Mon, 17 Nov 2008 21:44:50 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/intel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Internet</title>
+      <link>https://blog.liquidbytes.net/tags/internet/</link>
+      <pubDate>Sat, 05 Sep 2009 09:16:44 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/internet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ipad</title>
+      <link>https://blog.liquidbytes.net/tags/ipad/</link>
+      <pubDate>Mon, 16 Apr 2012 13:02:29 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/ipad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Iphone</title>
+      <link>https://blog.liquidbytes.net/tags/iphone/</link>
+      <pubDate>Thu, 18 Oct 2012 07:32:04 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/iphone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://blog.liquidbytes.net/tags/java/</link>
+      <pubDate>Tue, 06 Mar 2012 15:14:46 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript Amp Rich Client</title>
+      <link>https://blog.liquidbytes.net/tags/javascript-amp-rich-client/</link>
+      <pubDate>Tue, 02 Oct 2012 16:02:41 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/javascript-amp-rich-client/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascriptmvc</title>
+      <link>https://blog.liquidbytes.net/tags/javascriptmvc/</link>
+      <pubDate>Tue, 02 Oct 2012 16:02:41 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/javascriptmvc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jquery</title>
+      <link>https://blog.liquidbytes.net/tags/jquery/</link>
+      <pubDate>Tue, 02 Oct 2012 16:02:41 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Json</title>
+      <link>https://blog.liquidbytes.net/tags/json/</link>
+      <pubDate>Wed, 29 Oct 2008 11:58:57 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://blog.liquidbytes.net/tags/linux/</link>
+      <pubDate>Sat, 19 Jun 2010 13:08:06 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lulzsec</title>
+      <link>https://blog.liquidbytes.net/tags/lulzsec/</link>
+      <pubDate>Mon, 20 Jun 2011 17:16:59 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/lulzsec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mac Os X Amp Ios</title>
+      <link>https://blog.liquidbytes.net/tags/mac-os-x-amp-ios/</link>
+      <pubDate>Sat, 10 May 2008 14:41:34 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/mac-os-x-amp-ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mail</title>
+      <link>https://blog.liquidbytes.net/tags/mail/</link>
+      <pubDate>Sun, 11 May 2008 13:25:11 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/mail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>https://blog.liquidbytes.net/tags/math/</link>
+      <pubDate>Tue, 16 Nov 2010 08:54:58 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mountain View</title>
+      <link>https://blog.liquidbytes.net/tags/mountain-view/</link>
+      <pubDate>Mon, 15 Sep 2008 18:30:40 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/mountain-view/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Music</title>
+      <link>https://blog.liquidbytes.net/tags/music/</link>
+      <pubDate>Fri, 28 Sep 2012 07:30:23 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mvc</title>
+      <link>https://blog.liquidbytes.net/tags/mvc/</link>
+      <pubDate>Mon, 05 Jan 2009 22:38:06 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/mvc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Niklaus Wirth</title>
+      <link>https://blog.liquidbytes.net/tags/niklaus-wirth/</link>
+      <pubDate>Fri, 19 Oct 2012 17:14:23 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/niklaus-wirth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nosql</title>
+      <link>https://blog.liquidbytes.net/tags/nosql/</link>
+      <pubDate>Tue, 24 Aug 2010 01:36:06 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/nosql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Odbtp</title>
+      <link>https://blog.liquidbytes.net/tags/odbtp/</link>
+      <pubDate>Mon, 19 May 2008 14:16:08 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/odbtp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open Source</title>
+      <link>https://blog.liquidbytes.net/tags/open-source/</link>
+      <pubDate>Sun, 15 Aug 2010 19:03:46 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/open-source/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Openajax</title>
+      <link>https://blog.liquidbytes.net/tags/openajax/</link>
+      <pubDate>Thu, 15 Jul 2010 09:36:32 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/openajax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Performance</title>
+      <link>https://blog.liquidbytes.net/tags/performance/</link>
+      <pubDate>Thu, 08 May 2008 16:56:30 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/performance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Photo</title>
+      <link>https://blog.liquidbytes.net/tags/photo/</link>
+      <pubDate>Sun, 07 Oct 2012 17:32:00 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/photo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Php</title>
+      <link>https://blog.liquidbytes.net/tags/php/</link>
+      <pubDate>Tue, 21 Aug 2012 11:19:03 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Phpunit</title>
+      <link>https://blog.liquidbytes.net/tags/phpunit/</link>
+      <pubDate>Tue, 21 Aug 2012 11:19:03 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/phpunit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy</title>
+      <link>https://blog.liquidbytes.net/tags/privacy/</link>
+      <pubDate>Mon, 01 Sep 2008 12:05:52 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/privacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project Management</title>
+      <link>https://blog.liquidbytes.net/tags/project-management/</link>
+      <pubDate>Thu, 17 Nov 2011 13:20:01 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/project-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rasmus Lerdorf</title>
+      <link>https://blog.liquidbytes.net/tags/rasmus-lerdorf/</link>
+      <pubDate>Thu, 04 Sep 2008 19:31:21 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/rasmus-lerdorf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recruiting</title>
+      <link>https://blog.liquidbytes.net/tags/recruiting/</link>
+      <pubDate>Mon, 01 Sep 2008 17:20:44 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/recruiting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ria</title>
+      <link>https://blog.liquidbytes.net/tags/ria/</link>
+      <pubDate>Fri, 18 Nov 2011 16:57:24 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/ria/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Safari</title>
+      <link>https://blog.liquidbytes.net/tags/safari/</link>
+      <pubDate>Sun, 06 Sep 2009 22:26:37 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/safari/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Science</title>
+      <link>https://blog.liquidbytes.net/tags/science/</link>
+      <pubDate>Tue, 01 Mar 2011 15:59:07 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Science Amp Philosophy</title>
+      <link>https://blog.liquidbytes.net/tags/science-amp-philosophy/</link>
+      <pubDate>Tue, 01 Mar 2011 15:59:07 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/science-amp-philosophy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Slashdot</title>
+      <link>https://blog.liquidbytes.net/tags/slashdot/</link>
+      <pubDate>Mon, 01 Sep 2008 17:20:44 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/slashdot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Soa</title>
+      <link>https://blog.liquidbytes.net/tags/soa/</link>
+      <pubDate>Thu, 17 Nov 2011 13:40:59 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/soa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Design</title>
+      <link>https://blog.liquidbytes.net/tags/software-design/</link>
+      <pubDate>Sat, 11 Dec 2010 15:15:09 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/software-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Development</title>
+      <link>https://blog.liquidbytes.net/tags/software-development/</link>
+      <pubDate>Fri, 20 Apr 2012 10:50:32 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/software-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spam</title>
+      <link>https://blog.liquidbytes.net/tags/spam/</link>
+      <pubDate>Wed, 21 May 2008 16:46:28 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/spam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sql</title>
+      <link>https://blog.liquidbytes.net/tags/sql/</link>
+      <pubDate>Wed, 22 Aug 2012 10:09:39 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sql Server</title>
+      <link>https://blog.liquidbytes.net/tags/sql-server/</link>
+      <pubDate>Mon, 19 May 2008 14:16:08 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/sql-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Starbucks</title>
+      <link>https://blog.liquidbytes.net/tags/starbucks/</link>
+      <pubDate>Sun, 19 Jul 2009 11:21:21 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/starbucks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Startup</title>
+      <link>https://blog.liquidbytes.net/tags/startup/</link>
+      <pubDate>Fri, 27 Apr 2012 08:57:12 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/startup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stencil</title>
+      <link>https://blog.liquidbytes.net/tags/stencil/</link>
+      <pubDate>Mon, 20 Jun 2011 17:16:59 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/stencil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theory</title>
+      <link>https://blog.liquidbytes.net/tags/theory/</link>
+      <pubDate>Sat, 11 Dec 2010 15:15:09 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/theory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tinymce</title>
+      <link>https://blog.liquidbytes.net/tags/tinymce/</link>
+      <pubDate>Mon, 29 Oct 2012 18:02:49 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/tinymce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Travel</title>
+      <link>https://blog.liquidbytes.net/tags/travel/</link>
+      <pubDate>Sun, 07 Oct 2012 17:32:00 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/travel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Twitter</title>
+      <link>https://blog.liquidbytes.net/tags/twitter/</link>
+      <pubDate>Sat, 05 Sep 2009 09:16:44 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://blog.liquidbytes.net/tags/ubuntu/</link>
+      <pubDate>Tue, 23 Oct 2012 19:10:12 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Validation</title>
+      <link>https://blog.liquidbytes.net/tags/validation/</link>
+      <pubDate>Mon, 05 Jan 2009 22:38:06 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/validation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vpn</title>
+      <link>https://blog.liquidbytes.net/tags/vpn/</link>
+      <pubDate>Mon, 21 Jun 2010 19:03:39 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/vpn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wallpaper</title>
+      <link>https://blog.liquidbytes.net/tags/wallpaper/</link>
+      <pubDate>Wed, 02 May 2012 12:03:32 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/wallpaper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wiki</title>
+      <link>https://blog.liquidbytes.net/tags/wiki/</link>
+      <pubDate>Tue, 16 Nov 2010 08:54:58 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/wiki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://blog.liquidbytes.net/tags/windows/</link>
+      <pubDate>Mon, 01 Sep 2008 12:05:52 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xslt</title>
+      <link>https://blog.liquidbytes.net/tags/xslt/</link>
+      <pubDate>Wed, 29 Oct 2008 11:58:57 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/xslt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xubuntu</title>
+      <link>https://blog.liquidbytes.net/tags/xubuntu/</link>
+      <pubDate>Tue, 23 Oct 2012 19:10:12 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/xubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zend Framework</title>
+      <link>https://blog.liquidbytes.net/tags/zend-framework/</link>
+      <pubDate>Mon, 19 May 2008 14:16:08 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/zend-framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zendcon2008</title>
+      <link>https://blog.liquidbytes.net/tags/zendcon2008/</link>
+      <pubDate>Mon, 15 Sep 2008 18:30:40 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/tags/zendcon2008/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

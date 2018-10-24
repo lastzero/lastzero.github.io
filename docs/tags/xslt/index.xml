@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xslt on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/xslt/</link>
+    <description>Recent content in Xslt on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Wed, 29 Oct 2008 11:58:57 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/xslt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ajax and Rich Internet Application FAQ</title>
+      <link>https://blog.liquidbytes.net/2008/10/ajax-and-rich-internet-application-faq/</link>
+      <pubDate>Wed, 29 Oct 2008 11:58:57 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/10/ajax-and-rich-internet-application-faq/</guid>
+      <description>Shall I use JSON or XML as AJAX transport format?
+There actually is no reason to use XML instead of JSON, if you don&amp;#8217;t plan to use XSLT. JSON is part of JavaScript which has been around since the dark ages of the web. Also, there are very fast server-side JSON implementations and JSON is the more compact protocol, thus saving bandwidth.
+Isn&amp;#8217;t XSLT much faster than to use JSON and modify the DOM with JavaScript?</description>
+    </item>
+    
+  </channel>
+</rss>

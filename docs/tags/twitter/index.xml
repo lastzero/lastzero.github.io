@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Twitter on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/twitter/</link>
+    <description>Recent content in Twitter on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Sat, 05 Sep 2009 09:16:44 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Twitter: @lastzero</title>
+      <link>https://blog.liquidbytes.net/2009/09/twitter-lastzero/</link>
+      <pubDate>Sat, 05 Sep 2009 09:16:44 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2009/09/twitter-lastzero/</guid>
+      <description>Wow, after years, I managed to create a twitter account this week. @williamluciw invited me. It&amp;#8217;s much easier to write short tweets from time to time, than updating a blog with interesting content. On the other hand, it&amp;#8217;s a waste of time.
+The best use case I found so far, is to tell the world about things I like, things I don&amp;#8217;t like, or bugs I find in more or less popular applications/Web sites.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apple on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/apple/</link>
+    <description>Recent content in Apple on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Thu, 18 Oct 2012 07:32:04 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/apple/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Howto: Write an iPhone app with PhoneGap</title>
+      <link>https://blog.liquidbytes.net/2012/10/howto-write-an-iphone-app-with-phonegap/</link>
+      <pubDate>Thu, 18 Oct 2012 07:32:04 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/10/howto-write-an-iphone-app-with-phonegap/</guid>
+      <description>PhoneGap lets you write smartphone apps with HTML, CSS and JavaScript. No need to learn Objective-C or get used to proprietary C/C++ libraries. Sounds good in theory, but how easy is it really?
+I found the official documentation a little bit confusing, so I wrote this streamlined howto while I&amp;#8217;ve been testing PhoneGap myself. If you got about an hour of time, these are the steps to follow to compile &amp;amp; run your own iPhone app:</description>
+    </item>
+    
+    <item>
+      <title>Apple announces Mac App Store: Fool me once, shame on you… fool me twice, shame on me.</title>
+      <link>https://blog.liquidbytes.net/2010/10/apple-announces-mac-app-store-fool-me-once-shame-on-you-fool-me-twice-shame-on-me/</link>
+      <pubDate>Sat, 23 Oct 2010 07:28:37 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/10/apple-announces-mac-app-store-fool-me-once-shame-on-you-fool-me-twice-shame-on-me/</guid>
+      <description>Well, it&amp;#8217;s official. Apple has now announced it&amp;#8217;s bringing the
+App Store concept to the Mac and it looks like they&amp;#8217;ll be
+restricting apps with FairPlay DRM too for good measure. When we
+first began talking about the problems with the App Store on the
+iPhone and iPod Touch, people wanted us to drop it and stop
+talking about the DRM tricks being pulled by Apple on the grounds</description>
+    </item>
+    
+  </channel>
+</rss>

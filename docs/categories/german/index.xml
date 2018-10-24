@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>German on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/categories/german/</link>
+    <description>Recent content in German on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Tue, 18 Aug 2009 11:36:17 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/categories/german/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>c’t magazine: WebZwoNullTurbo, how to optimize JavaScript</title>
+      <link>https://blog.liquidbytes.net/2009/08/ct-magazine-webzwonullturbo-how-to-optimize-javascript/</link>
+      <pubDate>Tue, 18 Aug 2009 11:36:17 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2009/08/ct-magazine-webzwonullturbo-how-to-optimize-javascript/</guid>
+      <description>There is an article about JavaScript optimization in the current issue of the German c&amp;#8217;t magazine. I read it with great interest and there are some tips that need to be commented:
+1) Declare local variables with the keyword var, to save time for searching it in the global namespace:
+function foo () { var bar = &#39;abc&#39;; return bar; }  This should always be done, for sure. However the article is wrong in that the variable will be created in the local namespace, if you don&amp;#8217;t use var.</description>
+    </item>
+    
+    <item>
+      <title>PHP Magazin: Parlez-vous Zend?</title>
+      <link>https://blog.liquidbytes.net/2007/07/php-magazin-zend-framework/</link>
+      <pubDate>Wed, 11 Jul 2007 13:10:58 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2007/07/php-magazin-zend-framework/</guid>
+      <description>Wer sich fuer mehrsprachige Unternehmens-Anwendungen mit Zend Framework interessiert, findet im aktuellen PHP Magazin (5.07) einen Artikel von mir. Anhand eines Fallbeispiels wurde gezeigt, wie die Neuentwicklung einer PHP Anwendung mit modernen Technologien ablaufen kann und was es zu beachten gibt. </description>
+    </item>
+    
+  </channel>
+</rss>

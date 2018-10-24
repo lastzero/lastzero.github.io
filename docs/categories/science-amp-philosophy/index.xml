@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Science Amp Philosophy on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/categories/science-amp-philosophy/</link>
+    <description>Recent content in Science Amp Philosophy on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Tue, 01 Mar 2011 15:59:07 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/categories/science-amp-philosophy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Psycho-Cybernetics</title>
+      <link>https://blog.liquidbytes.net/2011/03/psycho-cybernetics/</link>
+      <pubDate>Tue, 01 Mar 2011 15:59:07 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2011/03/psycho-cybernetics/</guid>
+      <description>It is always interesting to see, what we &amp;#8220;forgot&amp;#8221; during history. One of the these things is, without a doubt, Cybernetics (which in turn is a child of the 2nd world war) and maybe even the origin of computers (see von Neumann architecture), which is closely coupled to that.
+While passing by a second-hand bookstore in Evanston, IL I saw the book Psycho-Cybernetics in the window, which was published in 1960, 12 years after Cybernetics was published by Norbert Wiener.</description>
+    </item>
+    
+    <item>
+      <title>Shades of the Singularity (IEEE Spectrum 12.10)</title>
+      <link>https://blog.liquidbytes.net/2011/03/shades-of-the-singularity-ieee-spectrum-12-10/</link>
+      <pubDate>Mon, 28 Feb 2011 23:07:10 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2011/03/shades-of-the-singularity-ieee-spectrum-12-10/</guid>
+      <description>In IEEE Spectrum 12.10 you find an article about building &amp;#8220;The brain of a New Machine&amp;#8221; using Memristors by Versace &amp;amp; Chandler. Bottom line is that they expect that a new memory technology built on the Memristor chips produced by HP Labs enables them to construct massive-parallel computers that consume only a comparable small amount of energy. While this might be the case, the article does not really answer the question how the software that runs on that hardware looks like.</description>
+    </item>
+    
+    <item>
+      <title>Free math “book”</title>
+      <link>https://blog.liquidbytes.net/2010/11/free-math-book/</link>
+      <pubDate>Tue, 16 Nov 2010 08:54:58 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/11/free-math-book/</guid>
+      <description>Yesterday, I migrated my personal math reference to the new Wiki:
+http://math.chaoticpattern.net/wiki/index
+It is all in German and with my own clumsy comments. Those who read it, will notice that math is a useful tool for me, rather than some kind of art &amp;#8211; although I agree you can look at it as art, if you got the time. That&amp;#8217;s why I tried to compress it as much as possible ;)</description>
+    </item>
+    
+    <item>
+      <title>A cybernetic view on Web search</title>
+      <link>https://blog.liquidbytes.net/2007/06/cybernetic-view-on-web-search/</link>
+      <pubDate>Sat, 02 Jun 2007 14:46:06 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2007/06/cybernetic-view-on-web-search/</guid>
+      <description>When it comes to Web search, everybody thinks of Google nowadays. But there are shortcomings: Google has just one large index for all users. This is why search engine optimization has become so popular and why you sometimes don&amp;#8217;t find what you&amp;#8217;re looking for. A possible solution would be to have different indexes, maintained by the users, that cover the various needs (e.g. topics, regions, content quality,&amp;#8230;). That way, a user can decide to only get search results from Germany without ads, for example.</description>
+    </item>
+    
+    <item>
+      <title>Teil der Welt</title>
+      <link>https://blog.liquidbytes.net/2006/05/geschichte-vom-kleinen-scharfen-messer-heinz-von-foerster/</link>
+      <pubDate>Mon, 22 May 2006 12:57:11 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2006/05/geschichte-vom-kleinen-scharfen-messer-heinz-von-foerster/</guid>
+      <description>Ich lese gerade &amp;#8220;Teil der Welt&amp;#8221; von Foerster und Monika Broecker, die ich neulich kennengelernt habe. Wenn ich Zeit habe schreibe ich mehr darueber&amp;#8230; eine Sache fand ich nur sehr interessant zu lesen&amp;#8230; von Foester hatte Besuch von einer Vegetarierin die immer ein kleines Scharfes Messer zum Fruehstueck wollte:
+ [&amp;#8230;] Aber jedenfalls habe ich gewusst: Dieses kleine, scharfe Messer ist sehr wichtig. Ich habe daher unerhoert aufgepasst, dass ich jedes Mal das kleine, scharfe Messer an diesen Platz lege.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/ai/</link>
+    <description>Recent content in Ai on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Mon, 28 Feb 2011 23:07:10 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shades of the Singularity (IEEE Spectrum 12.10)</title>
+      <link>https://blog.liquidbytes.net/2011/03/shades-of-the-singularity-ieee-spectrum-12-10/</link>
+      <pubDate>Mon, 28 Feb 2011 23:07:10 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2011/03/shades-of-the-singularity-ieee-spectrum-12-10/</guid>
+      <description>In IEEE Spectrum 12.10 you find an article about building &amp;#8220;The brain of a New Machine&amp;#8221; using Memristors by Versace &amp;amp; Chandler. Bottom line is that they expect that a new memory technology built on the Memristor chips produced by HP Labs enables them to construct massive-parallel computers that consume only a comparable small amount of energy. While this might be the case, the article does not really answer the question how the software that runs on that hardware looks like.</description>
+    </item>
+    
+  </channel>
+</rss>

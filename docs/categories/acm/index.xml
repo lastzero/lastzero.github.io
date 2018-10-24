@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Acm on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/categories/acm/</link>
+    <description>Recent content in Acm on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Sun, 14 Jul 2013 20:37:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/categories/acm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Written requirements in the age of agile development</title>
+      <link>https://blog.liquidbytes.net/2013/07/written-requirements-in-the-age-of-agile-development/</link>
+      <pubDate>Sun, 14 Jul 2013 20:37:53 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2013/07/written-requirements-in-the-age-of-agile-development/</guid>
+      <description>Many of today&amp;#8217;s agile software projects are characterized by a lack of written requirements and other documentation. The rationale behind this is that requirements change &amp;#8220;too often&amp;#8221; to be written down. Project management might also be afraid that writing documents consumes too much time of developers and stakeholders. However, my personal experience is that projects with clearly defined and written requirements run much smoother and have less delays. Written documents are forcing developers to think and clarify open issues before they start coding.</description>
+    </item>
+    
+    <item>
+      <title>Niklaus Wirth about complexity</title>
+      <link>https://blog.liquidbytes.net/2012/10/niklaus-wirth-about-complexity/</link>
+      <pubDate>Fri, 19 Oct 2012 17:14:23 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/10/niklaus-wirth-about-complexity/</guid>
+      <description>On both sides of this fence, complexity has and will maintain a strong fascination for many people. It is true that we live in a complex world and strive to solve inherently complex problems, which often do require complex mechanisms. However, this should not diminish our desire for elegant solutions, which convince by their clarity and effectiveness. Simple, elegant solutions are more effective, but they are harder to find than complex ones, and they require more time, which we too often believe to be unaffordable.</description>
+    </item>
+    
+    <item>
+      <title>Communications of the ACM 01/2011</title>
+      <link>https://blog.liquidbytes.net/2011/02/communications-of-the-acm-012011/</link>
+      <pubDate>Mon, 28 Feb 2011 17:29:13 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2011/02/communications-of-the-acm-012011/</guid>
+      <description>While being in Chicago I found the time to read through the last issue of Communications. Here&amp;#8217;s a short summary:
+ &amp;#8220;Where have all the workshops gone?&amp;#8221; by Moshe Y. Vardi &amp;#8211; he basically complains that todays workshops (&amp;#8220;second-rate conferences&amp;#8221;) are not the same as they have been in the past (&amp;#8220;informal gatherings of researchers&amp;#8221;). My suggestion: Go to an Unconference, although these are more informal gatherings of engineers, rather than researchers.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac Os X Amp Ios on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/categories/mac-os-x-amp-ios/</link>
+    <description>Recent content in Mac Os X Amp Ios on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Thu, 29 Oct 2015 13:24:18 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/categories/mac-os-x-amp-ios/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Howto: Install PHP, PHPUnit and Composer on Mac OS X</title>
+      <link>https://blog.liquidbytes.net/2015/10/howto-install-php-5-6-and-phpunit-5-0-on-mac-os-x/</link>
+      <pubDate>Thu, 29 Oct 2015 13:24:18 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2015/10/howto-install-php-5-6-and-phpunit-5-0-on-mac-os-x/</guid>
+      <description>Make sure the directories /usr/local, /usr/local/bin and /usr/local/sbin exist and check the permissions, so that regular users can access them. This should already be the case, if you got Homebrew installed and working.
+Open _~/.bashprofile and check, if /usr/local/bin and _/usr/local/sbin_ are properly added to your PATH environment variable:
+export PATH=&#34;/usr/local/sbin:/usr/local/bin:$PATH&#34; If there is no _~/.bashprofile yet, simply create it (see Mac OS X configuration for software developers).
+Since using Homebrew seems overly complicated and you&amp;#8217;ll get an outdated version (5.</description>
+    </item>
+    
+    <item>
+      <title>Mac OS X configuration for software developers</title>
+      <link>https://blog.liquidbytes.net/2015/10/howto-mac-configuration-for-software-developers/</link>
+      <pubDate>Tue, 27 Oct 2015 19:52:44 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2015/10/howto-mac-configuration-for-software-developers/</guid>
+      <description>Coming from Linux and FreeBSD, I initially didn&amp;#8217;t feel comfortable working with OS X and I still think it&amp;#8217;s a bad idea to run a full featured Web server on a Mac. But there are a couple of things you can do to turn your Mac into a great development environment.
+Install the following essential software packages  Google Chrome and Firefox &amp;#8211; Safari is the new Internet Explorer ;) Xcode via App Store (free); required to compile software with Homebrew and comes with the Mac version of git Homebrew for installing additional Unix/Linux software packages VMware Fusion (~ 100 USD) or VirtualBox (free) for running virtual machines Docker for creating and running software containers  Productivity Tools and IDEs  I strongly recommend using a JetBrains IDE such as PhpStorm, IntelliJ IDEA or PyCharm (~ 100 USD) Snagit via App Store for creating nice screen shots (~ 50 USD) Scroll Reverser, if you are working with a touch pad and a mouse (on a MacBook) Transmit via App Store, if you need to work a lot with remote FTP, SFTP or WebDAV servers, e.</description>
+    </item>
+    
+    <item>
+      <title>Howto: Install PHP 5.5 and PHPUnit on OS X via Homebrew</title>
+      <link>https://blog.liquidbytes.net/2013/08/howto-install-php-5-5-and-phpunit-on-os-x-via-homebrew/</link>
+      <pubDate>Sun, 25 Aug 2013 09:37:09 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2013/08/howto-install-php-5-5-and-phpunit-on-os-x-via-homebrew/</guid>
+      <description>Here is how to install the latest PHP and PHPUnit versions on OS X using , which became my first choice after testing other package managers.
+To avoid conflicts, it is generally not recommended to use Homebrew alongside other external OS X package managers such as MacPorts or Fink. You can remove MacPorts with these Terminal commands:
+sudo port -f uninstall installed sudo rm -rf /opt/local sudo rm -rf /Applications/DarwinPorts If you prefer to stay with MacPorts: There is a blog post with a detailed howto for PHP 5.</description>
+    </item>
+    
+    <item>
+      <title>Howto: Write an iPhone app with PhoneGap</title>
+      <link>https://blog.liquidbytes.net/2012/10/howto-write-an-iphone-app-with-phonegap/</link>
+      <pubDate>Thu, 18 Oct 2012 07:32:04 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/10/howto-write-an-iphone-app-with-phonegap/</guid>
+      <description>PhoneGap lets you write smartphone apps with HTML, CSS and JavaScript. No need to learn Objective-C or get used to proprietary C/C++ libraries. Sounds good in theory, but how easy is it really?
+I found the official documentation a little bit confusing, so I wrote this streamlined howto while I&amp;#8217;ve been testing PhoneGap myself. If you got about an hour of time, these are the steps to follow to compile &amp;amp; run your own iPhone app:</description>
+    </item>
+    
+    <item>
+      <title>Apple announces Mac App Store: Fool me once, shame on you… fool me twice, shame on me.</title>
+      <link>https://blog.liquidbytes.net/2010/10/apple-announces-mac-app-store-fool-me-once-shame-on-you-fool-me-twice-shame-on-me/</link>
+      <pubDate>Sat, 23 Oct 2010 07:28:37 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/10/apple-announces-mac-app-store-fool-me-once-shame-on-you-fool-me-twice-shame-on-me/</guid>
+      <description>Well, it&amp;#8217;s official. Apple has now announced it&amp;#8217;s bringing the
+App Store concept to the Mac and it looks like they&amp;#8217;ll be
+restricting apps with FairPlay DRM too for good measure. When we
+first began talking about the problems with the App Store on the
+iPhone and iPod Touch, people wanted us to drop it and stop
+talking about the DRM tricks being pulled by Apple on the grounds</description>
+    </item>
+    
+    <item>
+      <title>Howto: Dunkle Gnome Themes und Firefox/Thunderbird</title>
+      <link>https://blog.liquidbytes.net/2006/09/dunkle-gnome-themes-firefox/</link>
+      <pubDate>Sat, 02 Sep 2006 17:51:57 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2006/09/dunkle-gnome-themes-firefox/</guid>
+      <description>Eigentlich ist es ganz einfach ein dunkles Gnome-Theme zu verwenden: Downloaden und per Drag-and-Drop installieren. Nur wird man, uebrigens auch unter OS X, alsbald feststellen, dass man die Menues von Firefox und Thunderbird 1.5 nicht mehr lesen kann, weil der Font dort unveraendert schwarz ist. Das macht sich auf einem schwarzen Hintergrund nicht wirklich gut. Es gibt jetzt 3 Moeglichkeiten:
+ Resigniert das schoene neue Theme deinstallieren. Nicht Sinn der Sache.</description>
+    </item>
+    
+  </channel>
+</rss>

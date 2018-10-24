@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Soa on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/soa/</link>
+    <description>Recent content in Soa on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Thu, 17 Nov 2011 13:40:59 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/soa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Combining SOA and Cloud Computing</title>
+      <link>https://blog.liquidbytes.net/2011/11/combining-soa-and-cloud-computing/</link>
+      <pubDate>Thu, 17 Nov 2011 13:40:59 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2011/11/combining-soa-and-cloud-computing/</guid>
+      <description>To my surprise, the combination of SOA (Service-oriented Architecture) and Cloud Computing (basically outsourcing the server management/using many virtual machines) was described as something new in IEEE Computer&amp;#8217;s October issue (&amp;#8220;Software Engineering Meets Services and Cloud Computing&amp;#8221;, Stephen S . Yau and Ho G. An, pp. 47 &amp;#8211; 53).
+Besides the fact, that this is nothing new, but an ongoing trend that started a couple of years ago, there are three observations I&amp;#8217;l like to share:</description>
+    </item>
+    
+  </channel>
+</rss>

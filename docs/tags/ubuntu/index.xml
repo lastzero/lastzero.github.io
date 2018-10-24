@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Tue, 23 Oct 2012 19:10:12 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Configuring Ubuntu/Xubuntu and Apache 2 for local development environments</title>
+      <link>https://blog.liquidbytes.net/2012/10/configuring-ubuntu-and-apache-2-for-development-environments/</link>
+      <pubDate>Tue, 23 Oct 2012 19:10:12 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/10/configuring-ubuntu-and-apache-2-for-development-environments/</guid>
+      <description>Most Web server howtos out there are concerned with production environments, where you need a high level of performance and security. As a developer who runs Apache 2 on localhost, you have other requirements, such as quick configuration and flexibility. It&amp;#8217;s inconvenient to edit (usually copy &amp;amp; paste) your virtual hosts configuration and add entries to /etc/hosts whenever you are working on new projects (e.g. on GitHub) &amp;#8211; especially, if you just want to test something.</description>
+    </item>
+    
+    <item>
+      <title>Xubuntu 12.10 for Web software developers</title>
+      <link>https://blog.liquidbytes.net/2012/10/xubuntu-12-10-for-web-software-developers/</link>
+      <pubDate>Sun, 14 Oct 2012 17:31:04 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/10/xubuntu-12-10-for-web-software-developers/</guid>
+      <description>Do you also think coding Web applications on OS X, Windows or even Ubuntu with Gnome 3 doesn&amp;#8217;t feel right? There are reasons: First, the production servers for probably 85% of all Web apps run on Linux: If you need special extensions, libraries or other tools, you know how difficult it can be to get them compiled, installed and running on &amp;#8220;non-standard&amp;#8221; environments and how easy it can be on a Debian/Ubuntu system.</description>
+    </item>
+    
+    <item>
+      <title>Howto: Connect to a Cisco VPN using Ubuntu Linux 10.04</title>
+      <link>https://blog.liquidbytes.net/2010/06/cisco-client-vpn-vpnc-ubuntu-linux-10-04/</link>
+      <pubDate>Mon, 21 Jun 2010 19:03:39 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/06/cisco-client-vpn-vpnc-ubuntu-linux-10-04/</guid>
+      <description>Argh, I spent the whole day figuring out how to connect to the VPN of my current customer. The Windows client on my other computer works just fine, at least after selecting the UDP option. But it is quite some overhead to install Windows on my Linux box just to connect to a VPN. The proprietary Cisco VPN client for Linux works until kernel version 2.6.25 AFAIK. Therefore, this is no option for all users of Ubuntu 10.</description>
+    </item>
+    
+    <item>
+      <title>Howto: WWAN on a Lenovo ThinkPad X100e with Ubuntu 10.04</title>
+      <link>https://blog.liquidbytes.net/2010/06/wwan-lenovo-thinkpad-x100e-ubuntu-10-04/</link>
+      <pubDate>Sat, 19 Jun 2010 13:08:06 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/06/wwan-lenovo-thinkpad-x100e-ubuntu-10-04/</guid>
+      <description>I could not find a single correct and useful description how to get the Gobi™ 2000 PCI Express Mini Card, that is built into some Lenovo ThinkPad X100e models, to work with Ubuntu Linux 10.04 LTS &amp;#8220;Lucid Lynx&amp;#8221; on Google (which is identical to the Internet). Therefore I want to share my knowledge with you, before I forget everything. This howto might also work for other notebooks that use the same WWAN/UMTS/3G card (like the ThinkPad T410).</description>
+    </item>
+    
+  </channel>
+</rss>

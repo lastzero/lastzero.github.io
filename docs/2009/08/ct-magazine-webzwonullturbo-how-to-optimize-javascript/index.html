@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="c’t magazine: WebZwoNullTurbo, how to optimize JavaScript" />
+<meta property="og:description" content="There is an article about JavaScript optimization in the current issue of the German c&#8217;t magazine. I read it with great interest and there are some tips that need to be commented:
+1) Declare local variables with the keyword var, to save time for searching it in the global namespace:
+function foo () { var bar = &#39;abc&#39;; return bar; }  This should always be done, for sure. However the article is wrong in that the variable will be created in the local namespace, if you don&#8217;t use var." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2009/08/ct-magazine-webzwonullturbo-how-to-optimize-javascript/" /><meta property="article:published_time" content="2009-08-18T11:36:17&#43;00:00"/>
+<meta property="article:modified_time" content="2009-08-18T11:36:17&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="c’t magazine: WebZwoNullTurbo, how to optimize JavaScript"/>
+<meta name="twitter:description" content="There is an article about JavaScript optimization in the current issue of the German c&#8217;t magazine. I read it with great interest and there are some tips that need to be commented:
+1) Declare local variables with the keyword var, to save time for searching it in the global namespace:
+function foo () { var bar = &#39;abc&#39;; return bar; }  This should always be done, for sure. However the article is wrong in that the variable will be created in the local namespace, if you don&#8217;t use var."/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2009/08/ct-magazine-webzwonullturbo-how-to-optimize-javascript/">
+
+    
+    <title>c’t magazine: WebZwoNullTurbo, how to optimize JavaScript &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>c’t magazine: WebZwoNullTurbo, how to optimize JavaScript</h1>
+        </div>
+    </section>
+
+    
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Aug 18, 2009</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            <p>There is an article about JavaScript optimization in the current issue of the German c&#8217;t magazine. I read it with great interest and there are some tips that need to be commented:</p>
+
+<p>1) Declare local variables with the keyword var, to save time for searching it in the global namespace:</p>
+
+<pre>function foo () {
+ var bar = 'abc';
+ return bar;
+}
+</pre>
+
+<p>This should always be done, for sure. However the article is wrong in that the variable will be created in the local namespace, if you don&#8217;t use var. In that case it will be created in the global namespace (which is window in Web browsers).</p>
+
+<p>2) Another recommendation is to use setTimeout(doSomething, time, param1, param2,&#8230;) instead of setTimeout(&#8216;doSomething(&#8216; + param1 + &#8216;,&#8217; + param2 +&#8217;)&#8217;, time). While this would be a good idea probably, <a href="http://msdn.microsoft.com/en-us/library/ms536753(VS.85).aspx">Internet Explorer</a> does not support it. Also the use of local object instance variables like this.value to pass parameters to functions that are later executed by setTimeout is dangerous, as the context is not preserved for setTimeout. Always use the variables in the global namespace or use the var self = this hack (might cause memory leaks) to access the current context. Two examples from the Internet Explorer Developer Center:</p>
+
+<pre>// The first example of a closure passes the variable to a named function.
+function startTimer() {
+    var div = document.getElementById('currentTime');
+    setTimeout(function(){doClock(div)},200);
+}
+// The second example also uses a closure, by referring to an argument passed to the function.
+function doClock(obj) {
+    setInterval(function(){obj.innerHTML=(new Date()).toLocaleString()},200);
+}</pre>
+
+<p>3) Function inlining, that is not to use functions in loops but copy &amp; paste the code, can speed up things a bit, however it can not be considered good style, does reduce readability and often violates the DRY (don&#8217;t repeat yourself) principle.</p>
+
+<p>4) Compressing JavaScript code for use in production environments is a very good idea. I do recommend to use the YUI compressor, which does not break code and works very well with additional gzip compression. It can be integrated in automated build scripts very nicely.</p>
+
+<p>5) The biggest impact for a clean architecture and less memory leaks probably comes from using Event Delegation, which was not mentioned in the article. Try <a href="http://javascriptmvc.com/" target="_blank">JavaScriptMVC</a>.</p>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

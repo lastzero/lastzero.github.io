@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Howto: vsftpd mit virtuellen Usern einrichten" />
+<meta property="og:description" content="This is a small vsftpd howto I wrote some months ago, while installing it on a SuSE Linux 10 server &#8211; sorry to those who don&#8217;t understand German or use another Linux distribution! Some hints may be useful anyways&#8230;
+The official vsftpd home page is: http://vsftpd.beasts.org/
+vsftpd installieren und anpassen Zunaechst sollte man sicherstellen, dass man vsftpd ueberhaupt installiert hat:
+walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast installieren (die Suchfunktion erspart Scrollen in der Paketliste!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2007/06/vsftpd-mit-virtuellen-usern/" /><meta property="article:published_time" content="2007-06-22T13:15:17&#43;00:00"/>
+<meta property="article:modified_time" content="2007-06-22T13:15:17&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Howto: vsftpd mit virtuellen Usern einrichten"/>
+<meta name="twitter:description" content="This is a small vsftpd howto I wrote some months ago, while installing it on a SuSE Linux 10 server &#8211; sorry to those who don&#8217;t understand German or use another Linux distribution! Some hints may be useful anyways&#8230;
+The official vsftpd home page is: http://vsftpd.beasts.org/
+vsftpd installieren und anpassen Zunaechst sollte man sicherstellen, dass man vsftpd ueberhaupt installiert hat:
+walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast installieren (die Suchfunktion erspart Scrollen in der Paketliste!"/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2007/06/vsftpd-mit-virtuellen-usern/">
+
+    
+    <title>Howto: vsftpd mit virtuellen Usern einrichten &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>Howto: vsftpd mit virtuellen Usern einrichten</h1>
+        </div>
+    </section>
+
+    
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Jun 22, 2007</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            
+
+<p>This is a small vsftpd howto I wrote some months ago, while installing it on a <strong>SuSE Linux 10</strong> server &#8211; sorry to those who don&#8217;t understand German or use another Linux distribution! Some hints may be useful anyways&#8230;</p>
+
+<p>The official vsftpd home page is: <a href="http://vsftpd.beasts.org/">http://vsftpd.beasts.org/</a></p>
+
+<h3 id="vsftpd-installieren-und-anpassen">vsftpd installieren und anpassen</h3>
+
+<p>Zunaechst sollte man sicherstellen, dass man vsftpd ueberhaupt installiert hat:</p>
+
+<pre>walrus:~ # rpm -q vsftpd
+vsftpd-2.0.2-3</pre>
+
+<p>Falls nicht, wie gewohnt ueber yast installieren (die Suchfunktion erspart Scrollen in der Paketliste!). Bei anderen Linux Distributionen entsprechend (z.B. yum unter Fedora).</p>
+
+<p>Als naechstes legt man in /etc/passwd (bzw. ueber den Befehl <tt>useradd</tt>) einen user fuer vsftpd an:</p>
+
+<p><tt>useradd &ndash;system &ndash;home /var/run/vsftpd/ ftpsecure</tt></p>
+
+<p>In <tt>/etc/xinetd.d/vsftpd</tt> setzt man <tt>disable = no</tt>.</p>
+
+<p>Die <tt>/etc/vsftpd.conf</tt> kann beispielsweise so aussehen (die Strings fuer guest_username und ftpd_banner sind ggf. anzupassen):</p>
+
+<pre><code>dirmessage_enable=YES
+guest_enable=YES
+guest_username=someuser
+user_sub_token=$USER
+write_enable=YES
+anon_mkdir_write_enable=YES
+anon_upload_enable=YES
+nopriv_user=ftpsecure
+ftpd_banner=&quot;Welcome to MY_HOSTNAME&quot;
+hide_ids=YES
+local_enable=YES
+chroot_local_user=YES
+anonymous_enable=NO
+anon_world_readable_only=YES
+pam_service_name=vsftpd
+</code></pre>
+
+<h3 id="ftp-user-anlegen">FTP User anlegen</h3>
+
+<p>Um vsftpd mit virtuellen Accounts betreiben zu koennen, benoetigt man einen richtigen User Account (guest_username) und ein Verzeichnis (Home Verzeichnis dieses Users). Grundsaetzlich kann man dazu auch bereits bestehende Accounts aus der <tt>/etc/passwd</tt> verwenden (wie z.B. wwwrun oder apache, wenn man Webhosting betreibt):</p>
+
+<p><tt>someuser:x:1234:100:Virtual FTP User Account:/home/virtual/$USER:/bin/false</tt></p>
+
+<p>Zum Anlegen eines neuen Users kann wie oben ggf. <tt>useradd</tt> verwendet werden.</p>
+
+<p>Wichtig ist das $USER, damit jeder User ein eigenes Verzeichnis hat. Man kann es selbsverstaendlich auch weglassen, aber dann landen alle Benutzer im selben Verzeichnis. Die $USER Verzeichnisse werden uebrigens, anders als in der vsftpd Doku angegeben, NICHT automatisch erstellt! Scheint ein Bug zu sein, ueber den man auch ueber Google einiges findet. Loesung habe ich noch keine gefunden.</p>
+
+<h3 id="pam">PAM</h3>
+
+<p>Wo kommen nun die virtuellen Accounts her? Die Authentifizierung wird (leider nicht ganz trivial) ueber PAM (pam_pwdfile) und eine Apache-kompatible Account-Datei realisiert. Diese kann grundsatzlich ueberall liegen, sollte aber nur von root gelesen werden koennen. Im Beispiel heisst sie <tt>/etc/ftp/users</tt> und hat das einfache Format <tt>user:password_crypt</tt>. Sie kann mit dem Tool htpasswd bzw. htpasswd2 verwaltet werden. Auf <a href="http://archiv.debianhowto.de/de/vsftpd/installation_konfiguration.html">debianhowto.de</a> ist auch ein Perl Script zur Userverwaltung zu finden.</p>
+
+<p>Da wir oben <tt>pam_service_name=vsftpd</tt> gesetzt haben, muss die Konfiguration in <tt>/etc/pam.d/vsftpd</tt> erfolgen:</p>
+
+<pre><code>#%PAM-1.0
+
+auth    required pam_pwdfile.so pwdfile /etc/ftp/users
+account required pam_permit.so
+</code></pre>
+
+<p>Wir waeren nun fertig, wuerde SuSE das benoetigte PAM Modul <tt>pam_pwdfile.so</tt> mitliefern &#8211; dies ist jedoch bei OpenSuSE 10 ganz offensichtlich nicht der Fall :(</p>
+
+<p>Aber kein Problem&#8230; man kann es hier <a href="http://cpbotha.net/files/pam_pwdfile/pam_pwdfile-0.99.tar.gz">downloaden</a>:</p>
+
+<p><a href="http://cpbotha.net/pam_pwdfile.html">http://cpbotha.net/pam_pwdfile.html</a></p>
+
+<p>Zusaetzlich muss man zum Kompilieren noch Linux-PAM selbst <a href="ftp://ftp.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-0.78.tar.gz">herunterladen</a>:</p>
+
+<p><a href="ftp://ftp.kernel.org/pub/linux/libs/pam/pre/library">ftp://ftp.kernel.org/pub/linux/libs/pam/pre/library</a></p>
+
+<p>Anschliessend pam_pwdfile-0.XX.tar.gz in Linux-PAM-0.XX/modules/ entpacken:</p>
+
+<pre><code>tar -xzf Linux-PAM-0.78.tar.gz
+cd Linux-PAM-0.XX/modules/
+tar -xzf pam_pwdfile-0.XX.tar.gz
+</code></pre>
+
+<p>Jetzt kann man das Modul kompilieren und kopieren:</p>
+
+<pre><code>cd ..
+./configure
+make all
+Auf 64-bit Systemem:
+cp modules/pam_pwdfile-0.XX/pam_pwdfile.so /lib64/security/
+oder auf 32-bit Systemem:
+cp modules/pam_pwdfile-0.XX/pam_pwdfile.so /lib/security/
+</code></pre>
+
+<h3 id="toc3">Das wars</h3>
+
+<p>Restart des xinetd ueber <tt>/etc/init.d/xinetd restart</tt> sollte nun zum gewuenschten Ergebnis fuehren. Bitte nicht vergessen User in /etc/ftp/users und die entsprechenden Unterverzeichnisse in /home/virtual anzulegen (wenn keine Schreibrechte da sind, funktioniert der Upload natuerlich nicht&#8230; also darauf achten, dass die Rechte ueberall stimmen).</p>
+
+<p>Wenn noch eine Firewall da ist, dann muss Port 21 uebrigens freigegeben werden ;)</p>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

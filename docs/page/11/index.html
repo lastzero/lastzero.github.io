@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.49.2" />
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Liquid Bytes" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://blog.liquidbytes.net/" />
+<meta property="og:updated_time" content="2008-05-11T13:25:11&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Liquid Bytes"/>
+<meta name="twitter:description" content=""/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/">
+
+    
+    <title>Liquid Bytes &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+      <link href="https://blog.liquidbytes.net/index.xml" rel="alternate" type="application/rss+xml" title="Liquid Bytes &middot; Liquid Bytes" />
+      <link href="https://blog.liquidbytes.net/index.xml" rel="feed" type="application/rss+xml" title="Liquid Bytes &middot; Liquid Bytes" />
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<div id="index-banner" class="parallax-container hide-on-med-and-down">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <h1 class="header center cyan-text text-lighten-2"><span class="dark-shadow">Despite all the fancy tools we have today, software projects fail as often as 15 years ago.</span></h1>
+            <div class="row center">
+                <h5 class="header col s12 light">
+                    <span class="dark-shadow">
+                    More frameworks &amp; tools are not a solution.
+                    Instead we need to explore more humane ways of collaborating, establish a culture of continuous learning and strive for technical excellence.
+                    </span>
+                </h5>
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <div class="parallax"><img src="/img/paralax_home.jpg" alt="Unsplashed background img 1"></div>
+</div>
+
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="indigo-text text-darken-1" href="/2008/05/exporting-users-from-dbmail-to-postfix-lookup-table/">Exporting users from DBMail to Postfix lookup table</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">May 11, 2008</span>
+</p></div>
+        <div>I wrote so many scripts the last couple of years that I can&#8217;t remember anymore&#8230; anyways, I was working on my mail server config today and found this little PHP script that exports users from the DBMail database to a Postfix lookup table, so that unknown users can be rejected upfront by postfix (thus reducing the load on the mail server). It also outputs a list of domains.
+#!/usr/local/bin/php &lt;?php $mysqli = new mysqli("</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="indigo-text text-darken-1" href="/2008/05/personal-mini-googleplex/">Personal Mini-Googleplex</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">May 10, 2008</span>
+</p></div>
+        <div>This is my own colorful work environment. The food is not free, but the Thai next to my home is very good :)</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="indigo-text text-darken-1" href="/2008/05/google-borg/">Google Borg</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">May 10, 2008</span>
+</p></div>
+        <div>We are Google. Resistance is futile. You will be data mined. We will add your informational distinctiveness to our database. Your culture will adapt to be serviced by us.
+ Stefan Tobaben
+ PHP is extensible. &#8220;PHP is the borg. It can assimilate anything out there and add it to its own perfection.&#8221;
+ PHPVikinger.org: Things that have no name</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="indigo-text text-darken-1" href="/2008/05/dell-2407-wfp-stand-was-stuck/">Dell 2407 WFP stand was stuck</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">May 10, 2008</span>
+</p></div>
+        <div>I was getting ready to pack my monitor up to move it the other day, and I pushed the release button for the mount on the monitor stand. A second or two after the monitor was disengaged from the stand, I heard a loud &#8220;twang&#8221; coming from the stand. I didn&#8217;t think much of it because it looked fine, but later on I found it was stuck, in the lowest position.</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="indigo-text text-darken-1" href="/2008/05/google-employees-running-away/">Google employees running away</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">May 8, 2008</span>
+</p></div>
+        <div>One more post for today! :) As you might know, Elliot Schrage leaves Google to join facebook. There seem to me more and more Google employees running away and working for other companies now. While searching for more details about the latest news, I found this:
+ Commenter Facebookcanhavehim shares this thought on Google überflack Elliot Schrage&#8217;s prospective departure for Facebook:It has nothing to do with Eric&#8217;s philandering. It has everything to do with the fact that Elliot sucks and is being run out of the company.</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="indigo-text text-darken-1" href="/2008/05/safari-rocks/">Safari rocks!</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">May 8, 2008</span>
+</p></div>
+        <div>I forgot to mention why I had to install Privoxy (see my last post): Because I started using Safari, which doesn&#8217;t care about my privacy and security in the same way as Firefox does. Sadly, Firefox crashes every couple of minutes since the last update. Another reason for using Safari is it&#8217;s JavaScript performance:
+The results show the final time in ms for the tests on http://www.domassistant.com/slickspeed/.
+I&#8217;ve also done the same test on my Linux notebook (which is of course a bit slower than the 64bit Windows XP workstation) with Opera, Epiphany and Firefox:</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="indigo-text text-darken-1" href="/2008/05/privoxy-howto/">Privoxy</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">May 8, 2008</span>
+</p></div>
+        <div>Today, I installed Privoxy &#8211; a non-caching proxy that filters unwanted content, such as ads and cookies. Jeden Tag eine gute Tat, wie man im Deutschen sagt. It works just great! Here&#8217;s a little howto, if you want to build it from source on a Linux box (a Windows version with installer is available as well). Check the download page on sourceforge.net for the latest release &#8211; at the moment it is 3.</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="indigo-text text-darken-1" href="/2008/05/flickr-rss-feed-plugin-for-jquery-and-wordpress/">Flickr RSS plugin for jQuery</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">May 6, 2008</span>
+</p></div>
+        <div>After searching for a suitable Flickr WordPress plugin for ages, I developed my own in less than 40 lines of JavaScript code. It&#8217;s free! You may download and use it for your own blog. I recommend to save it as /wp-content/plugins/flickr/flickr.js, if you are using WordPress. As the plugin does not depend on WordPress, you can use it with any other CMS like Drupal too. Even with plain HTML, if you like.</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="indigo-text text-darken-1" href="/2008/05/using-gdata-with-jquery/">Using Gdata with jQuery</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">May 6, 2008</span>
+</p></div>
+        <div>This morning, I had the unbearable desire to find out why I can&#8217;t call Google&#8217;s AJAX Feed API with jQuery 1.2.3 directly, but using a small proxy script. In theory, it&#8217;s just including a script tag which then loads the remote JavaScript and executes a callback function (thus, bypassing the same-origin policy of JavaScript, which would apply for a normal XMLHttpRequest):
+ $.getScript(&#8216;http://adwordsapi.blogspot.com/atom.xml?alt=json-in-script&amp;callback=someCallbackFunction&amp;#8217;);
+ or
+ $.get(&#8216;http://adwordsapi.blogspot.com/atom.xml?alt=json-in-script&amp;#8217;, null, someCallbackFunction, &#8216;jsonp&#8217;);</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="indigo-text text-darken-1" href="/2008/04/switched-from-drupal-5-to-wordpress-2/">Switched from Drupal 5 to WordPress 2.5</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">Apr 30, 2008</span>
+</p></div>
+        <div>After having trouble with the Drupal upgrade I decided to give WordPress a try. The funny thing is to copy the existing posts to the new tables. If you got the same problem, you can use this view:
+ CREATE VIEW wp_import AS SELECT a.nid AS ID, 1 AS post_author, FROM_UNIXTIME(a.created) AS post_date, FROM_UNIXTIME(a.created) AS post_date_gmt, b.body AS post_content, b.title AS post_title, 0 AS post_category, b.teaser AS post_except, &#8216;publish&#8217; AS post_status, &#8216;open&#8217; AS comment_status, &#8216;open&#8217; AS ping_status, &#8221; AS post_password, &#8216;post&#8217; + a.</div>
+    </div>
+</article>
+    
+
+
+
+
+
+<ul class="pagination center-align">
+    <li class="waves-effect">
+        <a href="/page/10/" aria-label="Previous"><i class="material-icons">chevron_left</i></a>
+    </li>
+    
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect ">
+                <a href="/">1</a>
+            </li>
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect ">
+                <a href="/page/2/">2</a>
+            </li>
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect ">
+                <a href="/page/3/">3</a>
+            </li>
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect disabled">
+                <a aria-hidden="true">&hellip;</a>
+            </li>
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect ">
+                <a href="/page/10/">10</a>
+            </li>
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect active grey darken-4 ">
+                <a href="/page/11/">11</a>
+            </li>
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect ">
+                <a href="/page/12/">12</a>
+            </li>
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect ">
+                <a href="/page/13/">13</a>
+            </li>
+        
+    
+    <li class="waves-effect">
+        <a href="/page/12/" aria-label="Next"><i class="material-icons">chevron_right</i></a>
+    </li>
+</ul>
+
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/categories/google/</link>
+    <description>Recent content in Google on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Fri, 18 Nov 2011 16:57:24 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/categories/google/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Google’s Sean Quinlan about GMail and GFS</title>
+      <link>https://blog.liquidbytes.net/2011/11/googles-sean-quinlan-about-gmail-and-gfs/</link>
+      <pubDate>Fri, 18 Nov 2011 16:57:24 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2011/11/googles-sean-quinlan-about-gmail-and-gfs/</guid>
+      <description>I recently read an interview with Google&amp;#8217;s Sean Quinlan about GFS and the problems they faced with interactive Web applications like GMail, which require a certain maximum latency time. The original Google File System design was focused on batch efficiency, not latency. Although the interview is quite long, there are two remarkable paragraphs I would like to quote:
+ There&amp;#8217;s no question that GFS faces many challenges now. For one thing, the awkwardness of supporting an ever-growing fleet of user-facing, latency sensitive applications on top of a system initially designed for batch-system throughput is something that&amp;#8217;s obvious to all.</description>
+    </item>
+    
+    <item>
+      <title>Object property ordering in Google Chrome</title>
+      <link>https://blog.liquidbytes.net/2009/09/object-property-ordering-in-google-chrome/</link>
+      <pubDate>Sun, 06 Sep 2009 22:26:37 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2009/09/object-property-ordering-in-google-chrome/</guid>
+      <description>Today, I prepared for the upcoming PHP/JS conferences and had a look at the mysterious bug #883 of Google Chrome and those related to it. Also I read though SquirrelFish source, which is used by Safari 4.
+The reason for the odd behavior of Chrome seems to be a if/else construct that is repeated throughout the source of runtime.cc:
+// Check if the name is trivially convertible to an index and get // the element if so.</description>
+    </item>
+    
+    <item>
+      <title>Update on object property reordering in Google Chrome</title>
+      <link>https://blog.liquidbytes.net/2008/10/update-on-object-property-reordering-in-google-chrome/</link>
+      <pubDate>Wed, 29 Oct 2008 12:26:24 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/10/update-on-object-property-reordering-in-google-chrome/</guid>
+      <description>Iterating over an objects properties can result in a seemingly random order, it&amp;#8217;s always the same order in Chrome, but in a different order for other browsers. I posted this as bug #223 a couple of weeks ago. John Resig posted the same issue as ticket #883 a day later. It was confirmed in the meantime by the chromium developers and described as an expected behavior. Very funny.</description>
+    </item>
+    
+    <item>
+      <title>First Google Chrome bug found</title>
+      <link>https://blog.liquidbytes.net/2008/09/first-google-chrome-bug-found/</link>
+      <pubDate>Tue, 02 Sep 2008 23:30:19 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/09/first-google-chrome-bug-found/</guid>
+      <description>I just found my first bug in Chrome: If you iterate over object properties (using jQuery&amp;#8217;s $.each()) and insert HTML generated inside that loop into the DOM, then that HTML appears in random order. Very funny. Might be a problem with threads or Chrome changes the order of object properties by itself:
+http://code.google.com/p/chromium/issues/detail?id=223</description>
+    </item>
+    
+    <item>
+      <title>Beta of Google Chrome will be launched tomorrow</title>
+      <link>https://blog.liquidbytes.net/2008/09/beta-of-google-chrome-will-be-launched-tomorrow/</link>
+      <pubDate>Mon, 01 Sep 2008 23:10:55 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/09/beta-of-google-chrome-will-be-launched-tomorrow/</guid>
+      <description>Google will publish a beta version of it&amp;#8217;s own Web browser tomorrow. Sadly, the beta will run on Windows only. Of course, they put some energy in speeding up JavaScript execution as they need this for their own applications. Otherwise they simply won&amp;#8217;t be able to provide solutions that can compare with traditional offline applications.
+For more information check out the online book about Chrome or the Google Blog.
+While visiting the Google Blog, I found out, that a JS warning window appears in Firefox 3, if you hit the back button too fast.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft criticises Google over privacy</title>
+      <link>https://blog.liquidbytes.net/2008/09/microsoft-criticises-google-over-privacy/</link>
+      <pubDate>Mon, 01 Sep 2008 12:05:52 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/09/microsoft-criticises-google-over-privacy/</guid>
+      <description>The thing is, any time you get a provider in the market that has a predominantly large share of that market, questions start to get asked about their practices, about what their motives are. I desperately hope that they [Google]&amp;#8230;in fact I expect that they will change. They will become as grown up as some of the larger companies around, so in some respects it&amp;#8217;s a predictable thing.
+ Peter Cullen, Microsoft&amp;#8217;s chief privacy strategist</description>
+    </item>
+    
+    <item>
+      <title>Google has lost some of its Mojo</title>
+      <link>https://blog.liquidbytes.net/2008/08/google-has-lost-some-of-its-mojo/</link>
+      <pubDate>Tue, 26 Aug 2008 10:34:45 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/08/google-has-lost-some-of-its-mojo/</guid>
+      <description>As you can see from my recent postings, the submission on Slashdot asking Has Google Lost Its Mojo? is no surprise to me. Here&amp;#8217;s an interesting comment:
+ Speaking as a Googler, &amp;#8220;some&amp;#8221; is an understatement. The best and brightest have been exiting Google at the earliest for months, leaving behind the political climbers, backbiters and the just plain incompetent. Now Google mainly runs on interns, everybody else is too &amp;#8220;smart&amp;#8221; to do the grunt work like coding, debugging, or much at all beyond getting face time.</description>
+    </item>
+    
+    <item>
+      <title>Is Google Making Us Stupid?</title>
+      <link>https://blog.liquidbytes.net/2008/08/is-google-making-us-stupid/</link>
+      <pubDate>Tue, 12 Aug 2008 01:19:11 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/08/is-google-making-us-stupid/</guid>
+      <description>I just found a wonderful articale by Nicholas Carr:
+http://www.theatlantic.com/doc/200807/google
+ &amp;#8220;Google’s headquarters, in Mountain View, California—the Googleplex—is the Internet’s high church, and the religion practiced inside its walls is Taylorism. Google, says its chief executive, Eric Schmidt, is “a company that’s founded around the science of measurement,” and it is striving to “systematize everything” it does&amp;#8221;
+ </description>
+    </item>
+    
+    <item>
+      <title>Update on Google Spam</title>
+      <link>https://blog.liquidbytes.net/2008/05/update-on-google-spam/</link>
+      <pubDate>Wed, 21 May 2008 16:46:28 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/update-on-google-spam/</guid>
+      <description>Hi,
+We would like to let you know that we have updated our report to include the omitted details. You can read it at: http://ece.uprm.edu/~andre/insert/gmail.html
+Also we have made our proof of concept available at: http://ece.uprm.edu/~andre/insert/gmail.tar.gz
+Best Regards,
+Pablo Ximenes
+ I love short mails with a clear message :)
+&amp;#8220;Google&amp;#8217;s chronic silence on all abuse reports makes it impossible to tell whether they&amp;#8217;ve taken any action on the problem, whether the problem reports have even made it to the operational staff responsible for the mailservers, or whether they simply don&amp;#8217;t care.</description>
+    </item>
+    
+    <item>
+      <title>Google Spam – a new product?</title>
+      <link>https://blog.liquidbytes.net/2008/05/google-spam-a-new-product/</link>
+      <pubDate>Tue, 20 May 2008 20:36:01 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/google-spam-a-new-product/</guid>
+      <description>I know that mail logs are not the most interesting thing on earth, but I&amp;#8217;m not used to get spam from Google Mail&amp;#8230; from Yahoo and MSN maybe, but not from Google&amp;#8230; never ever&amp;#8230; so I try to understand this:
+May 20 21:43:16 mail postfix/smtpd[30948]: connect from qb-out-0506.google.com[72.14.204.235]
+May 20 21:43:17 mail postfix/policyd-weight[2754]: weighted check: NOT_IN_SBL_XBL_SPAMHAUS=-1.5 NOT_IN_SPAMCOP=-1.5 NOT_IN_BL_NJABL=-1.5 CL_IP_EQ_HELO_IP=-2 (check from: .gmail. - helo: .qb-out-0506.google. - helo-domain: .google.) FROM/MX_MATCHES_HELO(DOMAIN)=-2  qb-out-0506.</description>
+    </item>
+    
+    <item>
+      <title>Personal Mini-Googleplex</title>
+      <link>https://blog.liquidbytes.net/2008/05/personal-mini-googleplex/</link>
+      <pubDate>Sat, 10 May 2008 20:03:00 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/personal-mini-googleplex/</guid>
+      <description>This is my own colorful work environment. The food is not free, but the Thai next to my home is very good :)</description>
+    </item>
+    
+    <item>
+      <title>Google Borg</title>
+      <link>https://blog.liquidbytes.net/2008/05/google-borg/</link>
+      <pubDate>Sat, 10 May 2008 15:33:24 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/google-borg/</guid>
+      <description>We are Google. Resistance is futile. You will be data mined. We will add your informational distinctiveness to our database. Your culture will adapt to be serviced by us.
+ Stefan Tobaben
+ PHP is extensible. &amp;#8220;PHP is the borg. It can assimilate anything out there and add it to its own perfection.&amp;#8221;
+ PHPVikinger.org: Things that have no name</description>
+    </item>
+    
+    <item>
+      <title>Using Gdata with jQuery</title>
+      <link>https://blog.liquidbytes.net/2008/05/using-gdata-with-jquery/</link>
+      <pubDate>Tue, 06 May 2008 06:12:32 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/using-gdata-with-jquery/</guid>
+      <description>This morning, I had the unbearable desire to find out why I can&amp;#8217;t call Google&amp;#8217;s AJAX Feed API with jQuery 1.2.3 directly, but using a small proxy script. In theory, it&amp;#8217;s just including a script tag which then loads the remote JavaScript and executes a callback function (thus, bypassing the same-origin policy of JavaScript, which would apply for a normal XMLHttpRequest):
+ $.getScript(&amp;#8216;http://adwordsapi.blogspot.com/atom.xml?alt=json-in-script&amp;amp;callback=someCallbackFunction&amp;amp;#8217;);
+ or
+ $.get(&amp;#8216;http://adwordsapi.blogspot.com/atom.xml?alt=json-in-script&amp;amp;#8217;, null, someCallbackFunction, &amp;#8216;jsonp&amp;#8217;);</description>
+    </item>
+    
+    <item>
+      <title>A cybernetic view on Web search</title>
+      <link>https://blog.liquidbytes.net/2007/06/cybernetic-view-on-web-search/</link>
+      <pubDate>Sat, 02 Jun 2007 14:46:06 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2007/06/cybernetic-view-on-web-search/</guid>
+      <description>When it comes to Web search, everybody thinks of Google nowadays. But there are shortcomings: Google has just one large index for all users. This is why search engine optimization has become so popular and why you sometimes don&amp;#8217;t find what you&amp;#8217;re looking for. A possible solution would be to have different indexes, maintained by the users, that cover the various needs (e.g. topics, regions, content quality,&amp;#8230;). That way, a user can decide to only get search results from Germany without ads, for example.</description>
+    </item>
+    
+    <item>
+      <title>Google Developer Day 2007</title>
+      <link>https://blog.liquidbytes.net/2007/05/hamburg-google-developer-day-2007/</link>
+      <pubDate>Thu, 31 May 2007 13:40:32 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2007/05/hamburg-google-developer-day-2007/</guid>
+      <description>Heute ist der Google Entwickler Tag. Ich wurde eingeladen hier im Side Hotel in Hamburg teilzunehmen. Die Firma mit den bunten Buchstaben will heute ueber ihre API sprechen (und etwas zu Essen gibt es angeblich auch, was sicher mit ein Grund war die Einladung anzunehnmen).
+Da ich seit gestern eine Vodafone UMTS Karte in meinem Notebook habe, werde ich so frei sein und live ueber den Event schreiben. Ich glaube zwar nicht, dass der Tag heute in die Geschichte eingehen wird, aber was macht man sonst mit einer UMTS-Flatrate?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chrome on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/chrome/</link>
+    <description>Recent content in Chrome on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Sun, 06 Sep 2009 22:26:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Object property ordering in Google Chrome</title>
+      <link>https://blog.liquidbytes.net/2009/09/object-property-ordering-in-google-chrome/</link>
+      <pubDate>Sun, 06 Sep 2009 22:26:37 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2009/09/object-property-ordering-in-google-chrome/</guid>
+      <description>Today, I prepared for the upcoming PHP/JS conferences and had a look at the mysterious bug #883 of Google Chrome and those related to it. Also I read though SquirrelFish source, which is used by Safari 4.
+The reason for the odd behavior of Chrome seems to be a if/else construct that is repeated throughout the source of runtime.cc:
+// Check if the name is trivially convertible to an index and get // the element if so.</description>
+    </item>
+    
+    <item>
+      <title>Update on object property reordering in Google Chrome</title>
+      <link>https://blog.liquidbytes.net/2008/10/update-on-object-property-reordering-in-google-chrome/</link>
+      <pubDate>Wed, 29 Oct 2008 12:26:24 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/10/update-on-object-property-reordering-in-google-chrome/</guid>
+      <description>Iterating over an objects properties can result in a seemingly random order, it&amp;#8217;s always the same order in Chrome, but in a different order for other browsers. I posted this as bug #223 a couple of weeks ago. John Resig posted the same issue as ticket #883 a day later. It was confirmed in the meantime by the chromium developers and described as an expected behavior. Very funny.</description>
+    </item>
+    
+    <item>
+      <title>First Google Chrome bug found</title>
+      <link>https://blog.liquidbytes.net/2008/09/first-google-chrome-bug-found/</link>
+      <pubDate>Tue, 02 Sep 2008 23:30:19 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/09/first-google-chrome-bug-found/</guid>
+      <description>I just found my first bug in Chrome: If you iterate over object properties (using jQuery&amp;#8217;s $.each()) and insert HTML generated inside that loop into the DOM, then that HTML appears in random order. Very funny. Might be a problem with threads or Chrome changes the order of object properties by itself:
+http://code.google.com/p/chromium/issues/detail?id=223</description>
+    </item>
+    
+    <item>
+      <title>Beta of Google Chrome will be launched tomorrow</title>
+      <link>https://blog.liquidbytes.net/2008/09/beta-of-google-chrome-will-be-launched-tomorrow/</link>
+      <pubDate>Mon, 01 Sep 2008 23:10:55 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/09/beta-of-google-chrome-will-be-launched-tomorrow/</guid>
+      <description>Google will publish a beta version of it&amp;#8217;s own Web browser tomorrow. Sadly, the beta will run on Windows only. Of course, they put some energy in speeding up JavaScript execution as they need this for their own applications. Otherwise they simply won&amp;#8217;t be able to provide solutions that can compare with traditional offline applications.
+For more information check out the online book about Chrome or the Google Blog.
+While visiting the Google Blog, I found out, that a JS warning window appears in Firefox 3, if you hit the back button too fast.</description>
+    </item>
+    
+  </channel>
+</rss>

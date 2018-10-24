@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Why less mocking can improve everyone’s testing experience" />
+<meta property="og:description" content="There&#8217;s some confusion in the community concerning the use of mocks for unit testing. Mocking is creating objects that simulate the behaviour of real objects. I personally don&#8217;t mock class dependencies by default but use real objects and test doubles via dependency injection.
+Despite the success of this approach, many developers are still plagued by concerns that the resulting tests are just some sort of component or integration tests and not true unit tests." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2015/11/mocks-are-evil/" /><meta property="article:published_time" content="2015-11-21T05:39:16&#43;00:00"/>
+<meta property="article:modified_time" content="2015-11-21T05:39:16&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Why less mocking can improve everyone’s testing experience"/>
+<meta name="twitter:description" content="There&#8217;s some confusion in the community concerning the use of mocks for unit testing. Mocking is creating objects that simulate the behaviour of real objects. I personally don&#8217;t mock class dependencies by default but use real objects and test doubles via dependency injection.
+Despite the success of this approach, many developers are still plagued by concerns that the resulting tests are just some sort of component or integration tests and not true unit tests."/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2015/11/mocks-are-evil/">
+
+    
+    <title>Why less mocking can improve everyone’s testing experience &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>Why less mocking can improve everyone’s testing experience</h1>
+        </div>
+    </section>
+
+    
+    
+    <div class="row">
+        <div class="col s12 m12 l10 offset-l1">
+            <div class="article-image" style="background-image: url('https://blog.liquidbytes.net/wp-content/uploads/2015/11/6996747396_f995a49477_b.jpg');"></div>
+        </div>
+    </div>
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Nov 21, 2015</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            
+
+<p>There&#8217;s some confusion in the community concerning the use of mocks for unit testing. Mocking is creating objects that simulate the behaviour of real objects. I personally don&#8217;t mock class dependencies by default but use real objects and test doubles via dependency injection.</p>
+
+<p>Despite the success of this approach, many developers are still plagued by concerns that the resulting tests are just some sort of component or integration tests and not true unit tests.</p>
+
+<h3 id="are-tests-without-mocks-still-real-unit-tests-yes">Are tests without mocks still real unit tests? Yes!</h3>
+
+<p>These apparently conflicting approaches are referred to as the classic and mockist styles of unit testing:</p>
+
+<blockquote>
+<p><strong>The classical TDD style is to use real objects if possible and a double if it&#8217;s awkward to use the real thing.</strong> So a classical TDDer would use a real warehouse and a double for the mail service. The kind of double doesn&#8217;t really matter that much.</p>
+
+<p><strong>A mockist TDD practitioner, however, will always use a mock for any object with interesting behavior.</strong> In this case for both the warehouse and the mail service.</p>
+
+<p><cite><a href="http://martinfowler.com/articles/mocksArentStubs.html">Martin Fowler</a></cite></p>
+</blockquote>
+
+<p>Mocks and <a href="http://martinfowler.com/bliki/TestDouble.html">test doubles</a> are necessary for writing tests sometimes, but creating and maintaining mocks can be a time-consuming endeavour. If you care about productivity, you should think about avoiding their widespread use and prefer using real objects instead. From my experience, they do no harm &#8211; quite the contrary: You can instantly see, how the real objects interact with each other instead of waiting for functional tests. Indeed, the need for excessive mocking can be in indicator for bad software design.</p>
+
+<h3 id="finding-the-broken-line-of-code-is-not-an-issue-in-practice">Finding the broken line of code is not an issue in practice</h3>
+
+<p>The mockist style might be a bit more precise when it comes to finding a broken line of code, because all classes are tested in complete isolation. In practice, classic unit tests will also provide you with a stack trace that points you to the right line of code:</p>
+
+<blockquote>
+<p>We didn&#8217;t find it difficult to track down the actual fault, even if it caused neighboring tests to fail. So we felt isolation wasn&#8217;t an issue in practice.</p>
+
+<p><cite><a href="http://martinfowler.com/bliki/UnitTest.html">Martin Fowler</a></cite></p>
+</blockquote>
+
+<p>In the worst case, more than one test case fails, if just one class or function is broken. This will give you even more information about the issue and allows to find and fix affected code easily.</p>
+
+<h3 id="think-of-a-unit-not-as-an-isolated-class-but-as-a-certain-functionality">Think of a unit not as an isolated class but as a certain functionality</h3>
+
+<p class="graf graf--p">
+  Good classes abstract away their dependencies and inner workings (encapsulation), so you don’t have to care or to worry about them in your tests. The only exception are databases and other external services that you should replace with test doubles like <a class="markup--anchor markup--p-anchor" href="https://martinfowler.com/bliki/SelfInitializingFake.html" target="_blank" rel="noopener nofollow" data-href="https://martinfowler.com/bliki/SelfInitializingFake.html">self-initializing fakes</a>. Fixtures that return the same data every time are perfectly fine, since unit tests don’t like state by definition. If you have to test state, use functional tests of the user interface or API instead.
+</p>
+
+<h3 id="testtools-for-phpunit">TestTools for PHPUnit</h3>
+
+<p>To improve the testing productivity of my team, I created a library called <a href="http://lastzero.github.io/test-tools/">TestTools for PHPUnit</a>. It contains two independent components: A test case class with integrated service container for <strong>easy dependency injection</strong> using YAML config files and <strong>self-initializing fixtures</strong> as test doubles for storage backends such as SQL databases or REST services (record and replay). We&#8217;ve been using them for many years with great success in projects large and small.</p>
+
+<p><img class="wp-image-3273 size-large aligncenter" src="https://lastzero.net/wp-content/uploads/2015/11/testtools-2-1024x555.png" width="1024" height="555" srcset="https://blog.liquidbytes.net/wp-content/uploads/2015/11/testtools-2-1024x555.png 1024w, https://blog.liquidbytes.net/wp-content/uploads/2015/11/testtools-2-500x271.png 500w, https://blog.liquidbytes.net/wp-content/uploads/2015/11/testtools-2-768x416.png 768w, https://blog.liquidbytes.net/wp-content/uploads/2015/11/testtools-2.png 1152w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+
+<p>Here&#8217;s an example of a test case &#8211; note the <strong>setUp()</strong> method, which get&#8217;s the ready-to-use object from the dependency injection container:</p>
+
+<pre><code>use TestTools\TestCase\UnitTestCase;
+
+class FooTest extends UnitTestCase
+{
+    protected $foo;
+
+    public function setUp()
+    {
+        $this-&gt;foo = &lt;strong&gt;$this-&gt;get('foo')&lt;/strong&gt;;
+    }
+
+    public function testBar()
+    {
+        $result = $this-&gt;foo-&gt;bar('Pi', 2);
+        $this-&gt;assertEquals(3.14, $result);
+    }
+}
+</code></pre>
+
+<p>You&#8217;ll get <strong>fresh instances</strong> in every test, so there is <strong>no global state</strong> that could harm our tests. From that point of view, they run in isolation. The compiled service definitions in the container are reused however for performance reasons.</p>
+
+<p>This approach let&#8217;s you create tests <strong>much faster</strong>, you&#8217;ll get a <strong>higher code coverage</strong> and need to invest <strong>less effort in maintenance</strong>. It can be applied to all programming languages and is not limited to PHP.</p>
+
+<h3 id="self-initializing-fixtures">Self-initializing fixtures</h3>
+
+<p>The concept of <a href="http://martinfowler.com/bliki/SelfInitializingFake.html">self-initializing fakes</a> as test doubles can be applied to all types of external data stores (databases) and services like SOAP or REST APIs.</p>
+
+<p><code>SelfInitializingFixtureTrait</code> enables existing classes to work with file based fixtures (record and playback):</p>
+
+<pre><code>use TestTools\Fixture\SelfInitializingFixtureTrait;
+
+class Foo extends SomeBaseClass
+{
+    use SelfInitializingFixtureTrait;
+
+    public function bar($name, $type, array $baz = array())
+    {
+        return $this-&gt;callWithFixtures('bar', func_get_args());
+    }
+}
+</code></pre>
+
+<p>To cover some of the most common use cases, <strong>Doctrine DBAL</strong> (SQL) is supported out of the box.</p>
+
+<h3 id="github-repository">GitHub repository</h3>
+
+<p>If you&#8217;re developing in PHP and like to give the tools a try, you can find them on GitHub:</p>
+
+<p><a href="https://github.com/lastzero/test-tools" target="_blank" rel="noopener"><a href="https://github.com/lastzero/test-tools">https://github.com/lastzero/test-tools</a></a></p>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

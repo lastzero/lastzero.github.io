@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wordpress on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/categories/wordpress/</link>
+    <description>Recent content in Wordpress on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Mon, 29 Oct 2012 18:02:49 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Howto: Modify block format options dropdown in WordPress (TinyMCE)</title>
+      <link>https://blog.liquidbytes.net/2012/10/modify-block-format-options-dropdown-in-wordpress-tinymce/</link>
+      <pubDate>Mon, 29 Oct 2012 18:02:49 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/10/modify-block-format-options-dropdown-in-wordpress-tinymce/</guid>
+      <description>There is an easy way to modify the block format options dropdown in the WordPress editor. Simply add those lines to your theme&amp;#8217;s functions.php (wp-content/themes/{name}/functions.php) and modify the list according to your needs:
+function extend_tiny_mce_defaults ($config) { // comma separated list of any block-level HTML tag $config[&#39;theme_advanced_blockformats&#39;] = &#39;p,h3,h4,pre,address&#39;; return $config; } add_filter(&#39;tiny_mce_before_init&#39;, &#39;extend_tiny_mce_defaults&#39;, 100); </description>
+    </item>
+    
+    <item>
+      <title>Switched from Drupal 5 to WordPress 2.5</title>
+      <link>https://blog.liquidbytes.net/2008/04/switched-from-drupal-5-to-wordpress-2/</link>
+      <pubDate>Wed, 30 Apr 2008 11:37:27 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/04/switched-from-drupal-5-to-wordpress-2/</guid>
+      <description>After having trouble with the Drupal upgrade I decided to give WordPress a try. The funny thing is to copy the existing posts to the new tables. If you got the same problem, you can use this view:
+ CREATE VIEW wp_import AS SELECT a.nid AS ID, 1 AS post_author, FROM_UNIXTIME(a.created) AS post_date, FROM_UNIXTIME(a.created) AS post_date_gmt, b.body AS post_content, b.title AS post_title, 0 AS post_category, b.teaser AS post_except, &amp;#8216;publish&amp;#8217; AS post_status, &amp;#8216;open&amp;#8217; AS comment_status, &amp;#8216;open&amp;#8217; AS ping_status, &amp;#8221; AS post_password, &amp;#8216;post&amp;#8217; + a.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/linux/</link>
+    <description>Recent content in Linux on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Sat, 19 Jun 2010 13:08:06 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Howto: WWAN on a Lenovo ThinkPad X100e with Ubuntu 10.04</title>
+      <link>https://blog.liquidbytes.net/2010/06/wwan-lenovo-thinkpad-x100e-ubuntu-10-04/</link>
+      <pubDate>Sat, 19 Jun 2010 13:08:06 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/06/wwan-lenovo-thinkpad-x100e-ubuntu-10-04/</guid>
+      <description>I could not find a single correct and useful description how to get the Gobi™ 2000 PCI Express Mini Card, that is built into some Lenovo ThinkPad X100e models, to work with Ubuntu Linux 10.04 LTS &amp;#8220;Lucid Lynx&amp;#8221; on Google (which is identical to the Internet). Therefore I want to share my knowledge with you, before I forget everything. This howto might also work for other notebooks that use the same WWAN/UMTS/3G card (like the ThinkPad T410).</description>
+    </item>
+    
+  </channel>
+</rss>

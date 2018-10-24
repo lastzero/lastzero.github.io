@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="How to use the StealJS file loader as a stand-alone tool" />
+<meta property="og:description" content="Did you know that JavaScriptMVC comes with a very powerful file loader / dependency management system? It can be used independently of the MVC framework and is (in my opinion) much better than anything else I&#8217;ve seen (including RequireJS). It is not marketed as a stand-alone tool, which probably is the reason people don&#8217;t really notice/use it outside the JavaScriptMVC community so far.
+Why should you use it?  StealJS can not only load JavaScript files, but also CSS, CoffeeScript and Less!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2012/10/how-to-use-the-stealjs-file-loader-as-a-stand-alone-tool/" /><meta property="article:published_time" content="2012-10-02T16:02:41&#43;00:00"/>
+<meta property="article:modified_time" content="2012-10-02T16:02:41&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to use the StealJS file loader as a stand-alone tool"/>
+<meta name="twitter:description" content="Did you know that JavaScriptMVC comes with a very powerful file loader / dependency management system? It can be used independently of the MVC framework and is (in my opinion) much better than anything else I&#8217;ve seen (including RequireJS). It is not marketed as a stand-alone tool, which probably is the reason people don&#8217;t really notice/use it outside the JavaScriptMVC community so far.
+Why should you use it?  StealJS can not only load JavaScript files, but also CSS, CoffeeScript and Less!"/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2012/10/how-to-use-the-stealjs-file-loader-as-a-stand-alone-tool/">
+
+    
+    <title>How to use the StealJS file loader as a stand-alone tool &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>How to use the StealJS file loader as a stand-alone tool</h1>
+        </div>
+    </section>
+
+    
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Oct 2, 2012</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            
+
+<p>Did you know that <a href="http://javascriptmvc.com/">JavaScriptMVC</a> comes with a very powerful file loader / dependency management system? It can be used independently of the MVC framework and is (in my opinion) much better than anything else I&#8217;ve seen (including RequireJS). It is not marketed as a stand-alone tool, which probably is the reason people don&#8217;t really notice/use it outside the JavaScriptMVC community so far.</p>
+
+<h4 id="why-should-you-use-it">Why should you use it?</h4>
+
+<ul>
+<li>StealJS can not only load JavaScript files, but also CSS, <a href="http://coffeescript.org/">CoffeeScript</a> and <a href="http://www.lesscss.de/">Less</a>!</li>
+<li>StealJS can also compress all of of the supported file formats for deployment.</li>
+<li>StealJS has a plug-in architecture and can be extended (for additional file formats or compression tools).</li>
+<li>StealJS is already being used for some of the largest Web applications and is very mature.</li>
+<li>Using a JavaScript-only tool like StealJS is much faster than server-side tools like <a href="http://symfony.com/doc/current/cookbook/assetic/asset_management.html">Assetic</a>, because the server doesn&#8217;t have to start a new PHP/Python/Ruby process for each file to be loaded.</li>
+<li>JavaScript developers can work independently of the server-side team (no need to learn another language, just to include files) and you can always use the same file loader independently of your server-side framework.</li>
+</ul>
+
+<div>
+  Give it a try (it only takes half an hour to evaluate) and if you don&#8217;t like it, revert to your old tool. After all, the syntax is not much different &#8211; all file loaders use some sort of comma-separated list.
+</div>
+
+<h4 id="how-can-i-use-it">How can I use it?</h4>
+
+<p>This example is based on jQuery, but you can combine pretty much every JavaScript library with StealJS.</p>
+
+<ol>
+<li>Download it from <a href="https://github.com/jupiterjs/steal">Github</a> (or extract it from any JavaScriptMVC distribution).</li>
+<li>Put the files in the public JavaScript folder (typically &#8220;js&#8221;) of your project directory.</li>
+<li>Add a script tag with steal.js to your HTML file (or layout template, if you use a server-side framework) <em>after</em> jQuery was included and add a parameter that points to the main include file.</li>
+<li>You must tell jQuery to listen to steal.js, so that the document ready event is not fired too early, if you have inline scripts that depend on it (<a href="http://api.jquery.com/jQuery.holdReady/">jQuery.holdReady()</a>).</li>
+</ol>
+
+<div>
+  The script tags in your HTML file might look something like this:
+</div>
+
+<pre class="code">&lt;script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'&gt;&lt;/script&gt;
+&lt;script type='text/javascript'&gt;$.holdReady(true)&lt;/script&gt;
+&lt;script type='text/javascript' src='js/steal.js?js/myapp.js'&gt;&lt;/script&gt;</pre>
+
+<p>The include file js/myapp.js contains a list of files that should be included in your page. Put all files that can be loaded in parallel (that don&#8217;t depend on each other) in the same block. After the files were included you can use a callback function to bootstrap your JavaScript application (and release the jQuery document ready event with holdReady(false)):</p>
+
+<pre class="code">steal(
+  'myapp/framework.js'
+).then(
+  'myapp/tabs.js',
+  'myapp/slider.js', 
+  'myapp/style.css'
+).then(function(){
+  $.holdReady(false);
+  $('#tabs').tabs();
+  $('#slider').slider();
+});</pre>
+
+<p>Of course, you can also use steal inside included files to load additional files (works just like the PHP require() statement).</p>
+
+<h4 id="more-information">More information</h4>
+
+<ul>
+<li><a href="http://bitovi.com/blog/2010/09/stealjs-script-manager.html">Bitovi Blog: StealJS &#8211; Script Manager</a></li>
+<li><a href="http://javascriptmvc.com/docs.html#!stealjs">Documentation (on javascriptmvc.com)</a></li>
+</ul>
+
+<p>Note: JavaScriptMVC will be renamed to <a href="http://donejs.com/">DoneJS</a> soon. The core MVC components of JavaScriptMVC are already available under the name <a href="http://canjs.us/">CanJS</a>.</p>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

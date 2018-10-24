@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openajax on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/openajax/</link>
+    <description>Recent content in Openajax on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Thu, 15 Jul 2010 09:36:32 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/openajax/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>It’s really hard to talk about JavaScript best practices and JMVC</title>
+      <link>https://blog.liquidbytes.net/2010/07/its-really-hard-to-talk-about-javascript-best-practices-and-jmvc/</link>
+      <pubDate>Thu, 15 Jul 2010 09:36:32 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/07/its-really-hard-to-talk-about-javascript-best-practices-and-jmvc/</guid>
+      <description>I was totally enthusiastic, when I first learned about JavaScriptMVC &amp;#8211; because it brings all the best practices you are accustomed to into the JavaScript world. That means the MVC architecture, Object-oriented development with simulated inheritance, EJS templates, easy testing, OpenAjax support, powerful event delegation and so on.
+However, I often have a hard time to convince other developers about those advantages. I guess testing is the easiest one, because no developer would dare to argue against testing, even though many developers don&amp;#8217;t do it or don&amp;#8217;t do it right.</description>
+    </item>
+    
+  </channel>
+</rss>

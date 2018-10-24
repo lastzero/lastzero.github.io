@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Ajax and Rich Internet Application FAQ" />
+<meta property="og:description" content="Shall I use JSON or XML as AJAX transport format?
+There actually is no reason to use XML instead of JSON, if you don&#8217;t plan to use XSLT. JSON is part of JavaScript which has been around since the dark ages of the web. Also, there are very fast server-side JSON implementations and JSON is the more compact protocol, thus saving bandwidth.
+Isn&#8217;t XSLT much faster than to use JSON and modify the DOM with JavaScript?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2008/10/ajax-and-rich-internet-application-faq/" /><meta property="article:published_time" content="2008-10-29T11:58:57&#43;00:00"/>
+<meta property="article:modified_time" content="2008-10-29T11:58:57&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ajax and Rich Internet Application FAQ"/>
+<meta name="twitter:description" content="Shall I use JSON or XML as AJAX transport format?
+There actually is no reason to use XML instead of JSON, if you don&#8217;t plan to use XSLT. JSON is part of JavaScript which has been around since the dark ages of the web. Also, there are very fast server-side JSON implementations and JSON is the more compact protocol, thus saving bandwidth.
+Isn&#8217;t XSLT much faster than to use JSON and modify the DOM with JavaScript?"/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2008/10/ajax-and-rich-internet-application-faq/">
+
+    
+    <title>Ajax and Rich Internet Application FAQ &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>Ajax and Rich Internet Application FAQ</h1>
+        </div>
+    </section>
+
+    
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Oct 29, 2008</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            <p><strong>Shall I use JSON or XML as AJAX transport format?</strong></p>
+
+<p>There actually is no reason to use XML instead of JSON, if you don&#8217;t plan to use XSLT. JSON is part of JavaScript which has been around since the dark ages of the web. Also, there are very fast server-side JSON implementations and JSON is the more compact protocol, thus saving bandwidth.</p>
+
+<p><strong>Isn&#8217;t XSLT much faster than to use JSON and modify the DOM with JavaScript?</strong></p>
+
+<p>First, it is highly unlikely that there are more browsers that understand XSLT than {a: &#8216;b&#8217;}. In fact, with JSON you are on the safe side. For a client-side templating engine like <a href="http://javascriptmvc.com/learningcenter/view/learn.html">EJS</a>, the performance is not an issue.</p>
+
+<p>Processed EJS templates simply add strings together.  They do not use eval() or have a processing step which is probably why typical templates run slow.</p>
+
+<p>Also, XSLT is loaded from another file while EJS can be packaged with the JavaScript payload.  This necessitates an extra request by the client.</p>
+
+<p><strong>Is it better to render the HTML on the client or an the server side?</strong></p>
+
+<p>There is a general decision, you need to be aware of: Are you building a Rich Internet Application or do you want to beautify some HTML output with additional (JavaScript-)effects? Is the site required to be usable without JS? If you can rely on JS and if it&#8217;s a RIA, then I would suggest using a client-side MVC framework like <a href="http://www.javascriptmvc.com/">JavaScriptMVC</a>, which comes with client side controllers, template engine and model classes. Your server will mainly provide JSON-API functions and the basic page grid then, and not deliver complete HTML pages. Lots of logic (and therefore code) will move to the browser/JavaScript: In effect, you will need more JavaScript developers and less server-side developers for your projects. On the other hand, you will see a gain in consistency and also performance, as you have way less client/server communication, once the JS code is loaded (which can be pretty fast, thanks to compression). Many popular Web applications are using this approach.</p>
+
+<p><strong>Which JavaScript library shall I use (Dojo, jQuery,&#8230;)?</strong></p>
+
+<p>The choice of JavaScript DOM/Ajax library is IMO not so important, as long as it doesn&#8217;t leak memory, has a small code size and offers fast DOM queries. See</p>
+
+<p><a href="http://www.domassistant.com/slickspeed/">http://www.domassistant.com/slickspeed/</a>{.moz-txt-link-freetext}</p>
+
+<p>The real problem you will have, is that normal event binding causes problems because of memory leaks (circular references which can&#8217;t be handled by the garbage collection of most browsers) and also because you need to loop through all elements and refresh everything after doing changes to the DOM (for example after AJAX requests that modify the HTML). So, at the end of the day, you will want to use event delegation, which comes for free with the controllers of JavaScriptMVC.</p>
+
+<p><strong>I know there is JavaScript &#8220;integration&#8221; in my favorite Java/PHP/Python/Perl development framework. Am I ready for building a Rich Internet Application now?</strong></p>
+
+<p>Server-side generated JS, like what you will get when using any framework that offers JavaScript support (I&#8217;m not talking about JSON/REST here), can be a pain, because almost certainly, you will have a very limited feature set and maybe also problems with deployment and testing, because the common server-side frameworks can&#8217;t really test JavaScript code nor is there a smart way to optimize generated code or structure it. Most of the approaches I&#8217;ve seen just generate some inline JavaScript which is good for enhancing forms a bit with new input elements/validators or offer some nice visual effects &#8211; but that&#8217;s it. If something like this needs to be customized a lot and grows big, you might be in trouble. Again, the question is &#8220;JavaScript enhanced Web site&#8221; or &#8220;Rich Internet Application&#8221;? To generate JavaScript with a server-side language/framework  has it&#8217;s limits and is very often not consistent, if you use hand-written JavaScript code at the same time.</p>
+
+<p><strong>What features should a JavaScript framework for Rich Internet Applications offer?</strong></p>
+
+<p>I would argue that a good JavaScript framework allows an average developer to produce effective and structured code. jQuery and the like however are just browser abstraction layers (like Zend_Db is an abstraction layer for databases). Raw jQuery will almost certainly produce the same mess as raw PHP or any other server-side language that does not imply a clean application structure (MVC). You end up with reinventing the wheel and you will have different code to do similar things. Or it will just be plain slow, because without dispatching events (event delegation) you end up with looping over elements to attach events and effects, which simply gets slow for many elements. Also you will have no overview and especially inline JavaScript can&#8217;t be compressed, which means you will transfer the same source code with every request. That said, I vote for separating server-side code, JavaScript and HTML and have clearly defined interfaces. A sound architecture is a great help for all developers, as soon as there are more lines of code than fit on a screen. You don&#8217;t want to start guessing, if the code you look for is hidden in a JavaScript file, in a template, in a view helper or some other file.</p>
+
+<p><strong>Which browsers are commonly supported for Rich Internet Applications?</strong></p>
+
+<p>Compatibility is not a big issue anymore, if you are fine with supporting IE 6+, Safari 3+ (incl. iPhone), Firefox 2+ and Opera 9.5+. IE &lt; 6 is very hard to support (I would simply refuse to do so). IE 6 is slow with JavaScript, but the real pain is it&#8217;s lack of good CSS support.</p>
+
+<p><strong>I want to use W3C standards only (W3C DOM, XML and semantic XHTML) for my Rich Internet Application. JSON, innerHTML and DIV elements are evil, right?</strong></p>
+
+<p>No. If you have a closer look, then you will notice that semantic HTML (for example, using the table element to render a table instead of DIVs) or not using innerHTML sometimes offers very bad performance for DOM manipulations, thus render the complete application useless. innerHTML very often delivers the best performance for inserting content to the DOM. So, don&#8217;t decide on certain implementation details upfront, especially if you plan to support IE6, which simply is an old browser and needs some special treatment. JavaScript forces you to be very pragmatic sometimes.</p>
+
+<p>See <a href="http://www.quirksmode.org/dom/innerhtml.html">http://www.quirksmode.org/dom/innerhtml.html</a></p>
+
+<p>JSON is a standard because it is implied by EMCAScript. See JSON vs. XML.</p>
+
+<p><strong>Using parallel requests to get data from the server seems to be a good idea to speed up performance. Is there any downside?</strong></p>
+
+<p>Depends. A major issue with modern Web applications is that the initial loading causes many parallel requests, as you just deliver the page grid and the JavaScript client side code then renders all the other elements from client-side templates and loads the corresponding data (if needed) using the mentioned JSON-APIs. A constant overhead is produced when using comet. Parallel requests frequently cause problems, as some server-side session handler implementations lock the session (other requests have to wait then, until the session is accessible again). Also the many requests might require lots of memory and server processes.</p>
+
+<p><em>I want to thank <a href="http://javascriptmvc.com/blog/">Justin Meyer</a> (maintainer of JavaScriptMVC) for all the interesting discussions and his input on the JSON vs. XSLT debate.</em></p>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

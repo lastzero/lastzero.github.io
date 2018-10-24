@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fun Stuff on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/fun-stuff/</link>
+    <description>Recent content in Fun Stuff on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Tue, 24 Aug 2010 01:36:06 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/fun-stuff/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cassandra</title>
+      <link>https://blog.liquidbytes.net/2010/08/cassandra/</link>
+      <pubDate>Tue, 24 Aug 2010 01:36:06 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/08/cassandra/</guid>
+      <description>Just one short note, before I go to bed.
+At FrOSCon I saw the talk about the NoSQL database Cassandra. The guy was pretty convincing. He also said, SQL joins are slow and cumbersome for some use cases (his example was Twitter). Then his slides showed how nicely Cassandra can provide the same data as some kind of materialized view that is constantly updated after data changes. And how secure the storage is with multiple backups and smart fail-safe mechanisms.</description>
+    </item>
+    
+    <item>
+      <title>The Perfect Development Environment</title>
+      <link>https://blog.liquidbytes.net/2010/08/the-perfect-development-environment/</link>
+      <pubDate>Fri, 20 Aug 2010 06:49:38 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/08/the-perfect-development-environment/</guid>
+      <description>This is a reply to http://thinkvitamin.com/dev/the-perfect-development-environment/
+Work Setting I prefer to be alone, with no one walking around, having conversations on the phone or asking questions. And yes, barking dogs are bad while you try to focus on source code^^
+If people can not keep their mouth shut, loud music helps a lot. Use the headphones, whenever other people are around.
+If you do an on-site consulting job, better not keep the client from asking questions though: This is what he (or she) pays for!</description>
+    </item>
+    
+    <item>
+      <title>Do not</title>
+      <link>https://blog.liquidbytes.net/2009/02/do-not/</link>
+      <pubDate>Wed, 18 Feb 2009 13:50:51 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2009/02/do-not/</guid>
+      <description>reverse_and_create : function(files){ var sorted = [], instances =[]; for(var id in files){ sorted.push(files[id]) } for(var i = 0; i &amp;lt; sorted.length; i++){ if (sorted[i].id) { instances.push(this.create_as_existing(sorted[i])); } } return instances; }, do_not_reverse_and_create : function(files){ if(files != undefined){ var instances =[]; for(var i = 0; i &amp;lt; files.length; i++){ if (files[i].id) { instances.push(this.create_as_existing(files[i])); } } return instances; } }  What a shame!</description>
+    </item>
+    
+    <item>
+      <title>Merry Christmas!</title>
+      <link>https://blog.liquidbytes.net/2008/12/merry-christmas/</link>
+      <pubDate>Thu, 25 Dec 2008 13:45:34 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/12/merry-christmas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dolphin Submarine</title>
+      <link>https://blog.liquidbytes.net/2008/09/dolphin-submarine/</link>
+      <pubDate>Thu, 04 Sep 2008 12:48:59 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/09/dolphin-submarine/</guid>
+      <description>How cool is that?
+
+Update: The original article on ananova.com is not available anymore. Not sure what company is building the dolphin submarine. All I got is this picture! Sorry.
+Update 2: If you&amp;#8217;re interested to buy one or want more technical specs, have a look at http://www.thisiswhyimbroke.com/dolphin-power-boat or http://seabreacher.com/</description>
+    </item>
+    
+    <item>
+      <title>Java Recruiting</title>
+      <link>https://blog.liquidbytes.net/2008/09/java-recruiting/</link>
+      <pubDate>Mon, 01 Sep 2008 17:20:44 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/09/java-recruiting/</guid>
+      <description>From http://ask.slashdot.org/askslashdot/08/09/01/1246201.shtml:
+ Recruiting for Java posts is a minefield &amp;#8211; it&amp;#8217;s full of people who should be stacking shelves in a supermarket. If you want a Java job, just update your resume to say that you know Java. I have met lots of J2EE experts at work, who would not be able to code a &amp;#8220;Hello World&amp;#8221; program, if their jobs depended on it. Also learn lots of buzz words.</description>
+    </item>
+    
+    <item>
+      <title>Personal Mini-Googleplex</title>
+      <link>https://blog.liquidbytes.net/2008/05/personal-mini-googleplex/</link>
+      <pubDate>Sat, 10 May 2008 20:03:00 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/personal-mini-googleplex/</guid>
+      <description>This is my own colorful work environment. The food is not free, but the Thai next to my home is very good :)</description>
+    </item>
+    
+  </channel>
+</rss>

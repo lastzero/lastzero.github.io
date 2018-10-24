@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/java/</link>
+    <description>Recent content in Java on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Tue, 06 Mar 2012 15:14:46 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Replacing OpenJDK with Oracle JDK</title>
+      <link>https://blog.liquidbytes.net/2012/03/replacing-openjdk-with-oracle-jdk/</link>
+      <pubDate>Tue, 06 Mar 2012 15:14:46 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/03/replacing-openjdk-with-oracle-jdk/</guid>
+      <description>Since I can&amp;#8217;t use OpenJDK for most applications (see last post), I was looking for a way to easily replace it with the original JDK. Thankfully I found a good howto. The short version:
+# Download Java from Oracle * and extract the contents of the tar.gz archive to &#34;java-7-oracle&#34; sudo mv java-7-oracle/ /usr/lib/jvm/ sudo add-apt-repository ppa:nilarimogard/webupd8 sudo apt-get update sudo apt-get install update-java sudo update-java  http://www.oracle.com/technetwork/java/javase/downloads/java-se-jdk-7-download-432154.html  This should work for Ubuntu 11.</description>
+    </item>
+    
+    <item>
+      <title>OpenJDK</title>
+      <link>https://blog.liquidbytes.net/2012/03/openjdk/</link>
+      <pubDate>Tue, 06 Mar 2012 12:03:35 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/03/openjdk/</guid>
+      <description>When OpenJDK as a Free Software alternative to Sun/Oracle Java was announced I thought this is a great idea. I don&amp;#8217;t like proprietary software too much and since I&amp;#8217;m a PHP, JavaScript and SQL developer, I didn&amp;#8217;t expect any &amp;#8220;bad&amp;#8221; consequences for my work. It&amp;#8217;s not like you expect any fancy or enterprise features, if you use the &amp;#8220;free&amp;#8221; version of some commercial software. That said, there are a lot of useful Java tools that you frequently need as a Web developer, such as</description>
+    </item>
+    
+    <item>
+      <title>Java Recruiting</title>
+      <link>https://blog.liquidbytes.net/2008/09/java-recruiting/</link>
+      <pubDate>Mon, 01 Sep 2008 17:20:44 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/09/java-recruiting/</guid>
+      <description>From http://ask.slashdot.org/askslashdot/08/09/01/1246201.shtml:
+ Recruiting for Java posts is a minefield &amp;#8211; it&amp;#8217;s full of people who should be stacking shelves in a supermarket. If you want a Java job, just update your resume to say that you know Java. I have met lots of J2EE experts at work, who would not be able to code a &amp;#8220;Hello World&amp;#8221; program, if their jobs depended on it. Also learn lots of buzz words.</description>
+    </item>
+    
+  </channel>
+</rss>

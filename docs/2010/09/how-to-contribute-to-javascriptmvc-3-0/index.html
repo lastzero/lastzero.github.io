@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="How to contribute to JavaScriptMVC 3.0" />
+<meta property="og:description" content="If you are reading this, I can safely assume you know what JavaScriptMVC (JMVC) is, what its features are, and what components it consists of, namely:
+ FuncUnit (the test framework) DocumentJS (the documentation engine) jQuery (JavaScriptMVC uses a special fork with added bugfixes) JavaScriptMVC (the core framework) Steal (the code manager / script loader; sometimes referred to as “StealJS”) Phui (component library for JavaScriptMVC, not part of the core)  These partly independent components (together with Selenium) are bundled using git submodules (http://book." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2010/09/how-to-contribute-to-javascriptmvc-3-0/" /><meta property="article:published_time" content="2010-09-04T12:25:33&#43;00:00"/>
+<meta property="article:modified_time" content="2010-09-04T12:25:33&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to contribute to JavaScriptMVC 3.0"/>
+<meta name="twitter:description" content="If you are reading this, I can safely assume you know what JavaScriptMVC (JMVC) is, what its features are, and what components it consists of, namely:
+ FuncUnit (the test framework) DocumentJS (the documentation engine) jQuery (JavaScriptMVC uses a special fork with added bugfixes) JavaScriptMVC (the core framework) Steal (the code manager / script loader; sometimes referred to as “StealJS”) Phui (component library for JavaScriptMVC, not part of the core)  These partly independent components (together with Selenium) are bundled using git submodules (http://book."/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2010/09/how-to-contribute-to-javascriptmvc-3-0/">
+
+    
+    <title>How to contribute to JavaScriptMVC 3.0 &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>How to contribute to JavaScriptMVC 3.0</h1>
+        </div>
+    </section>
+
+    
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Sep 4, 2010</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            
+
+<p>If you are reading this, I can safely assume you know what JavaScriptMVC (JMVC) is, what its features are, and what components it consists of, namely:</p>
+
+<ul>
+<li>FuncUnit (the test framework)</li>
+<li>DocumentJS (the documentation engine)</li>
+<li>jQuery (JavaScriptMVC uses a special fork with added bugfixes)</li>
+<li>JavaScriptMVC  (the core framework)</li>
+<li>Steal (the code manager / script loader; sometimes referred to as “StealJS”)</li>
+<li>Phui  (component library for JavaScriptMVC, not part of the core)</li>
+</ul>
+
+<p>These partly independent components (together with Selenium) are bundled using git submodules (<a href="http://book.git-scm.com/5_submodules.html">http://book.git-scm.com/5_submodules.html</a>) in a repository called “framework” for your convenience:</p>
+
+<p><a href="http://github.com/jupiterjs/framework">http://github.com/jupiterjs/framework</a></p>
+
+<p>A detailed description of the components can be found on the Jupiter JS blog:</p>
+
+<p><a href="http://jupiterjs.com/#news/javascriptmvc-features">http://jupiterjs.com/#news/javascriptmvc-features</a></p>
+
+<h4 id="release-2-0">Release 2.0</h4>
+
+<p>You should be aware that release 2.0 is still out there. Don’t get confused. It is hosted on Google Code at <a href="http://code.google.com/p/javascriptmvc/">http://code.google.com/p/javascriptmvc/</a> and uses Subversion instead of git. Don’t use the issue tracker there for bugs you find in 3.0.</p>
+
+<p>The respective project Web sites are:</p>
+
+<ul>
+<li><a href="http://www.javascriptmvc.com/">http://www.javascriptmvc.com/</a> for 2.0</li>
+<li><a href="http://v3.javascriptmvc.com/index.html%20for%203.0">http://v3.javascriptmvc.com/index.html</a> for 3.0</li>
+</ul>
+
+<h4 id="ways-to-contribute">Ways to contribute</h4>
+
+<p>There is a number of ways to contribute:</p>
+
+<ol>
+<li>You can fork the project repositories on github (<a href="http://github.com/jupiterjs/">http://github.com/jupiterjs/</a>) into your own repository and send a “pull request”, every time you want to submit changes (pull requests replace patches and preserve your authorship)</li>
+<li>After contributing for a while, you can become a member of the JavaScriptMVC team and ask for direct write access to the project repositories</li>
+<li>You can just checkout/download  the latest framework version and report bugs to the developers (<a href="http://github.com/jupiterjs/javascriptmvc/issues">http://github.com/jupiterjs/javascriptmvc/issues</a>) or answer questions on the mailing list (<a href="http://groups.google.com/group/javascriptmvc?hl=en">http://groups.google.com/group/javascriptmvc?hl=en</a>)</li>
+</ol>
+
+<h4 id="a-few-words-about-git">A few words about git</h4>
+
+<p>In every case you should become more or less familiar with git (the distributed version control system) and github (the project hosting Web site).  The Git Community Book is a great reference: <a href="http://book.git-scm.com/index.html">http://book.git-scm.com/index.html</a>. If you are already familiar with Subversion, you might want to read the “Git &#8211; SVN Crash Course” (<a href="http://git.or.cz/course/svn.html">http://git.or.cz/course/svn.html</a>). The main idea of git is that everyone has its own repository (that’s why it’s called distributed). It allows everyone to contribute easily to Open Source projects and was initially designed and developed by Linus Torvalds for Linux kernel development.</p>
+
+<p>In contrast to “normal” version control systems, a commit is happening on your local computer only. If you want to actually send your code to the server, you have to push it back to the remote repository. If this is not the main repository of the project but your own fork, you additionally have to send a “pull request” to the project owner (jupiterjs in that case). As a previous user of Subversion I found the whole process of checking out the source, committing my changes and pushing it back to the repository tremendously complicated, even though I understand the need for distributed version control. In part this is because git sometimes comes up with error messages that look pretty scary and that don’t help to understand the actual problem.</p>
+
+<h4 id="setup-your-github-account">Setup your github account</h4>
+
+<p>After you created your free github account at <a href="http://github.com/">http://github.com/</a>, you need to go to the Account Settings page, click on “SSH Public Keys” in the left hand side navigation and then enter your public key. If you don’t have one yet, you open a text terminal on the local computer and enter:</p>
+
+<blockquote>
+<p>ssh-keygen -t rsa -C &#8220;youremail@address.com&#8221;</p>
+</blockquote>
+
+<p>There is a more detailed howto at <a href="http://help.github.com/msysgit-key-setup/">http://help.github.com/msysgit-key-setup/</a>.</p>
+
+<p>If you run Windows, you are probably out of luck. Try to ask Google for assistance ;)</p>
+
+<p>Next step is to fork the repositories you want to work on. This process is pretty convenient – you simply click the fork button on the main repository page. The complete list is visible on:</p>
+
+<p><a href="http://github.com/jupiterjs">http://github.com/jupiterjs</a></p>
+
+<h4 id="install-git-and-java">Install Git and Java</h4>
+
+<p>If not yet done, you should also install Git and Java on the local computer by using the package management software that comes with your Linux distribution. On Ubuntu you can use the “Synaptic Package Manager” for example. At least in the past, I had bad experiences with OpenJDK and Rhino (the engine that executes JMVC’s command line scripts), so I recommend installing the “original” Sun/Oracle Java version. The Selenium server also needs Java.</p>
+
+<h4 id="clone-the-repositories">Clone the repositories</h4>
+
+<p>I recommend cloning (that means checkout) the “framework” repository as the first step. The build script in there allows creating the downloadable packages you see on <a href="http://github.com/jupiterjs/framework/downloads">http://github.com/jupiterjs/framework/downloads</a>. To do this, follow these 4 easy steps:</p>
+
+<ol>
+<li>Create an empty local directory that should contain all your github repositories and change into it</li>
+<li>git clone git://github.com/jupiterjs/framework.git</li>
+<li>git submodule init</li>
+<li>git submodule update</li>
+</ol>
+
+<p>That’s it!</p>
+
+<p>The procedure to clone your forked project repositories is similar. First you need the URL that you have to provide to Git.</p>
+
+<p>Go to your Git home page ( <a href="http://github.com/%5busername%5d/">http://github.com/[username]/</a>) and then click on the forked respository, e.g. javascriptmvc. On the top you’ll see 3 different URLS:</p>
+
+<ul>
+<li>SSH with read and write access: This is what you want to use</li>
+<li>HTTP: This is slower and offers read only access</li>
+<li>Git Read-Only: Since we want to push (write) our changes to the server, this does not make sense</li>
+</ul>
+
+<p>Now simply clone it into your local github directory by typing:</p>
+
+<p>git clone <a href="mailto:git@github.com:[username]/%5brepository%5d.git">git@github.com:[username]/[repository].git</a></p>
+
+<h4 id="push-changes">Push changes</h4>
+
+<p>With Git, you can do as many commit as you want locally. Please note that the equivalent to “svn commit” is “git commit –a”. Please be nice and provide a commit message every time, for example:</p>
+
+<blockquote>
+<p>git commit -a &#8211;message &#8216;Changed github URLs from pinhook to jupiterjs&#8217;</p>
+</blockquote>
+
+<p>To see what would be commited or to see your changes since the last commit you can use “git status” and “git diff”.</p>
+
+<p>After testing all your changes locally (this is probably worth another article, but I’m running out of time now), you are free to commit your changes to the remote repository:</p>
+
+<blockquote>
+<p>git push origin master</p>
+</blockquote>
+
+<p>You can also configure git to always push to the matching remote branch (there are other options as well, but I’m not that much into git to fully understand them, to be honest):</p>
+
+<blockquote>
+<p>git config push.default matching</p>
+</blockquote>
+
+<p>Next time you push something into that repository, it is enough to use “git push”.</p>
+
+<p>As mentioned earlier, you have to do send a “pull request” (there is a nice button on github to do just that), if you want to send your changes from your fork to the original project repository.</p>
+
+<h4 id="pull-changes-for-submodules">Pull changes for submodules</h4>
+
+<p>In my naïve thinking, I assumed that Git will automatically update the submodule directories in the framework repository when you type “git submodule update”. This is not the case.</p>
+
+<p>You have to manually pull the latest changes in each sub directory that contains a submodule like this:</p>
+
+<blockquote>
+<p>cd funcunit/</p>
+
+<p>git checkout master (only required the first time)</p>
+
+<p>git pull</p>
+</blockquote>
+
+<p>You will only get the changes in the submodules via “git pull” in the main framework directory if somebody with write access to framework does this “cd [submodule]; git pull” procedure locally and then pushes back to the repository on github:</p>
+
+<p><a href="http://github.com/jupiterjs/framework/commit/1affd96d632b34621e9e0d06707ea83d1d4c3b9d">http://github.com/jupiterjs/framework/commit/1affd96d632b34621e9e0d06707ea83d1d4c3b9d</a></p>
+
+<h4 id="thanks">Thanks</h4>
+
+<p>Thanks for reading this. You see, I’m not a Git expert yet and I really hope I didn’t give any bad advice concerning its usage. As I improve my knowledge and find best practices how to do things most efficiently, I will update this page or post a follow-up. Especially testing is not covered in this article, which is a shame.</p>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Science on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/science/</link>
+    <description>Recent content in Science on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Tue, 01 Mar 2011 15:59:07 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/science/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Psycho-Cybernetics</title>
+      <link>https://blog.liquidbytes.net/2011/03/psycho-cybernetics/</link>
+      <pubDate>Tue, 01 Mar 2011 15:59:07 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2011/03/psycho-cybernetics/</guid>
+      <description>It is always interesting to see, what we &amp;#8220;forgot&amp;#8221; during history. One of the these things is, without a doubt, Cybernetics (which in turn is a child of the 2nd world war) and maybe even the origin of computers (see von Neumann architecture), which is closely coupled to that.
+While passing by a second-hand bookstore in Evanston, IL I saw the book Psycho-Cybernetics in the window, which was published in 1960, 12 years after Cybernetics was published by Norbert Wiener.</description>
+    </item>
+    
+    <item>
+      <title>Shades of the Singularity (IEEE Spectrum 12.10)</title>
+      <link>https://blog.liquidbytes.net/2011/03/shades-of-the-singularity-ieee-spectrum-12-10/</link>
+      <pubDate>Mon, 28 Feb 2011 23:07:10 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2011/03/shades-of-the-singularity-ieee-spectrum-12-10/</guid>
+      <description>In IEEE Spectrum 12.10 you find an article about building &amp;#8220;The brain of a New Machine&amp;#8221; using Memristors by Versace &amp;amp; Chandler. Bottom line is that they expect that a new memory technology built on the Memristor chips produced by HP Labs enables them to construct massive-parallel computers that consume only a comparable small amount of energy. While this might be the case, the article does not really answer the question how the software that runs on that hardware looks like.</description>
+    </item>
+    
+    <item>
+      <title>Communications of the ACM 01/2011</title>
+      <link>https://blog.liquidbytes.net/2011/02/communications-of-the-acm-012011/</link>
+      <pubDate>Mon, 28 Feb 2011 17:29:13 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2011/02/communications-of-the-acm-012011/</guid>
+      <description>While being in Chicago I found the time to read through the last issue of Communications. Here&amp;#8217;s a short summary:
+ &amp;#8220;Where have all the workshops gone?&amp;#8221; by Moshe Y. Vardi &amp;#8211; he basically complains that todays workshops (&amp;#8220;second-rate conferences&amp;#8221;) are not the same as they have been in the past (&amp;#8220;informal gatherings of researchers&amp;#8221;). My suggestion: Go to an Unconference, although these are more informal gatherings of engineers, rather than researchers.</description>
+    </item>
+    
+  </channel>
+</rss>

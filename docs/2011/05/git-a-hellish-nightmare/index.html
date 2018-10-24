@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Git: A hellish nightmare!" />
+<meta property="og:description" content="Even though I am the master of procrastination, I managed to fix 3 issues in flot (JS charting plugin for jQuery) and PHPUnit this week. Of course they are hosted on github and everyone who knows me, knows that I hate git because it is sooo different from svn and my brain frequently explodes when I see all the branches and connections between them. Every time I try to explain that to more or less experienced git users, they try to convince me from the opposite." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2011/05/git-a-hellish-nightmare/" /><meta property="article:published_time" content="2011-05-04T15:52:10&#43;00:00"/>
+<meta property="article:modified_time" content="2011-05-04T15:52:10&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git: A hellish nightmare!"/>
+<meta name="twitter:description" content="Even though I am the master of procrastination, I managed to fix 3 issues in flot (JS charting plugin for jQuery) and PHPUnit this week. Of course they are hosted on github and everyone who knows me, knows that I hate git because it is sooo different from svn and my brain frequently explodes when I see all the branches and connections between them. Every time I try to explain that to more or less experienced git users, they try to convince me from the opposite."/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2011/05/git-a-hellish-nightmare/">
+
+    
+    <title>Git: A hellish nightmare! &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>Git: A hellish nightmare!</h1>
+        </div>
+    </section>
+
+    
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">May 4, 2011</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            <p>Even though I am the master of procrastination, I managed to fix 3 issues in <a href="https://github.com/smashedpumpkin/flot/branches" target="_blank">flot</a> (JS charting plugin for jQuery) and <a href="https://github.com/smashedpumpkin/phpunit/commit/9087b0a4321af3b2a36e28b8dd0efcf54aed76e1" target="_blank">PHPUnit</a> this week. Of course they are hosted on github and everyone who knows me, knows that I hate git because it is sooo different from svn and my brain frequently explodes when I see all the branches and connections between them. Every time I try to explain that to more or less experienced git users, they try to convince me from the opposite. Anyhow, it shouldn&#8217;t be a mission impossible to checkout the source, fix the bugs and send pull request &#8211; one for each fix &#8211; to the maintainers, right?</p>
+
+<p>After committing the second flot fix, I found out that you can only send ONE pull request per branch and I didn&#8217;t even know how to create new branches. Not to speak about how to move the commits to the right branches. Without the help of Alexandre Salomé from Sensio Labs I would have been totally lost! Here is what he did:</p>
+
+<p><code>&lt;br /&gt;
+git status&lt;br /&gt;
+git checkout origin/master -b fix-fonts&lt;br /&gt;
+git remote&lt;br /&gt;
+git remote -v&lt;br /&gt;
+git checkout upstream/master -b tmp&lt;br /&gt;
+git branch -D fix-fonts&lt;br /&gt;
+git checkout -b fix-fonts&lt;br /&gt;
+git branch -D tmp&lt;br /&gt;
+git log&lt;br /&gt;
+git cherry-pick 82583fc&lt;br /&gt;
+git cherry-pick 082e991&lt;br /&gt;
+git push origin fix-typos&lt;br /&gt;
+git push origin fix-fonts&lt;br /&gt;
+git checkout 40d886f9&lt;br /&gt;
+git checkout -b fix-issue-520&lt;br /&gt;
+git push origin fix-issue-520&lt;br /&gt;
+git checkout origin/master&lt;br /&gt;
+git checkout upstream/master&lt;br /&gt;
+git branch -D master&lt;br /&gt;
+git checkout -b master&lt;br /&gt;
+git push -f origin master&lt;br /&gt;
+</code></p>
+
+<p>Simple, isn&#8217;t it?</p>
+
+<p>I <strong>really</strong> have to read (and understand) a book about git soon.</p>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

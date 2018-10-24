@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spam on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/spam/</link>
+    <description>Recent content in Spam on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Wed, 21 May 2008 16:46:28 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/spam/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Update on Google Spam</title>
+      <link>https://blog.liquidbytes.net/2008/05/update-on-google-spam/</link>
+      <pubDate>Wed, 21 May 2008 16:46:28 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/update-on-google-spam/</guid>
+      <description>Hi,
+We would like to let you know that we have updated our report to include the omitted details. You can read it at: http://ece.uprm.edu/~andre/insert/gmail.html
+Also we have made our proof of concept available at: http://ece.uprm.edu/~andre/insert/gmail.tar.gz
+Best Regards,
+Pablo Ximenes
+ I love short mails with a clear message :)
+&amp;#8220;Google&amp;#8217;s chronic silence on all abuse reports makes it impossible to tell whether they&amp;#8217;ve taken any action on the problem, whether the problem reports have even made it to the operational staff responsible for the mailservers, or whether they simply don&amp;#8217;t care.</description>
+    </item>
+    
+    <item>
+      <title>Google Spam – a new product?</title>
+      <link>https://blog.liquidbytes.net/2008/05/google-spam-a-new-product/</link>
+      <pubDate>Tue, 20 May 2008 20:36:01 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/google-spam-a-new-product/</guid>
+      <description>I know that mail logs are not the most interesting thing on earth, but I&amp;#8217;m not used to get spam from Google Mail&amp;#8230; from Yahoo and MSN maybe, but not from Google&amp;#8230; never ever&amp;#8230; so I try to understand this:
+May 20 21:43:16 mail postfix/smtpd[30948]: connect from qb-out-0506.google.com[72.14.204.235]
+May 20 21:43:17 mail postfix/policyd-weight[2754]: weighted check: NOT_IN_SBL_XBL_SPAMHAUS=-1.5 NOT_IN_SPAMCOP=-1.5 NOT_IN_BL_NJABL=-1.5 CL_IP_EQ_HELO_IP=-2 (check from: .gmail. - helo: .qb-out-0506.google. - helo-domain: .google.) FROM/MX_MATCHES_HELO(DOMAIN)=-2  qb-out-0506.</description>
+    </item>
+    
+  </channel>
+</rss>

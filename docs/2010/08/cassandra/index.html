@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Cassandra" />
+<meta property="og:description" content="Just one short note, before I go to bed.
+At FrOSCon I saw the talk about the NoSQL database Cassandra. The guy was pretty convincing. He also said, SQL joins are slow and cumbersome for some use cases (his example was Twitter). Then his slides showed how nicely Cassandra can provide the same data as some kind of materialized view that is constantly updated after data changes. And how secure the storage is with multiple backups and smart fail-safe mechanisms." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2010/08/cassandra/" /><meta property="article:published_time" content="2010-08-24T01:36:06&#43;00:00"/>
+<meta property="article:modified_time" content="2010-08-24T01:36:06&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cassandra"/>
+<meta name="twitter:description" content="Just one short note, before I go to bed.
+At FrOSCon I saw the talk about the NoSQL database Cassandra. The guy was pretty convincing. He also said, SQL joins are slow and cumbersome for some use cases (his example was Twitter). Then his slides showed how nicely Cassandra can provide the same data as some kind of materialized view that is constantly updated after data changes. And how secure the storage is with multiple backups and smart fail-safe mechanisms."/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2010/08/cassandra/">
+
+    
+    <title>Cassandra &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>Cassandra</h1>
+        </div>
+    </section>
+
+    
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Aug 24, 2010</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            <p>Just one short note, before I go to bed.</p>
+
+<p>At FrOSCon I saw the talk about the NoSQL database <a href="http://cassandra.apache.org/">Cassandra</a>. The guy was pretty convincing. He also said, SQL joins are slow and cumbersome for some use cases (his example was <a href="http://twitter.com/lastzero">Twitter</a>). Then his slides showed how nicely Cassandra can provide the same data as some kind of materialized view that is constantly updated after data changes. And how secure the storage is with multiple backups and smart fail-safe mechanisms.</p>
+
+<p>I was impressed.</p>
+
+<p>On the other hand, I am skeptical towards the promisses of the NoSQL advocates. And I normally don&#8217;t like any software that runs on Java (see Eclipse), but that&#8217;s another story. That kind of stuff sounds nice on the paper, but fails randomly in the real world. Probably because it is too smart and advanced.</p>
+
+<p>Directly after I came back home from FrOSCon, I noticed that certain feeds (like replies to me) show very recent tweets only. Nothing older than about 4 days. The search results page says: &#8220;Older tweets are temporarily unavailable.&#8221; Oh, really?</p>
+
+<p>Imagine you would use this kind of technology to run a bank: &#8220;Sorry, we lost your account transactions. We are sure you had at least 10 dollars on your account, so that is all you can get today. Maybe we find the rest later.&#8221;</p>
+
+<p>Hopefully they can restore their fail-safe materialized views. Somebody should convince police and government to use NoSQL databases: &#8220;Sorry, we lost your criminal record of the last 20 years. You are free to go.&#8221;</p>
+
+<p>I know, most NoSQL databases are not made for banking or even business applications. Friends &#8211; for example &#8211; are not that important/critical and that&#8217;s probably why <a href="http://www.facebook.com/micha.mayer">Facebook</a>, the other big Cassandra showcase project, does not really know how many I have. The number changes frequently by ± 1.</p>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

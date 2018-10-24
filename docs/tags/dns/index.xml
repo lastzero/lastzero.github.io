@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dns on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/dns/</link>
+    <description>Recent content in Dns on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Tue, 23 Oct 2012 19:10:12 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Configuring Ubuntu/Xubuntu and Apache 2 for local development environments</title>
+      <link>https://blog.liquidbytes.net/2012/10/configuring-ubuntu-and-apache-2-for-development-environments/</link>
+      <pubDate>Tue, 23 Oct 2012 19:10:12 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/10/configuring-ubuntu-and-apache-2-for-development-environments/</guid>
+      <description>Most Web server howtos out there are concerned with production environments, where you need a high level of performance and security. As a developer who runs Apache 2 on localhost, you have other requirements, such as quick configuration and flexibility. It&amp;#8217;s inconvenient to edit (usually copy &amp;amp; paste) your virtual hosts configuration and add entries to /etc/hosts whenever you are working on new projects (e.g. on GitHub) &amp;#8211; especially, if you just want to test something.</description>
+    </item>
+    
+  </channel>
+</rss>

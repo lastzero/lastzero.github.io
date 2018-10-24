@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Cloud9 IDE: My first impression" />
+<meta property="og:description" content="After I could gather some experience with Cloud9 IDE today, I&#8217;m in the process of customizing it to my needs. For example, the run and preview buttons seem useless when using Cloud9 as editor only: Most PHP/JavaScript Web apps are constantly running in another tab anyways and usually don&#8217;t require compilation (as a developer, I know how to use the reload button).
+The basic editor settings are accessible via Preferences and/or the Views menu." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2013/06/customizing-and-fixing-cloud9-ide/" /><meta property="article:published_time" content="2013-06-20T14:18:02&#43;00:00"/>
+<meta property="article:modified_time" content="2013-06-20T14:18:02&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cloud9 IDE: My first impression"/>
+<meta name="twitter:description" content="After I could gather some experience with Cloud9 IDE today, I&#8217;m in the process of customizing it to my needs. For example, the run and preview buttons seem useless when using Cloud9 as editor only: Most PHP/JavaScript Web apps are constantly running in another tab anyways and usually don&#8217;t require compilation (as a developer, I know how to use the reload button).
+The basic editor settings are accessible via Preferences and/or the Views menu."/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2013/06/customizing-and-fixing-cloud9-ide/">
+
+    
+    <title>Cloud9 IDE: My first impression &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>Cloud9 IDE: My first impression</h1>
+        </div>
+    </section>
+
+    
+    
+    <div class="row">
+        <div class="col s12 m12 l10 offset-l1">
+            <div class="article-image" style="background-image: url('https://blog.liquidbytes.net/wp-content/uploads/2013/06/Cloud9_WordPress.png');"></div>
+        </div>
+    </div>
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Jun 20, 2013</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            <p>After I could gather some experience with Cloud9 IDE today, I&#8217;m in the process of customizing it to my needs. For example, the run and preview buttons seem useless when using Cloud9 as editor only: Most PHP/JavaScript Web apps are constantly running in another tab anyways and usually don&#8217;t require compilation (as a developer, I know how to use the reload button).</p>
+
+<p>The basic editor settings are accessible via Preferences and/or the Views menu. More advanced config options and the list of plugins that are loaded can be found in <tt>cloud9/configs/default.js</tt>. The preview and run plugins can simply be commented out:</p>
+
+<pre>//"ext/preview/preview",
+//"ext/run/run", //Add location rule
+//"ext/runpanel/runpanel", //Add location rule
+//"ext/debugger/debugger", //Add location rule</pre>
+
+<p>For some reason, that doesn&#8217;t remove the preview button, which can be hidden using CSS in <tt>cloud9/plugins-client/ext.main/style/style.css</tt>:</p>
+
+<pre>.c9-menu-bar .c9-toolbarbutton-glossy.preview {
+    display: none;
+}</pre>
+
+<p><a href="https://lastzero.net/wp-content/uploads/2013/06/Cloud9_WordPress.png"><img class="size-medium wp-image-2631 alignright" alt="Cloud9 IDE" src="https://lastzero.net/wp-content/uploads/2013/06/Cloud9_WordPress-500x359.png" width="500" height="359" srcset="https://blog.liquidbytes.net/wp-content/uploads/2013/06/Cloud9_WordPress-500x359.png 500w, https://blog.liquidbytes.net/wp-content/uploads/2013/06/Cloud9_WordPress.png 964w" sizes="(max-width: 500px) 100vw, 500px" /></a></p>
+
+<p>Cloud9 2.0.93 seems to <strong>crash in Chrome</strong> from time to time. If you reload the file system tree on Chrome, the files and folders are not sorted alphabetically anymore. This is probably related to Chrome&#8217;s (V8) implementation of arrays and objects, which share the same code instead of using inheritance to separate the code in a clean way (iterating over array items is different than iterating over object properties &#8211; sometimes that gets mixed up).</p>
+
+<p>Cloud9 was very stable on <strong>Firefox 21</strong> on OS X without any add-ons/plugins such as Flash, Firebug, Adblock. However, <strong>create file/folder didn&#8217;t work</strong>.</p>
+
+<p style="text-align: left;">
+  Right now, I&#8217;m testing the latest <strong>Safari</strong> without any plugins/modifications. It seems stable, the themes look better than in Firefox and create file/folder works perfectly. Sometimes, the session can not be initialized properly, as it seems: It is not possible to open files or folders and the server log contains &#8220;Error &#8216;SyntaxError: Unexpected end of input&#8217; reading session&#8221;. Reloading Cloud9 usually helps. Safari is also nice because you can disable all header and footer elements, so that only the IDE is visible.
+</p>
+
+<p>Note that Cloud9 does not allow the usage of space characters in file and folder names; this is independent of the Web browser.</p>
+
+<p><strong>Conclusion:</strong> Cloud9 is a very interesting and innovative project. The editor can already be used, if you work around some issues. At the moment, I can not recommend it to developers, who don&#8217;t like to experiment a little. It is well possible, that I picked a release from GitHub which contains more issues than normally or that I should have used an older Node.js version on the server side to avoid certain bugs or error messages.</p>
+
+<p><strong>Update:</strong> Changing the session handler <a href="https://github.com/ajaxorg/cloud9/commit/73ab96d273124b2ddab71b8f08038a2d696b06b8">from file to memory</a> seems to fix the errors on first login and the &#8220;unexpected end of input&#8221; errors.</p>
+
+<p>There are also pre-built .deb packages for Ubuntu Server 12.04 available for download now:</p>
+
+<ul>
+<li><a href="https://lastzero.net/downloads/deb/ubuntu-12.04/cloud9_2.0.93_amd64.deb">/downloads/deb/ubuntu-12.04/cloud9_2.0.93_amd64.deb</a></li>
+<li><a href="https://lastzero.net/downloads/deb/ubuntu-12.04/nodejs_0.8.25_amd64.deb">/downloads/deb/ubuntu-12.04/nodejs_0.8.25_amd64.deb</a></li>
+</ul>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

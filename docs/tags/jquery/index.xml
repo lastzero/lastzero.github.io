@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jquery on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/jquery/</link>
+    <description>Recent content in Jquery on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Tue, 02 Oct 2012 16:02:41 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to use the StealJS file loader as a stand-alone tool</title>
+      <link>https://blog.liquidbytes.net/2012/10/how-to-use-the-stealjs-file-loader-as-a-stand-alone-tool/</link>
+      <pubDate>Tue, 02 Oct 2012 16:02:41 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/10/how-to-use-the-stealjs-file-loader-as-a-stand-alone-tool/</guid>
+      <description>Did you know that JavaScriptMVC comes with a very powerful file loader / dependency management system? It can be used independently of the MVC framework and is (in my opinion) much better than anything else I&amp;#8217;ve seen (including RequireJS). It is not marketed as a stand-alone tool, which probably is the reason people don&amp;#8217;t really notice/use it outside the JavaScriptMVC community so far.
+Why should you use it?  StealJS can not only load JavaScript files, but also CSS, CoffeeScript and Less!</description>
+    </item>
+    
+    <item>
+      <title>Update on “Script error leaving page with applet tag” (jQuery)</title>
+      <link>https://blog.liquidbytes.net/2008/10/update-on-script-error-leaving-page-with-applet-tag-jquery/</link>
+      <pubDate>Fri, 31 Oct 2008 21:10:25 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/10/update-on-script-error-leaving-page-with-applet-tag-jquery/</guid>
+      <description>After 9 months of waiting, there finally might be a fix for jQuery bug #2349: When you hide or remove a Java applet, you get a script error in Firefox. The impact was, that you could not really use jQuery together with Java applets. I&amp;#8217;m really looking forward to jQuery 1.3.0! :D</description>
+    </item>
+    
+    <item>
+      <title>JavaScript Components</title>
+      <link>https://blog.liquidbytes.net/2008/07/javascript-components/</link>
+      <pubDate>Sun, 06 Jul 2008 20:05:02 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/07/javascript-components/</guid>
+      <description>My blog was a calm place for a while now, because I&amp;#8217;m terribly busy with writing code (like it should be&amp;#8230;). With this posting, I want to present the prototype of JavaScript Components, which are comparable to Swing Components in Java. They make use of the Composite Pattern. That means every Component can act as a container for other Components. Together with Models, Views and a Controller (Event Dispatcher), they can form reusable widgets.</description>
+    </item>
+    
+  </channel>
+</rss>

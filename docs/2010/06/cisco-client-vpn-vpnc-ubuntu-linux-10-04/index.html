@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Howto: Connect to a Cisco VPN using Ubuntu Linux 10.04" />
+<meta property="og:description" content="Argh, I spent the whole day figuring out how to connect to the VPN of my current customer. The Windows client on my other computer works just fine, at least after selecting the UDP option. But it is quite some overhead to install Windows on my Linux box just to connect to a VPN. The proprietary Cisco VPN client for Linux works until kernel version 2.6.25 AFAIK. Therefore, this is no option for all users of Ubuntu 10." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2010/06/cisco-client-vpn-vpnc-ubuntu-linux-10-04/" /><meta property="article:published_time" content="2010-06-21T19:03:39&#43;00:00"/>
+<meta property="article:modified_time" content="2010-06-21T19:03:39&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Howto: Connect to a Cisco VPN using Ubuntu Linux 10.04"/>
+<meta name="twitter:description" content="Argh, I spent the whole day figuring out how to connect to the VPN of my current customer. The Windows client on my other computer works just fine, at least after selecting the UDP option. But it is quite some overhead to install Windows on my Linux box just to connect to a VPN. The proprietary Cisco VPN client for Linux works until kernel version 2.6.25 AFAIK. Therefore, this is no option for all users of Ubuntu 10."/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2010/06/cisco-client-vpn-vpnc-ubuntu-linux-10-04/">
+
+    
+    <title>Howto: Connect to a Cisco VPN using Ubuntu Linux 10.04 &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>Howto: Connect to a Cisco VPN using Ubuntu Linux 10.04</h1>
+        </div>
+    </section>
+
+    
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Jun 21, 2010</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            <p>Argh, I spent the whole day figuring out how to connect to the VPN of my current customer. The Windows client on my other computer works just fine, at least after selecting the UDP option. But it is quite some overhead to install Windows on my Linux box just to connect to a VPN. The proprietary Cisco VPN client for Linux works until kernel version 2.6.25 AFAIK. Therefore, this is no option for all users of Ubuntu 10.04 or later.</p>
+
+<p>There is an Open Source client for the cisco vpn concentrator that replaces the Cisco client: <strong>vpnc</strong></p>
+
+<p>It can be installed on the command line using</p>
+
+<pre class="code">sudo apt-get update && sudo apt-get install vpnc resolvconf</pre>
+
+<p>Once you&#8217;ve done this, you will want to create a config file for your VPN:</p>
+
+<pre class="code">/usr/share/vpnc/pcf2vpnc ciscovpnconfigfile.pcf &gt; default.conf</pre>
+
+<p>Now move that file to /etc/vpnc:</p>
+
+<pre class="code">sudo mv default.conf /etc/vpnc</pre>
+
+<p>Theoretically you should be able to use the VPN like this now:</p>
+
+<pre class="code">sudo vpnc</pre>
+
+<p>And terminate it like that:</p>
+
+<pre class="code">sudo vpnc-disconnect</pre>
+
+<p>Of course it would be too easy this way. There were a couple of changes I had to apply to the config file:</p>
+
+<p>First of all and most importantly, the line</p>
+
+<pre class="code">Application version Cisco Systems VPN Client 5.0.07.0240:WinNT</pre>
+
+<p>simulates a Windows client, which the Cisco concentrator at my customer&#8217;s network checked for. If that is the case and it refuses the connection, you won&#8217;t see any error that tells you about it, vpnc just won&#8217;t connect properly and say &#8220;no response from target&#8221; after several seconds! It took a long time until I figured that out, but just because I had a similar problem with an older Windows client previously. Also it&#8217;s hard to find out, how the version string is supposed to look like.</p>
+
+<p>The other line I added was &#8220;NAT Traversal Mode cisco-udp&#8221; and if you like &#8220;Xauth password XXX&#8221; to store your password in the config file, so that you don&#8217;t need to enter it each time you connect.</p>
+
+<p>Hope that works for you!</p>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

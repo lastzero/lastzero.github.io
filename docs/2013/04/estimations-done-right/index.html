@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Estimations done right" />
+<meta property="og:description" content="How reliable, useful and realistic are effort estimations and what are the implications of different methodologies? Since at least the 1960s, this is a hot topic for software engineers and their managers, although the importance of precise estimation is decreasing in the age of agile development.
+I would like to give a summary of my past experiences, some recommendations and point to scientific research. Judgement-based effort estimation is on average at least as accurate as formal estimation models, so I&#8217;m not covering any formal methods in this blog post." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2013/04/estimations-done-right/" /><meta property="article:published_time" content="2013-04-21T11:20:49&#43;00:00"/>
+<meta property="article:modified_time" content="2013-04-21T11:20:49&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Estimations done right"/>
+<meta name="twitter:description" content="How reliable, useful and realistic are effort estimations and what are the implications of different methodologies? Since at least the 1960s, this is a hot topic for software engineers and their managers, although the importance of precise estimation is decreasing in the age of agile development.
+I would like to give a summary of my past experiences, some recommendations and point to scientific research. Judgement-based effort estimation is on average at least as accurate as formal estimation models, so I&#8217;m not covering any formal methods in this blog post."/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2013/04/estimations-done-right/">
+
+    
+    <title>Estimations done right &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>Estimations done right</h1>
+        </div>
+    </section>
+
+    
+    
+    <div class="row">
+        <div class="col s12 m12 l10 offset-l1">
+            <div class="article-image" style="background-image: url('https://blog.liquidbytes.net/wp-content/uploads/2013/04/8701635182_624a209546_n.jpg');"></div>
+        </div>
+    </div>
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Apr 21, 2013</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            
+
+<p><img class="alignright size-full wp-image-2324" alt="Sprint planing meeting" src="https://lastzero.net/wp-content/uploads/2013/04/7596651448_9d9e7fa258.jpg" width="500" height="333" />How reliable, useful and realistic are <strong>effort estimations</strong> and what are the implications of <strong>different methodologies</strong>? Since at least the 1960s, this is a hot topic for software engineers and their managers, although the importance of precise estimation is decreasing in the age of <strong>agile development</strong>.</p>
+
+<p>I would like to give a summary of my past experiences, some recommendations and point to <strong>scientific research</strong>. Judgement-based effort estimation is on average at least as accurate as formal estimation models, so I&#8217;m not covering any formal methods in this blog post.</p>
+
+<blockquote>
+<p>In the reviewed studies, the models failed to systematically perform better than the experts when estimating the effort required to complete software development tasks.</p>
+
+<p><cite>Forecasting of software development work effort: Evidence on expert judgement and formal models, Magne Jørgensen, <a href="http://pages.cpsc.ucalgary.ca/~sillito/cpsc-601.23/readings/jorgensen-2007.pdf">International Journal of Forecasting 23 (2007)</a></cite></p>
+</blockquote>
+
+<h4 id="it-8217-s-the-requirements-stupid">It&#8217;s the requirements, stupid!</h4>
+
+<p>You can not estimate without complete and <strong>understandable requirements</strong>. It&#8217;s as easy as that. If you have no or bad requirements, you should <strong>charge by the hour</strong> and try to do your best. You can still work in sprints, but save the time to perform any estimates. You should become skeptical, if the product owner supplies the task requirements not during sprint planning, but shortly before the sprint is over. Agile developers <strong>embrace change</strong>, but they can not commit to things they don&#8217;t know. On the other hand, requirements don&#8217;t have to include every single detail to perform a high-level estimate.</p>
+
+<p>I used to work in a somewhat difficult und unpredictable project that got into much better shape, after we prepared a <strong>separate</strong> document containing the updated and complete requirements <strong>for each user story</strong> to be implemented. Developers don&#8217;t like to reveal the secrets of big requirements documents and collect information from various sources before they start to code.</p>
+
+<blockquote>
+<p>Early understanding of requirements and choice of architecture are key to managing large-scale systems and projects</p>
+
+<p><cite>Nuseibeh, B. (2001). <a href="http://oro.open.ac.uk/2213/1/">Weaving together requirements and architecture</a>. IEEE Computer, 34(3), pp. 115–119.</cite></p>
+</blockquote>
+
+<h4 id="ask-yourself-why-you-need-an-estimation">Ask yourself why you need an estimation</h4>
+
+<p>From the <strong>business perspective</strong>, there can be lots of good reasons to estimate the effort needed to finish a task or a project. But be aware that software developers can be more productive and produce higher quality, if they don&#8217;t feel the <strong>pressure</strong> to finish their tasks within a given time. You should certainly not use estimations to force developers to work <strong>faster</strong>, although realistic estimations can encourage them to work much <strong>more efficiently</strong> (smarter) by closing the Facebook tab in their browser.</p>
+
+<p>Developers who can estimate their tasks really well are usually more experienced and have a good feeling for what has to be done in order to complete a task. Inversely, developers who frequently need more time than estimated by themselves might have a bad understanding for the code they are working on or they are mentally exhausted.</p>
+
+<blockquote>
+<p>Professional software developers know how to provide the business with practical estimates that the business can use for planning purposes.</p>
+
+<p><cite>Robert C. Martin, The Clean Coder</cite></p>
+
+<p>Software people who build software under no schedule constraints are more productive than those who build software to a schedule.</p>
+
+<p><cite>Software Conflict 2.0: The Art and Science of Software Engineering (Robert L. Glass, Andrew Hunt and Donald J. Reifer)</cite></p>
+
+<p>If I&#8217;m asked if estimation is a Bad Thing my answer is the standard consultants&#8217; answer of &#8220;it depends&#8221;. [&#8230;] For me, estimation is valuable when it helps you make a significant decision.</p>
+
+<p><cite>Martin Fowler, <a href="http://martinfowler.com/bliki/PurposeOfEstimation.html">Purpose of Estimation</a></cite></p>
+</blockquote>
+
+<h4 id="understanding-the-context">Understanding the context</h4>
+
+<p>Any advice is only valid for a given <strong>context</strong>. For most common <strong>optimization problems</strong>, there usually is an <strong>average best</strong> solution and at least one more complex solution with higher risk and increased business value. And there are many inferior solutions, but some with much lower complexity that are still <strong>good enough</strong> for dedicated use cases. Higher risk can partly be compensated by more experienced engineers or managers. Lower risk often means less innovation, more overhead and lower efficiency.</p>
+
+<p>Estimations in the context of software engineering are performed to <strong>deliver value</strong> by solving business problems. <strong>Effort</strong> is just one of many things that can be estimated. Other important variables are <strong>productivity</strong>, <strong>efficiency</strong> and <strong>risk</strong>. While it is good to minimize unnecessary risk, you might also want to encourage risk to boost <strong>innovation</strong>. Therefore, any professional estimation is also a <strong>decision</strong>.</p>
+
+<p>The <strong>unique value</strong> of the software companies I usually work with as a <strong>freelance software engineer</strong> lies within their <strong>experience</strong> and <strong>efficiency</strong>. Typical questions to be answered by estimates are:</p>
+
+<ul>
+<li>Are there more efficient ways to reach the same goal?</li>
+<li>How many and what kinds of engineers and what other staff do I need to make a competitive offer while delivering great quality?</li>
+<li>What is the appropriate contract type (innovation vs low risk)?</li>
+</ul>
+
+<p>This is a completely different context than teaching <strong>existing software development teams</strong> of <strong>large corporations</strong> such as IBM, Deutsche Telekom or Daimler how to be more agile by encouraging more communication and improving the reliability of the release schedules. Productivity and efficiency inside organizations are constrained by <strong>existing policies</strong> and often by <strong>fixed budgets</strong>.</p>
+
+<p><strong>Measuring a quantity</strong> such as the development velocity, then using the current value for predictions and see how it can be improved <strong>afterwards</strong> (without violating corporate policies or other constraints) is a good example of an average best solution that can be applied in basically <strong>all situations</strong>.</p>
+
+<p>You can as well start your effort estimate by <strong>assuming</strong> a development velocity range based on the technology and the level of risk &amp; innovation, if you own the company, have sufficient experience and are in full control of essential properties of the development team. Ability to <strong>control complexity</strong>, make <strong>non-trivial predictions</strong> and a high <strong>profit margin</strong> are closely related and you will find no book (and only very few consultants) that will do the job for you. This is where <strong>fun</strong>, <strong>passion</strong> and <strong>heated arguments</strong> about the &#8220;right way&#8221; to do things begin.</p>
+
+<blockquote>
+<p>If published papers contain the secret of success for software, shouldn&#8217;t we see more jewels?</p>
+
+<p><cite>David Parnas</cite></p>
+</blockquote>
+
+<h4 id="case-1-project-scope">Case 1: Project scope</h4>
+
+<p>If you need an <strong>upfront</strong> estimation for a complete project, in order to make a quote or to allocate the required resources, the responsible manager should get separate estimates from the two or three <strong>most experienced developers.</strong> People who will later be involved have more motivation to get it right. An educated guess by the complete team (if you already have one) tends to result in an overly aggressive or conservative estimate. Presumed there is a suitable requirements document, I need about half a day to estimate a small project including some research. Larger projects can take longer, depending on how comprehensive the requirements document is and how much research has to be performed: The use of <strong>standard solutions</strong> instead of individual development can save a lot of time and effort. Make sure to get estimates (ideally ranges) for the <strong>individual software modules</strong> and not just one big number for the whole project.</p>
+
+<p>Alternatively, the team can do a <strong>planning poker</strong> (<a href="http://en.wikipedia.org/wiki/Wideband_delphi">wideband delphi</a>) and estimate using story points, an arbitrary unit, which can be converted to time &amp; money after the the experience you gathered with the first or second sprint. The assumption for this approach is, that you <strong>already</strong> have a team and enough resources to do the first sprints. For the projects I&#8217;ve been working in, this was typically not the case. Estimating the velocity would be almost the same as using an educated guess to estimate work hours directly. You can still do the planing poker once the team is complete, if you decide to work with story points. Note that for teams with a high fluctuation or other non-linear impediments (such as producing a mess), even story points may fail to predict the long-term velocity or the release date.</p>
+
+<p>To get a reliable project estimation in practice means to use the <strong>highest</strong> number of a given estimation range and add a margin to cover <strong>unforeseeable impediments</strong> as well as special management and test <strong>overhead</strong> that was not already included.</p>
+
+<p>There are many different ways to work with customers and it would exceed the scope to discuss the various contract types in detail. If you&#8217;re lucky, the customer pays for a given number of sprints and takes the result as it is, so you don&#8217;t have to promise a fixed feature set upfront &#8211; although the number of sprints should reflect the expected features. This requires a lot of trust. Another option is to agree on a <strong>minimum fixed feature set</strong> (<a href="http://www.nayima.be/html/agilefixedprice.pdf">agile fixed price</a>).</p>
+
+<p>That said: In agile projects, the initial estimation is ideally just there, to get an <strong>understanding for the size of the project</strong>. Projects <strong>don&#8217;t scale linearly</strong> with the number of developers (overall efficiency declines). You need to set up <strong>different</strong> structures depending on the <strong>expected project scope</strong>.</p>
+
+<p>The initially estimated work hours <strong>should not be used by the development team for sprint planning</strong> after the project has started, especially since requirements are subject to change in agile projects, but also because the development process is more focused on details such as components, dependencies and priorities, while the initial project estimation is more focused on resources and risk. Management overhead for example is of no concern for the development team. It depends largely on your previous experience, the size of the project and your organizational structure.</p>
+
+<p>More details about project estimates in <strong>enterprise environments</strong> can be found in &#8220;<a href="http://disciplinedagiledelivery.com/">Disciplined Agile Delivery</a>: A Practitioner&#8217;s Guide to Agile Software Delivery in the Enterprise&#8221; (IBM Press).</p>
+
+<blockquote>
+<p>Every single project team that either of us has been involved with had to provide some sort of financial estimate at the beginning of the project as part of the overall process of securing funding. Every. Single. One.</p>
+
+<p><cite>Mark W. Lines, Scott Ambler, Disciplined Agile Delivery: A Practitioner&#8217;s Guide to Agile Software Delivery in the Enterprise</cite></p>
+
+<p>Estimator experience is one of the most important factors in archiving development effort estimation accuracy, although it’s impractical to appoint the highest-qualified estimator on every project. [&#8230;] Try to exclude candidates with a high general degree of optimism as well as optimism in the estimation process.</p>
+
+<p><cite>Dirk Basten, Ali Sunyaev, pp. 88-90 <a href="http://www.computer.org/csdl/mags/co/2011/10/mco2011100088-abs.html">IEEE Computer October 2011</a></cite></p>
+</blockquote>
+
+<h4 id="case-2-sprint-planning">Case 2: Sprint planning</h4>
+
+<p>In agile projects, it&#8217;s a common best practice to let the whole team make an estimation <strong>during sprint planning</strong> until it reaches a consensus, especially if the task requires a discussion. The team members must only estimate <strong>the items that come next on the priority list</strong> and might be part of the upcoming sprint. It&#8217;s self-explaining, that you can not estimate a task for somebody else, if you need her or his <a href="http://www.scrum.org/About/All-Articles/articleType/ArticleView/articleId/95/Commitment-vs-Forecast-A-subtle-but-important-change-to-Scrum">commitment</a>.</p>
+
+<p>There can be <strong>special situations</strong>, in which it&#8217;s impractical to let all developers make an estimate, for example when the project manager / product owner needs a <strong>quick feedback</strong> to communicate with the client, the development team is <strong>too large to attend all meetings</strong> or there are <strong>multiple teams at different locations</strong>. In that case, you must find a suitable solution. For example, the most experienced developer can negotiate and pre-estimate the user stories for the next sprint and then do a second, detailed planning with the team afterwards. Remote teams are especially difficult in this regard, although a lot of tools have emerged to handle the issues. <strong>You should do whatever works best</strong>, which might take a while to figure out.</p>
+
+<blockquote>
+<p>Many teams find that estimation provides a useful forcing function to get team members to talk to each other. Estimation meetings can help get better understanding of various ways to implement upcoming stories, future architectural directions, and design problems in the code base.</p>
+
+<p><cite>Martin Fowler, <a href="http://martinfowler.com/bliki/PurposeOfEstimation.html">Purpose of Estimation</a></cite></p>
+</blockquote>
+
+<h4 id="add-a-margin">Add a margin</h4>
+
+<p><a href="http://lastzero.net/wp-content/uploads/2013/04/BGg6PWvCQAEBgM0.jpg"><img class="size-medium wp-image-2346 alignright" alt="Task completion diagram" src="https://lastzero.net/wp-content/uploads/2013/04/BGg6PWvCQAEBgM0-500x228.jpg" width="500" height="228" srcset="https://blog.liquidbytes.net/wp-content/uploads/2013/04/BGg6PWvCQAEBgM0-500x228.jpg 500w, https://blog.liquidbytes.net/wp-content/uploads/2013/04/BGg6PWvCQAEBgM0.jpg 767w" sizes="(max-width: 500px) 100vw, 500px" /></a>If you feel like the estimator was too optimistic, you should add a margin to compensate for that. In the context of sprint planning meetings, the team members should learn to add a margin to their individual estimates so that they can be sure to have enough time and don&#8217;t promise too much. This only applies, when working with absolute estimates or the team commits to finish a set of tasks until a certain date.</p>
+
+<p>Most estimations are too optimistic at first, so you should assume this is the case, if there are no reasons to believe otherwise. Another strategy is to ask for a &#8220;worst case&#8221; scenario and to use those numbers for planning. The diagram on the right hand side suggests that you should add 100% extra time to end up with a realistic estimation.</p>
+
+<p>This margin actually has <strong>nothing</strong> to do with security, distrust or hidden risk. It is important to understand, that a task is usually not done, when you finished most of the coding. You&#8217;ll always need <strong>time for proving</strong> the code is correct before it can finally be considered done and deployed to a production environment.</p>
+
+<blockquote>
+<p>When the product is 90% complete, the activity is only about halfway through its total time.</p>
+
+<p><cite>How we build things: …and why things are 90% complete, Philip G. Armour, <a href="http://dl.acm.org/citation.cfm?doid=2398356.2398367">Communications of the ACM, January 2013</a></cite></p>
+</blockquote>
+
+<h4 id="chose-the-right-task-size">Chose the right task size</h4>
+
+<p>Smaller tasks are generally easier to estimate than larger ones, because you spend more attention to the details. If you add up many small estimations, the inaccuracies will <a href="http://en.wikipedia.org/wiki/Law_of_large_numbers">cancel each other out</a>, while one big estimation can just be taken as it is. Research shows that estimators are biased when they compare tasks of completely different sizes after each other: They tend to either under- or overestimate the effort.</p>
+
+<blockquote>
+<p>Split larger tasks into smaller ones, which can usually be estimated more precisely.</p>
+
+<p><cite>Dirk Basten, Ali Sunyaev, pp. 88-90 <a href="http://www.computer.org/csdl/mags/co/2011/10/mco2011100088-abs.html">IEEE Computer October 2011</a></cite></p>
+
+<p>Using a medium-large user story led to the least estimation bias and the most accurate estimates.</p>
+
+<p><cite>Relative Estimation of Software Development Effort, Magne Jørgensen, <a href="http://simula.no/publications/Simula.simula.814/simula_pdf_file">IEEE Software March/April 2013</a></cite></p>
+</blockquote>
+
+<h4 id="work-hours-vs-story-points">Work Hours vs Story Points</h4>
+
+<p>There is quite a debate whether you should do relative estimation in points or absolute estimation in hours.This largely depends on the context and your intent.</p>
+
+<p>Work hours instead of story points or other relative estimations are more helpful to calculate costs and you can compare numbers between projects. However, you must be aware that team members can and will not be 100% efficient: Smaller companies sometimes manage to get 6 real work hours from a usual 8 hour work day (75% efficiency), while <strong>the efficiency at larger companies might be around 50%</strong>. Working over slow remote connections or with outdated IT equipment further reduces efficiency.</p>
+
+<p>I personally prefer to stick with work hours <strong>for planning a sprint</strong>. If you do it right, it helps to relax and detect potential problems at the same time. An absolute estimation surely sets <strong>expectations</strong>, but if you fulfill them, you instantly get a <strong>positive feedback</strong>. The secret is to always <strong>overestimate</strong> a little bit &#8211; an obviously <strong>absurd endeavor</strong> when using story points. This seems especially important for <strong>freelancers</strong> who have to bill every hour they work on a ticket. If a team member frequently needs longer than expected, it&#8217;s a sure <strong>sign of a bad understanding</strong> (either the task or the code) or it&#8217;s burnout, which should be taken serious. Note that work hour estimates work best with <strong>short sprints</strong> as you should not estimate tasks far in advance for highest possible accuracy.</p>
+
+<p>There are use cases in which <strong><a href="http://www.scrumalliance.org/articles/439-story-points-versus-task-hours">story points</a></strong> can be of advantage, for example if you want to <strong>pre-estimate all user stories</strong>. This can enable you to calculate development <strong>velocity</strong> (average, <strong>not guaranteed</strong>, story points per sprint) and help make <strong>predictions</strong> about future sprints. I consider story points <strong>complementary</strong> to estimates done in work hours. It is my <strong>humble opinion</strong> that story points <strong>alone</strong> make it easy to work too much (<strong>overcommitment</strong>) under certain conditions because you can get focused on a <strong>particular velocity</strong> and you have less feedback about your actual work time, if there are no other measures in place (also see <a href="http://learningagileandlean.wordpress.com/2012/05/10/the-elusive-20-time/">The Elusive 20% Time</a>). Similarly, a low <a href="http://martinfowler.com/bliki/TechnicalDebt.html">technical debt</a> is more important than a constant story point velocity for each sprint. It requires a lot of experience and consequent behavior not to fall into this <a href="http://martinfowler.com/bliki/FlaccidScrum.html">trap</a>.</p>
+
+<p>Another important use case for story points arises, if the estimator is <strong>unfamiliar with the technology</strong> being used, e.g. a PHP developer that must estimate a software that needs to be implemented in Java. The big question is, if that developer should do the estimation in the first place, because you indeed only get relative estimations with <strong>less instant value for the business</strong>. Relative estimations become useful after the project has started and you can see the velocity. But <strong>only</strong> if you don&#8217;t produce a mess and need to throw away the code after six or seven sprints, which can easily happen, if you use a technology for the first time.</p>
+
+<p>The variance how much time is needed by <strong>experienced</strong> developers to complete a given task isn&#8217;t very large on average for <strong>typical Web applications</strong> built on top of mature frameworks (Java caught up during the recent years), if you look at the results of the <a href="https://www.plat-forms.org/sites/plat-forms.org/files/platformsTR.pdf">Plat_Forms</a> contest 2007 in which 9 teams had to implement the same requirements within 30 hours:</p>
+
+<p style="text-align: center;">
+  <img class="aligncenter size-full wp-image-2416" alt="Platforms 2007: Completeness" src="https://lastzero.net/wp-content/uploads/2013/04/Platforms2007Completeness.png" width="659" height="289" srcset="https://blog.liquidbytes.net/wp-content/uploads/2013/04/Platforms2007Completeness.png 659w, https://blog.liquidbytes.net/wp-content/uploads/2013/04/Platforms2007Completeness-500x219.png 500w" sizes="(max-width: 659px) 100vw, 659px" />
+</p>
+
+<p>The results of the three teams of the PHP and Perl groups were pretty similar (I was in <a href="http://lastzero.net/wp-content/uploads/2008/04/plat_forms.jpg">PHP team 8</a>). Note that we had a very well written <a href="https://www.plat-forms.org/sites/plat-forms.org/files/platforms-task.pdf">requirements</a> document. My theory is: Whenever estimations for typical Web applications built on a similar technology stack are much different, it mainly indicates a problem with the <strong>understanding or the completeness of the requirements</strong>.</p>
+
+<blockquote>
+<p>The performance of the three PHP teams is remarkably similar. The variance among the Perl teams is also fairly small. [&#8230;] Team 9 Java produced by far the least complete solution overall, with only about half as much implemented functionality than the second-least complete solution. The reason is apparently the lack of maturity of the RAP framework that this team used.</p>
+
+<p><cite>Lutz Prechelt, Plat_Forms 2007: The Web Development Platform Comparison — Evaluation and Results, Institut für Informatik, Freie Universität Berlin</cite></p>
+</blockquote>
+
+<p><img class="alignleft size-full wp-image-2545" alt="Effort Estimate" src="https://lastzero.net/wp-content/uploads/2013/04/8700569795_e143161172_n.jpg" width="320" height="266" />Let&#8217;s take for example a task that is estimated with 4 hours. If somebody needs just 1 or 2 hours, it&#8217;s probably not tested or the code needs refactoring, which will produce a mess in the long run (&#8220;quick and dirty&#8221;). If somebody needs more than 8 hours, that&#8217;s too expensive and the person probably doesn&#8217;t really understand the technology, the requirements were badly prepared or the developer has other problems that should not be ignored. So, although I could estimate something considerably more or less than 4 hours, the <strong>business value</strong> of the result vanishes. <strong>It&#8217;s not like developers who are 10 times slower produce the same kind of high quality code and charge 10 times less.</strong> This is why I consider relative estimation of lower value for many of today&#8217;s streamlined Web projects. The same might be true for mobile app development.</p>
+
+<p>My vision is to enable all developers of a team to be equally productive and efficient (up to a certain, maintainable level) by sharing and implementing <strong><a href="http://www.cleancoders.com/">best practices</a></strong>. This requires to talk about the absolute (maximum) effort for <strong>specific tasks</strong> and how it can be reduced. I&#8217;ve never seen teams with largely different experience levels work well in practice and that&#8217;s also the feedback I get from many successful companies.</p>
+
+<p><img class="alignright size-full wp-image-2546" alt="Velocity as probability distribution" src="https://lastzero.net/wp-content/uploads/2013/04/8701635182_624a209546_n.jpg" width="320" height="257" />It is true that all unforeseen impediments can theoretically invalidate absolute estimates. In my opinion, the impact is negligible with reasonably short sprints and it is not the end of the world, if you miss your goals. In practice, it is valuable to know which tasks were taking longer than expected while a lower than expected story point velocity contains no information about specific tasks. It just indicates overcommitment, often because inexperienced teams don&#8217;t understand that the velocity is a <strong>probability distribution</strong>. If you try to finish as many tasks within a sprint as the velocity suggests, you have a 50% chance (or more) to miss that goal.</p>
+
+<p>You shouldn&#8217;t use absolute estimates for <strong>release planning</strong> though. Story points or even an educated guess are much more suitable for this purpose. An educated guess can be the best tool, if the team has a high fluctuation or there are other non-linear effects to be considered.</p>
+
+<p>For teams that don&#8217;t consist of reasonably experienced developers or projects that don&#8217;t build on well established technical foundations, you might be well advised to use story points only as <a href="http://scrum.jeffsutherland.com/">Jeff Sutherland</a> suggests. It is common sense that a consensus estimation during sprint planning requires relative points, if the team consists of members with evidently different experience levels.</p>
+
+<p>Last but not least you always have the option <strong>not to work with estimations at all</strong>, if there is enough confidence, trust and motivation within the team.</p>
+
+<p>My impression is that the <strong>management aspects</strong> of agile projects are overrated in comparison to the <strong>technical aspects</strong> such as automated testing and refactoring. You really shouldn&#8217;t invest too much energy into points vs hours and better care about good requirements, unit tests and the skills of the development team. This is what <strong>saves the most time</strong> at the end. Do what <strong>works best</strong> for your individual situation.</p>
+
+<blockquote>
+<p>When using analogy-based estimation, use reference projects similar to those to be estimated and compare the projects in terms of work hours rather than percentages.</p>
+
+<p><cite>Relative Estimation of Software Development Effort, Magne Jørgensen, <a href="http://simula.no/publications/Simula.simula.814/simula_pdf_file">IEEE Software March/April 2013</a></cite></p>
+
+<p>For me, story point is high-level estimation of complexity made <em>before</em> sprint planning. It could be done during release planning, but I think most Scrum teams do it during a preplanning session. Story points and sprint velocity then give us a guideline about the stories to be committed in the coming sprints.</p>
+
+<p>The task-hour estimation, on the other hand, is a low-level estimation made to represent the actual effort in hours needed to accomplish all the requirements of a story. Such an estimation should be done <em>during</em> sprint planning for highest possible accuracy, as the actual development may start the next day.</p>
+
+<p><cite>Chia Wei Cheng, Agile Scrum Master, <a href="http://www.scrumalliance.org/articles/439-story-points-versus-task-hours">Story Points Versus Task Hours</a></cite></p>
+
+<p>Story points give more accurate estimates, they drastically reduce planning time, they more accurately predict release dates, and they help teams improve performance. [&#8230;] The best developer on a project takes one hour to complete a task while the worst developer takes 10 hours (within a project) or 25 hours (across projects). For teams the difference is an order of magnitude greater.</p>
+
+<p><cite>Jeff Sutherland, <a href="http://scrum.jeffsutherland.com/2010/04/story-points-why-are-they-better-than.html">Story Points: Why are they better than hours?</a></cite></p>
+</blockquote>
+
+<h4 id="never-make-single-task-estimations-of-less-than-one-hour-or-more-than-16-hours">Never make single task estimations of less than one hour or more than 16 hours</h4>
+
+<p>To effectively enforce the use of medium task sizes, I found it most convenient to <strong>estimate with the powers of two</strong>: 1, 2, 4, 8, 16. This takes the inaccuracy of large estimations into account, while forcing you to split up tasks larger than 16 hours. It also protects you from ridiculous estimations such as &#8220;35 minutes&#8221; (should be 1 hour) or &#8220;2.4 hours&#8221; (should be 4 hours).</p>
+
+<p>If you think that there actually are tasks smaller than one hour, you should take into consideration that the estimation itself also takes time, the associated meetings take time, the task tracking in Jira or Trac takes time and you should always add a security margin. Sometimes small tasks take longer than expected, so you should never calculate less than 1 hour for anything. My experience is that most really small tasks come up at the end of the project during bug fixing. Of course you can and should combine tiny tasks such as small text changes into one single ticket.</p>
+
+<p>The Fibonacci numbers (1, 2, 3, 5, 8, 13) are commonly used for story point estimates, which has the same intent.</p>
+
+<p>Some agile partitioners group task estimates in <strong>T-shirt sizes</strong> (the story point examples are not supposed to equal the absolute estimates):</p>
+
+<ul>
+<li><strong>S</strong> is 1 hour or less (1 story point)</li>
+<li><strong>M</strong> is about half a day (2 to 5 story points)</li>
+<li><strong>L</strong> is about a day (8 story points)</li>
+<li><strong>XL</strong> is more than a day (13 or more story points)</li>
+</ul>
+
+<p>I like how this approach provides a <strong>more abstract</strong> effort categorization that doesn&#8217;t imply linear relationships.</p>
+
+<h4 id="some-food-for-thought">Some food for thought</h4>
+
+<p>If you go a step further and try to work with a <strong>sufficient number of tasks</strong>, you might not need different relative or absolute estimates at all. Remember that the differences in size will cancel each other out according to the <strong>law of large numbers</strong> and a mostly stable velocity can establish (<a href="http://learningagileandlean.wordpress.com/2013/04/07/scrum-commitments-littles-law-and-variability/">throughput</a>). Be aware that a<strong> precise number of tasks per sprint</strong> is not guaranteed (probability distribution), small tasks can create <strong>more preparation overhead</strong>, the size of all tasks should be within the same <a href="http://learningagileandlean.wordpress.com/2013/04/15/t-shirts-rabbits-lizards-and-sizing-software-features/">order of magnitude</a> (<strong>low variance</strong>) and shorter sprints make it increasingly difficult to process many tasks or user stories while longer sprints reduce agility and can hide potential weaknesses (<a href="http://www.leanprimer.com/downloads/lean_primer.pdf">lake and rocks metaphor</a>).</p>
+
+<div style="border: 1px solid black; padding: 4px;">
+  Once you manage to divide your work into enough executable tasks, it doesn&#8217;t matter if a particular estimate is accurate or not (<a href="http://alistair.cockburn.us/Elephant+carpaccio">elephant carpaccio</a>). This is true for absolute and relative estimates. Effort estimates continue to be a feedback mechanism to keep the task size small and encourage discussions about requirements, risk and productivity.
+</div>
+
+<p>In Scrum, a common question is how many tasks or stories you plan to finish within the <strong>next sprint</strong>, that means what forecast you make towards the product owner or the customer. The answer requires an absolute estimate (that should take the probability distribution into account). In the context of a <strong>single sprint</strong>, work hours and velocity are therefore just the two sides of the same coin:</p>
+
+<p><em>Total Sprint Time / Velocity in Tasks per Sprint = Average Time per Task</em></p>
+
+<p>You can still assign different estimated work hours to each task or do a planning poker in order to satisfy the project manager and get a discussion going (see <a href="http://learningagileandlean.wordpress.com/2013/04/22/noestimates-discussion-at-agile-open-toronto/">#NoEstimates</a>). If you stick with hours instead of arbitrary points, this is where the powers of two (see above) come into play: You can easily combine them to fill an 8 hour work day. To reduce management overhead or to apply this technique silently for yourself, a number of tasks can be grouped into a task tracker ticket, as long as you expose a consistent behavior in this regard. Counting the number of remaining tasks and dividing them through the tasks per time unit is the <strong>easiest and cheapest way</strong> to predict a release date, if the average task size does not change significantly throughout the project.</p>
+
+<blockquote>
+<p>Whether we weigh the requirements by effort or just count them does hardly make a difference at all.</p>
+
+<p><cite>Lutz Prechelt, Plat_Forms 2007: The Web Development Platform Comparison — Evaluation and Results, Institut für Informatik, Freie Universität Berlin</cite></p>
+</blockquote>
+
+<h4 id="get-feedback-from-the-client">Get feedback from the client</h4>
+
+<p>If the task you are supposed to estimate is <strong>incompletely described</strong> or there are <strong>ambiguities</strong>, you should ask the client / product owner for <strong>direct feedback</strong> or, if that&#8217;s not possible for some reason, add a note to your estimation that explains your assumptions. You can also give a range or make different estimations for various scenarios so that the client gets a feeling for the impact of his decisions. Note that you should resist to focus on <strong>less important details</strong>, when doing a high-level estimate.</p>
+
+<blockquote>
+<p>For me, one of the most important traits in a programmer, or indeed in a development team, is something that I&#8217;ll call Customer Affinity. This is the interest and closeness that the developers have in the business problem that the software is addressing, and in the people who live in that business world.</p>
+
+<p><cite>Martin Fowler, <a href="http://martinfowler.com/bliki/CustomerAffinity.html">Customer Affinity</a></cite></p>
+</blockquote>
+
+<p><strong>Don&#8217;t produce a mess</strong></p>
+
+<p><img class="alignright size-full wp-image-2548" alt="Technical Debt" src="https://lastzero.net/wp-content/uploads/2013/04/8701850930_6511e0ca7f_n.jpg" width="320" height="274" />Estimations &#8211; relative or absolute &#8211; are worth nothing, if you produce a mess in your code. Agile development is not just about adopting <a href="http://martinfowler.com/bliki/FlaccidScrum.html">Scrum</a> or using <a href="http://martinfowler.com/bliki/StandardStoryPoints.html">story points</a>. Only a high grade of <strong>test automation</strong> and <strong>constant refactoring</strong> can prevent a mess.</p>
+
+<p>My recommendation is not to primarily focus on user stories, because <a href="http://martinfowler.com/bliki/TechnicalDebt.html">technical debt</a> and not writing unit tests will inevitably increase the number of outstanding tasks (overhead) and therefore <strong>delay the release date</strong>. A velocity that counts implemented user stories ignores this fact and can give a false sense of progress.</p>
+
+<div>
+  While implementing user stories, disciplined agile teams should focus on avoiding to create new work in the form of technical debt or repeated manual testing for <strong>maximum efficiency</strong> and <strong>reliable forecasts</strong>.
+</div>
+
+<blockquote>
+<p>There&#8217;s a mess I&#8217;ve heard about with quite a few projects recently. It works out like this:</p>
+
+<p>1) They want to use an agile process, and pick Scrum</p>
+
+<p>2) They adopt the Scrum practices, and maybe even the principles</p>
+
+<p>3) After a while progress is slow because the code base is a mess</p>
+
+<p><cite>Martin Fowler</cite></p>
+
+<p>I’ve seen products ruined and companies destroyed by software messes. I’ve seen the productivity of teams decrease from <a href="http://en.wikipedia.org/wiki/Jitterbug">jitterbug</a> to dirge in just a few months. Nothing has a more profound or long-lasting negative effect on the productivity of a software team than a mess. Nothing.</p>
+
+<p><cite>Robert C. Martin, The Clean Coder</cite></p>
+
+<p>Most teams purporting to be doing agile software development are not applying the level of technical rigor necessary to succeed at it. Most “agile” teams have actually only adopted Scrum’s project-management practices and have failed to effectively adopt “the hard disciplines” like test-driven development, refactoring, pair programming, simple design, and continuous integration.</p>
+
+<p><cite>Jean-Raymond Abrial, Faultless systems: Yes we can!, <a title="September 2009 (vol. 42 no. 9)" href="ftp://ftp.inf.ethz.ch/doc/tech-reports/6xx/629.pdf">IEEE Computer <sup>9</sup>&frasl;<sub>2009</sub></a></cite></p>
+</blockquote>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Using SQL fixtures for database related unit tests" />
+<meta property="og:description" content="This is a short tutorial to show how to use fixtures for database related unit tests. The inspiration for this post came from a conversation I had at the recent PHP Unconference in Hamburg, Germany.
+From my experience, the usual way to test database related classes is to use a special test database, that needs a reset before each run (drop the existing tables and import the test dump). That approach has several severe drawbacks, all observed in real life projects many, many times:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2012/08/sql-fixtures-for-unit-tests/" /><meta property="article:published_time" content="2012-08-21T11:19:03&#43;00:00"/>
+<meta property="article:modified_time" content="2012-08-21T11:19:03&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using SQL fixtures for database related unit tests"/>
+<meta name="twitter:description" content="This is a short tutorial to show how to use fixtures for database related unit tests. The inspiration for this post came from a conversation I had at the recent PHP Unconference in Hamburg, Germany.
+From my experience, the usual way to test database related classes is to use a special test database, that needs a reset before each run (drop the existing tables and import the test dump). That approach has several severe drawbacks, all observed in real life projects many, many times:"/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2012/08/sql-fixtures-for-unit-tests/">
+
+    
+    <title>Using SQL fixtures for database related unit tests &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>Using SQL fixtures for database related unit tests</h1>
+        </div>
+    </section>
+
+    
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Aug 21, 2012</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            <p>This is a short tutorial to show how to use fixtures for database related unit tests. The inspiration for this post came from a conversation I had at the recent PHP Unconference in Hamburg, Germany.</p>
+
+<p>From my experience, the usual way to test database related classes is to use a special test database, that needs a reset before each run (drop the existing tables and import the test dump). That approach has several severe drawbacks, all observed in real life projects many, many times:</p>
+
+<ul>
+<li>Importing the database dump <strong>may take some time</strong>, but unit tests should run quickly.</li>
+<li>Running queries against a database server <strong>requires a running server and slows down the tests</strong>, depending on the speed of your server and your network (some developers may use remote connections).</li>
+<li><strong>Each developer needs it&#8217;s own test database</strong>, otherwise there may be conflicts, if one developer resets the database while tests are running.</li>
+<li>You <strong>need to ensure the test dump is always in sync with the latest database structure</strong>. This is something that usually breaks several times a month, because it&#8217;s hard to automate and there always is a lack of time for tasks like these.</li>
+<li>Even if you reset the database once before running the test suite, you still got <strong>state in your database</strong> while the tests are running. That means <strong>the successful execution of your tests may depend on the order they are called</strong>. Possible problems are hard to discover without investing a significant amount of time. Imagine a test that counts the rows in a table and expects a certain number. Another test may insert a row in that table, so the number of rows changes. If you run the second test before the first one, it breaks.</li>
+</ul>
+
+<p>The alternative should be really easy to come up with, but I&#8217;ve rarely seen it anywhere*: Use traditional <strong>fixture files</strong> to record and replay the result of database queries. Just like you would deal with tests for classes that use a SOAP or REST service in the background. Some developers also use manually created mock objects for that purpose, but automatically creating fixture files seems to be the easier way for me and (again) it saves a lot of time you can use to develop features or improve your source code.</p>
+
+<p>How does that look like in reality? First, you should use some fixture class to compose the fixture file name and to read/write/serialize the data (for example source code, see <a title="Opens github.com in a new window" href="https://github.com/smashedpumpkin/liquidlibrary/blob/master/Liquid/Fixture.php" target="_blank">Liquid_Fixture</a> on github). Second, you must modify your database adapter class to support optional fixtures:</p>
+
+<pre class="code">$fixturePath = dirname(__FILE__) . '/_fixtures/';
+$db = new My_Db();
+$db-&gt;useFixtures($fixturePath);
+</pre>
+
+<p>Internally, the database adapter might look something like this (the example &#8211; which you can of course copy &amp; paste into your application &#8211; is based on Zend_Db, but most adapters are similar):</p>
+
+<pre class="code">class Liquid_Db extends Zend_Db_Adapter_* {
+    private $_fixturePath = false;
+
+    public function __construct ($config) {
+        parent::__construct ($config);
+
+        if(isset($config['fixtures'])) {
+            $this-&gt;useFixtures($config['fixtures']);
+        }
+    }
+
+    public function useFixtures ($fixturePath) {
+        $this-&gt;_fixturePath = Liquid_Fixture::normalizePath($fixturePath);
+    }
+
+    public function disableFixtures () {
+        $this-&gt;_fixturePath = false;
+    }
+
+    protected function callWithFixtures ($functionName, $params) {
+        if($this-&gt;_fixturePath) {
+            $fixture = new Liquid_Fixture($this-&gt;_fixturePath . Liquid_Fixture::getFilename($functionName, $params));
+
+            try {
+                $result = $fixture-&gt;getData();
+                return $result;
+            } catch (Liquid_Fixture_Exception $e) {
+                // No fixture found, the query has to be executed
+            }
+        }
+
+        $result = call_user_func_array(array('parent', $functionName), $params);
+
+        if($this-&gt;_fixturePath) {
+            $fixture-&gt;setData($result);
+        }
+
+        return $result;
+    }
+
+    public function fetchAll ($sql, $bind = array(), $fetchMode = null) {
+        return $this-&gt;callWithFixtures('fetchAll', array($sql, $bind, $fetchMode));
+    }
+
+    public function fetchPairs ($sql, $bind = array()) {
+        return $this-&gt;callWithFixtures('fetchPairs', array($sql, $bind));
+    }
+
+    public function fetchAssoc ($sql, $bind = array()) {
+        return $this-&gt;callWithFixtures('fetchAssoc', array($sql, $bind));
+    }
+
+    public function fetchOne ($sql, $bind = array()) {
+        return $this-&gt;callWithFixtures('fetchOne', array($sql, $bind));
+    }
+
+    public function fetchRow ($sql, $bind = array(), $fetchMode = null) {
+        return $this-&gt;callWithFixtures('fetchRow', array($sql, $bind, $fetchMode));
+    }
+
+    public function fetchCol ($sql, $bind = array()) {
+        return $this-&gt;callWithFixtures('fetchCol', array($sql, $bind));
+    }
+
+    public function insert ($table, array $bind) {
+        return $this-&gt;callWithFixtures('insert', array($table, $bind));
+    }
+
+    public function update ($table, array $bind, $where = '') {
+        return $this-&gt;callWithFixtures('update', array($table, $bind, $where));
+    }
+}
+</pre>
+
+<p>Also see this general PHPUnit guide I wrote a while ago (German): <a href="http://www.chaoticpattern.net/#wiki/PHP%20Unit-Tests" target="_blank"><a href="http://www.chaoticpattern.net/#wiki/PHP%20Unit-Tests">http://www.chaoticpattern.net/#wiki/PHP%20Unit-Tests</a></a></p>
+
+<ul>
+<li><em>&#8220;There is no time to save time.&#8221; (Gaylord Aulke)</em></li>
+</ul>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

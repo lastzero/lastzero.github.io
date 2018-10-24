@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dc13 on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/dc13/</link>
+    <description>Recent content in Dc13 on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Tue, 05 Nov 2013 09:04:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/dc13/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Developer Conference 2013</title>
+      <link>https://blog.liquidbytes.net/2013/11/developer-conference-2013/</link>
+      <pubDate>Tue, 05 Nov 2013 09:04:03 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2013/11/developer-conference-2013/</guid>
+      <description>I&amp;#8217;m not known for going to conferences very often, so this year I will do something very special: Attending two conferences! PHP Unconference in September was great fun already. The other one will be Developer Conference in Hamburg, which starts in two days. I know some of the speakers personally (the list is actually quite impressive) and I look forward to see them again. Even Professor Lutz Prechelt will give a talk.</description>
+    </item>
+    
+  </channel>
+</rss>

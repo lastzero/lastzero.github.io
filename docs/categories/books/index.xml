@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/categories/books/</link>
+    <description>Recent content in Books on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Sat, 05 May 2012 09:56:12 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/categories/books/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Exceptions: Andrew Hunt/David Thomas vs Robert C. Martin</title>
+      <link>https://blog.liquidbytes.net/2012/05/exceptions-andrew-hunt-vs-robert-c-martin/</link>
+      <pubDate>Sat, 05 May 2012 09:56:12 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/05/exceptions-andrew-hunt-vs-robert-c-martin/</guid>
+      <description>There is a subtle difference between what Robert C. Martin recommends in Clean Code and what Andrew Hunt / David Thomas recommend in The Pragmatic Programmer. Martin encourages you to always use exceptions if the normal program flow is interrupted to avoid if statements (or even worse: forgotten if statements and mixed result types) while Hunt/Thomas say this can cause harm (&amp;#8220;it&amp;#8217;s a kind of cascading goto&amp;#8221;) and should only be used if something truly unexpected happens (tip 34).</description>
+    </item>
+    
+    <item>
+      <title>The Clean Coder</title>
+      <link>https://blog.liquidbytes.net/2012/04/the-clean-coder/</link>
+      <pubDate>Fri, 20 Apr 2012 10:50:32 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/04/the-clean-coder/</guid>
+      <description>I&amp;#8217;m currently reading The Clean Coder by Robert C. Martin. Here are some of my favorite quotes:
+Caffeine &amp;#8220;There is no doubt that some of us can make more efficient use of our focus-manna by consuming moderate amounts of caffeine. But take care. Caffeine also puts a strange jitter on our focus.&amp;#8221;
+Arrogance &amp;#8220;Programmers tend to be arrogant, self-absorbed introverts.We didn&amp;#8217;t go into this business because we like people. Most of us got into programming because we prefer to deeply focus on sterile minutia, juggle lots of concepts simultaneously, and in general prove to ourselves that we have brains the size of a planet, all while not having to interact with the messy complexities of other people.</description>
+    </item>
+    
+    <item>
+      <title>Psycho-Cybernetics</title>
+      <link>https://blog.liquidbytes.net/2011/03/psycho-cybernetics/</link>
+      <pubDate>Tue, 01 Mar 2011 15:59:07 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2011/03/psycho-cybernetics/</guid>
+      <description>It is always interesting to see, what we &amp;#8220;forgot&amp;#8221; during history. One of the these things is, without a doubt, Cybernetics (which in turn is a child of the 2nd world war) and maybe even the origin of computers (see von Neumann architecture), which is closely coupled to that.
+While passing by a second-hand bookstore in Evanston, IL I saw the book Psycho-Cybernetics in the window, which was published in 1960, 12 years after Cybernetics was published by Norbert Wiener.</description>
+    </item>
+    
+    <item>
+      <title>Secrets of the JavaScript Ninja</title>
+      <link>https://blog.liquidbytes.net/2011/03/secrets-of-the-javascript-ninja/</link>
+      <pubDate>Mon, 28 Feb 2011 23:26:27 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2011/03/secrets-of-the-javascript-ninja/</guid>
+      <description>On http://www.manning.com/resig/resig_meapch1.pdf you find the first chapter of John Resigs new book &amp;#8220;Secrets of the JavaScript Ninja&amp;#8220;. From what I can see there, the book can be a useful reference, but it does not look like there are any actual secrets revealed. All the bread &amp;amp; butter topics seem covered and John certainly understands JavaScript.
+I think every experienced JavaScript developers agrees with his statement:
+ Browser-based JavaScript development is much more complicated than it seems.</description>
+    </item>
+    
+    <item>
+      <title>Free math “book”</title>
+      <link>https://blog.liquidbytes.net/2010/11/free-math-book/</link>
+      <pubDate>Tue, 16 Nov 2010 08:54:58 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/11/free-math-book/</guid>
+      <description>Yesterday, I migrated my personal math reference to the new Wiki:
+http://math.chaoticpattern.net/wiki/index
+It is all in German and with my own clumsy comments. Those who read it, will notice that math is a useful tool for me, rather than some kind of art &amp;#8211; although I agree you can look at it as art, if you got the time. That&amp;#8217;s why I tried to compress it as much as possible ;)</description>
+    </item>
+    
+  </channel>
+</rss>

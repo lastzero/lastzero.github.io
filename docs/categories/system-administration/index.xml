@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>System Administration on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/categories/system-administration/</link>
+    <description>Recent content in System Administration on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Tue, 27 Oct 2015 19:52:44 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/categories/system-administration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mac OS X configuration for software developers</title>
+      <link>https://blog.liquidbytes.net/2015/10/howto-mac-configuration-for-software-developers/</link>
+      <pubDate>Tue, 27 Oct 2015 19:52:44 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2015/10/howto-mac-configuration-for-software-developers/</guid>
+      <description>Coming from Linux and FreeBSD, I initially didn&amp;#8217;t feel comfortable working with OS X and I still think it&amp;#8217;s a bad idea to run a full featured Web server on a Mac. But there are a couple of things you can do to turn your Mac into a great development environment.
+Install the following essential software packages  Google Chrome and Firefox &amp;#8211; Safari is the new Internet Explorer ;) Xcode via App Store (free); required to compile software with Homebrew and comes with the Mac version of git Homebrew for installing additional Unix/Linux software packages VMware Fusion (~ 100 USD) or VirtualBox (free) for running virtual machines Docker for creating and running software containers  Productivity Tools and IDEs  I strongly recommend using a JetBrains IDE such as PhpStorm, IntelliJ IDEA or PyCharm (~ 100 USD) Snagit via App Store for creating nice screen shots (~ 50 USD) Scroll Reverser, if you are working with a touch pad and a mouse (on a MacBook) Transmit via App Store, if you need to work a lot with remote FTP, SFTP or WebDAV servers, e.</description>
+    </item>
+    
+    <item>
+      <title>Howto: Install PHP 5.5 and PHPUnit on OS X via Homebrew</title>
+      <link>https://blog.liquidbytes.net/2013/08/howto-install-php-5-5-and-phpunit-on-os-x-via-homebrew/</link>
+      <pubDate>Sun, 25 Aug 2013 09:37:09 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2013/08/howto-install-php-5-5-and-phpunit-on-os-x-via-homebrew/</guid>
+      <description>Here is how to install the latest PHP and PHPUnit versions on OS X using , which became my first choice after testing other package managers.
+To avoid conflicts, it is generally not recommended to use Homebrew alongside other external OS X package managers such as MacPorts or Fink. You can remove MacPorts with these Terminal commands:
+sudo port -f uninstall installed sudo rm -rf /opt/local sudo rm -rf /Applications/DarwinPorts If you prefer to stay with MacPorts: There is a blog post with a detailed howto for PHP 5.</description>
+    </item>
+    
+    <item>
+      <title>Update your bookmarks!</title>
+      <link>https://blog.liquidbytes.net/2012/10/update-your-bookmarks/</link>
+      <pubDate>Tue, 16 Oct 2012 08:31:11 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/10/update-your-bookmarks/</guid>
+      <description>The primary domain for this blog is now lastzero.net and not nulldevice.de anymore. If you are using the old domain, you will be automatically redirected. Please update your bookmarks, links and RSS readers.
+The idea behind this move is, that I would like to see some more international visitors. I have the impression, that Web sites using a .de domain don&amp;#8217;t show up in Google&amp;#8217;s international search results or people don&amp;#8217;t click on it (is that true?</description>
+    </item>
+    
+    <item>
+      <title>Howto: Connect to a Cisco VPN using Ubuntu Linux 10.04</title>
+      <link>https://blog.liquidbytes.net/2010/06/cisco-client-vpn-vpnc-ubuntu-linux-10-04/</link>
+      <pubDate>Mon, 21 Jun 2010 19:03:39 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/06/cisco-client-vpn-vpnc-ubuntu-linux-10-04/</guid>
+      <description>Argh, I spent the whole day figuring out how to connect to the VPN of my current customer. The Windows client on my other computer works just fine, at least after selecting the UDP option. But it is quite some overhead to install Windows on my Linux box just to connect to a VPN. The proprietary Cisco VPN client for Linux works until kernel version 2.6.25 AFAIK. Therefore, this is no option for all users of Ubuntu 10.</description>
+    </item>
+    
+    <item>
+      <title>Update on Google Spam</title>
+      <link>https://blog.liquidbytes.net/2008/05/update-on-google-spam/</link>
+      <pubDate>Wed, 21 May 2008 16:46:28 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/update-on-google-spam/</guid>
+      <description>Hi,
+We would like to let you know that we have updated our report to include the omitted details. You can read it at: http://ece.uprm.edu/~andre/insert/gmail.html
+Also we have made our proof of concept available at: http://ece.uprm.edu/~andre/insert/gmail.tar.gz
+Best Regards,
+Pablo Ximenes
+ I love short mails with a clear message :)
+&amp;#8220;Google&amp;#8217;s chronic silence on all abuse reports makes it impossible to tell whether they&amp;#8217;ve taken any action on the problem, whether the problem reports have even made it to the operational staff responsible for the mailservers, or whether they simply don&amp;#8217;t care.</description>
+    </item>
+    
+    <item>
+      <title>Google Spam – a new product?</title>
+      <link>https://blog.liquidbytes.net/2008/05/google-spam-a-new-product/</link>
+      <pubDate>Tue, 20 May 2008 20:36:01 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/google-spam-a-new-product/</guid>
+      <description>I know that mail logs are not the most interesting thing on earth, but I&amp;#8217;m not used to get spam from Google Mail&amp;#8230; from Yahoo and MSN maybe, but not from Google&amp;#8230; never ever&amp;#8230; so I try to understand this:
+May 20 21:43:16 mail postfix/smtpd[30948]: connect from qb-out-0506.google.com[72.14.204.235]
+May 20 21:43:17 mail postfix/policyd-weight[2754]: weighted check: NOT_IN_SBL_XBL_SPAMHAUS=-1.5 NOT_IN_SPAMCOP=-1.5 NOT_IN_BL_NJABL=-1.5 CL_IP_EQ_HELO_IP=-2 (check from: .gmail. - helo: .qb-out-0506.google. - helo-domain: .google.) FROM/MX_MATCHES_HELO(DOMAIN)=-2  qb-out-0506.</description>
+    </item>
+    
+  </channel>
+</rss>

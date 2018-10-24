@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/documentation/</link>
+    <description>Recent content in Documentation on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Thu, 08 Nov 2012 16:49:38 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/documentation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What to document in agile projects?</title>
+      <link>https://blog.liquidbytes.net/2012/11/what-o-document-in-agile-projects/</link>
+      <pubDate>Thu, 08 Nov 2012 16:49:38 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/11/what-o-document-in-agile-projects/</guid>
+      <description>A posting in the Agile and Lean Software Development group on LinkedIn inspired me to think about the amount and type of documentation that should be created in agile projects. It is a misconception, if developers think that agile methods do not require any written documents. Here are a few (I think the most important) examples:
+ A Wiki that contains the steps required to set up the application and a list of config files and config options can be considered essencial documentation &amp;#8211; especially for developers who join the project at a later time.</description>
+    </item>
+    
+  </channel>
+</rss>

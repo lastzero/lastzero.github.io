@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Management on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/project-management/</link>
+    <description>Recent content in Project Management on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Thu, 17 Nov 2011 13:20:01 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/project-management/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Guidelines for Software Development Estimation Effort / IEEE Computer</title>
+      <link>https://blog.liquidbytes.net/2011/11/guidelines-for-software-development-estimation-effort-ieee-computer/</link>
+      <pubDate>Thu, 17 Nov 2011 13:20:01 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2011/11/guidelines-for-software-development-estimation-effort-ieee-computer/</guid>
+      <description>An analysis of 32 factors that influence the software development estimation accuracy can be found in Computer’s October issue (Dirk Basten, Ali Sunyaev, pp. 88-90).
+In my opinion, these are the most important results:
+ Try to exclude candidates with a high general degree of optimism as well as optimism in the estimation process Split larger tasks into smaller ones, which can usually be estimated more precisely Communicate frequently with the client to obtain direct feedback Estimator experience is one of the most important factors in archiving development effort estimation accuracy, although it&amp;#8217;s impractical to appoint the highest-qualified estimator on every project  </description>
+    </item>
+    
+  </channel>
+</rss>

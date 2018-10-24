@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bug on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/bug/</link>
+    <description>Recent content in Bug on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Fri, 31 Oct 2008 21:10:25 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/bug/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Update on “Script error leaving page with applet tag” (jQuery)</title>
+      <link>https://blog.liquidbytes.net/2008/10/update-on-script-error-leaving-page-with-applet-tag-jquery/</link>
+      <pubDate>Fri, 31 Oct 2008 21:10:25 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/10/update-on-script-error-leaving-page-with-applet-tag-jquery/</guid>
+      <description>After 9 months of waiting, there finally might be a fix for jQuery bug #2349: When you hide or remove a Java applet, you get a script error in Firefox. The impact was, that you could not really use jQuery together with Java applets. I&amp;#8217;m really looking forward to jQuery 1.3.0! :D</description>
+    </item>
+    
+    <item>
+      <title>Update on object property reordering in Google Chrome</title>
+      <link>https://blog.liquidbytes.net/2008/10/update-on-object-property-reordering-in-google-chrome/</link>
+      <pubDate>Wed, 29 Oct 2008 12:26:24 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/10/update-on-object-property-reordering-in-google-chrome/</guid>
+      <description>Iterating over an objects properties can result in a seemingly random order, it&amp;#8217;s always the same order in Chrome, but in a different order for other browsers. I posted this as bug #223 a couple of weeks ago. John Resig posted the same issue as ticket #883 a day later. It was confirmed in the meantime by the chromium developers and described as an expected behavior. Very funny.</description>
+    </item>
+    
+    <item>
+      <title>First Google Chrome bug found</title>
+      <link>https://blog.liquidbytes.net/2008/09/first-google-chrome-bug-found/</link>
+      <pubDate>Tue, 02 Sep 2008 23:30:19 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/09/first-google-chrome-bug-found/</guid>
+      <description>I just found my first bug in Chrome: If you iterate over object properties (using jQuery&amp;#8217;s $.each()) and insert HTML generated inside that loop into the DOM, then that HTML appears in random order. Very funny. Might be a problem with threads or Chrome changes the order of object properties by itself:
+http://code.google.com/p/chromium/issues/detail?id=223</description>
+    </item>
+    
+  </channel>
+</rss>

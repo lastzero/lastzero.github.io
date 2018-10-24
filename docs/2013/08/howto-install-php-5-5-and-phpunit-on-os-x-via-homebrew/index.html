@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Howto: Install PHP 5.5 and PHPUnit on OS X via Homebrew" />
+<meta property="og:description" content="Here is how to install the latest PHP and PHPUnit versions on OS X using , which became my first choice after testing other package managers.
+To avoid conflicts, it is generally not recommended to use Homebrew alongside other external OS X package managers such as MacPorts or Fink. You can remove MacPorts with these Terminal commands:
+sudo port -f uninstall installed sudo rm -rf /opt/local sudo rm -rf /Applications/DarwinPorts If you prefer to stay with MacPorts: There is a blog post with a detailed howto for PHP 5." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2013/08/howto-install-php-5-5-and-phpunit-on-os-x-via-homebrew/" /><meta property="article:published_time" content="2013-08-25T09:37:09&#43;00:00"/>
+<meta property="article:modified_time" content="2013-08-25T09:37:09&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Howto: Install PHP 5.5 and PHPUnit on OS X via Homebrew"/>
+<meta name="twitter:description" content="Here is how to install the latest PHP and PHPUnit versions on OS X using , which became my first choice after testing other package managers.
+To avoid conflicts, it is generally not recommended to use Homebrew alongside other external OS X package managers such as MacPorts or Fink. You can remove MacPorts with these Terminal commands:
+sudo port -f uninstall installed sudo rm -rf /opt/local sudo rm -rf /Applications/DarwinPorts If you prefer to stay with MacPorts: There is a blog post with a detailed howto for PHP 5."/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2013/08/howto-install-php-5-5-and-phpunit-on-os-x-via-homebrew/">
+
+    
+    <title>Howto: Install PHP 5.5 and PHPUnit on OS X via Homebrew &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>Howto: Install PHP 5.5 and PHPUnit on OS X via Homebrew</h1>
+        </div>
+    </section>
+
+    
+    
+    <div class="row">
+        <div class="col s12 m12 l10 offset-l1">
+            <div class="article-image" style="background-image: url('https://blog.liquidbytes.net/wp-content/uploads/2015/10/22305696820_96ae9aee67_z.jpg');"></div>
+        </div>
+    </div>
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Aug 25, 2013</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            <p>Here is how to install the latest <strong>PHP</strong> and <strong>PHPUnit</strong> versions on OS X using <Homebrew>, which became my first choice after testing other package managers.</p>
+
+<p>To avoid conflicts, it is generally not recommended to use Homebrew alongside other external OS X package managers such as <a href="http://www.macports.org/">MacPorts</a> or <a href="http://fink.thetis.ig42.org/">Fink</a>. You can remove MacPorts with these Terminal commands:</p>
+
+<pre>sudo port -f uninstall installed
+sudo rm -rf /opt/local
+sudo rm -rf /Applications/DarwinPorts</pre>
+
+<p>If you prefer to stay with MacPorts: There is a blog post with a detailed <a href="http://blog.bobbyallen.me/2013/07/30/installing-php-and-mysql-on-macosx-using-macports-for-development/">howto for PHP 5.5</a>. The respective uninstall commands for Fink are (untested):</p>
+
+<pre>fink remove --recursive daemonic xinitrc
+sudo rm -rf /sw</pre>
+
+<p>In case you don&#8217;t have Homebrew installed yet, it&#8217;s as easy as that:</p>
+
+<pre>ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+brew doctor # checks your installation and gives advice how to fix it</pre>
+
+<p>Make sure to have <strong>Xcode</strong> and (!) the <strong>Command Line Tools</strong> of Xcode installed (see <a href="http://i.stack.imgur.com/RU8OY.png">screenshot</a>) and then execute the following commands to download &amp; install PHP 5.5 (takes a little while):</p>
+
+<pre>rm -rf ~/.pearrc # remove existing PHP/PEAR config files
+brew update
+brew upgrade
+brew tap homebrew/dupes
+brew tap josegonzalez/homebrew-php
+brew install freetype jpeg libpng gd zlib openssl unixodbc
+brew install php55</pre>
+
+<p>Edit the PATH environment variable in your .bash_profile (might not exist yet) and restart your terminal session/tab for the changes to become effective:</p>
+
+<pre>nano ~/.bash_profile
+export PATH="$(brew --prefix josegonzalez/php/php55)/bin:/usr/local/bin:$PATH"</pre>
+
+<p>Afterwards, you can easily install the latest <a href="http://phpunit.de/manual/current/en/index.html">PHPUnit</a> release via PEAR (the PHP package manager):</p>
+
+<pre>sudo pear config-set auto_discover 1
+sudo pear install pear.phpunit.de/PHPUnit</pre>
+
+<p>Additional <a href="https://github.com/josegonzalez/homebrew-php/blob/master/README.md">changes</a> are needed to enable PHP 5.5 in Apache &#8211; OS X currently ships with 5.3 which will <strong>not</strong> be uninstalled/replaced by the previous steps. You can check the versions of the installed packages like this:</p>
+
+<pre>[MacBook-Air]# /usr/bin/php -v # OS X PHP
+PHP 5.3.15 with Suhosin-Patch (cli) (built: Aug 24 2012 17:45:44)
+Copyright (c) 1997-2012 The PHP Group
+Zend Engine v2.3.0, Copyright (c) 1998-2012 Zend Technologies
+
+[MacBook-Air]# php -v # Homebrew PHP
+PHP 5.5.1 (cli) (built: Aug 21 2013 16:26:25)
+Copyright (c) 1997-2013 The PHP Group
+Zend Engine v2.5.0, Copyright (c) 1998-2013 Zend Technologies
+
+[MacBook-Air]# phpunit --version
+PHPUnit 3.7.24 by Sebastian Bergmann.</pre>
+
+<p>Note that <a href="https://github.com/stefanesser/suhosin/issues/20">Suhosin</a> is currently not available for PHP 5.5.</p>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

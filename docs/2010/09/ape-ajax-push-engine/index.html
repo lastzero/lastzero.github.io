@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Ape: Ajax Push Engine" />
+<meta property="og:description" content="Let me say a few words about Ape, an Ajax push server I came across this week:
+http://www.ape-project.org/
+Even though the authors say it&#8217;s a stable 1.0 release and &#8220;insanely great&#8221;, there are some issues you should be aware of. I write this in the hope that it helps others to evaluate the server and to give feedback to the developers. The general idea of combining fast C code with JavaScript is very good." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2010/09/ape-ajax-push-engine/" /><meta property="article:published_time" content="2010-09-03T20:20:41&#43;00:00"/>
+<meta property="article:modified_time" content="2010-09-03T20:20:41&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ape: Ajax Push Engine"/>
+<meta name="twitter:description" content="Let me say a few words about Ape, an Ajax push server I came across this week:
+http://www.ape-project.org/
+Even though the authors say it&#8217;s a stable 1.0 release and &#8220;insanely great&#8221;, there are some issues you should be aware of. I write this in the hope that it helps others to evaluate the server and to give feedback to the developers. The general idea of combining fast C code with JavaScript is very good."/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2010/09/ape-ajax-push-engine/">
+
+    
+    <title>Ape: Ajax Push Engine &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>Ape: Ajax Push Engine</h1>
+        </div>
+    </section>
+
+    
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Sep 3, 2010</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            
+
+<p>Let me say a few words about <strong>Ape</strong>, an Ajax push server I came across this week:</p>
+
+<p><a href="http://www.ape-project.org/">http://www.ape-project.org/</a></p>
+
+<p>Even though the authors say it&#8217;s a stable 1.0 release and &#8220;insanely great&#8221;, there are some issues you should be aware of. I write this in the hope that it helps others to evaluate the server and to give feedback to the developers. The general idea of combining fast C code with JavaScript is very good. It&#8217;s still a young Open Source project and has a lot of potential.</p>
+
+<h4 id="incomplete-documentation">Incomplete documentation</h4>
+
+<p>It turned out to be a little bit challenging to develop code for Ape because of the quality of the documentation. There is an API documentation (which is not good for new users) and there is a Wiki with some links leading to missing pages. Most of the examples deal with how to implement a chat server. In fact Ape was previously named ACE (Ajax Chat Engine). It&#8217;s sometimes hard to understand how to use it for a general purpose application and what the limits are.</p>
+
+<h4 id="maximum-length-of-channel-names">Maximum length of channel names</h4>
+
+<p>One of these limitations is the maximum length of 40 characters for channel names. In my library I use channel names like &#8216;foo.bar.baz&#8217; that can be easily published with OpenAjax on the JavaScript side. Some of these events never arrived nor did the subscribe function throw an exception.</p>
+
+<h4 id="nickname-required-to-connect-to-server">Nickname required to connect to server</h4>
+
+<p>At first it seemed like the server requires a nickname to connect, which makes sense for chat applications only. Not every Web site out there should ask the user to enter his nickname, right? After investigating the issue (I didn&#8217;t find a hint in the documentation), I found out that an example server-side script in <em>/var/ape/examples</em> was causing this behavior. You can comment out this line in <em>main.ape.js</em> to &#8220;fix&#8221; it:</p>
+
+<pre>include("examples/nickname.js");</pre>
+
+<h4 id="error-when-sending-messages-to-empty-channels">Error when sending messages to empty channels</h4>
+
+<p>If you happen to send a message to a channel that is currently not subscribed (Ape calls it &#8220;joined&#8221;, like in a chat software), you&#8217;ll get an error. This behavior is strange, if you are used to other message servers that just accept the message, even if nobody will ever get it. If you know this can happen, it&#8217;s not so much of an issue anymore.</p>
+
+<h4 id="complicated-domain-name-setup">Complicated domain name setup</h4>
+
+<p>Ape uses sub domains in the form of [Number].ape. to communicate with the JavaScript client. Each connect increases the number (which is stored in a cookie) by one. They call the numbers &#8220;frequencies&#8221;. According to the documentation, this concept should provide sessions within a session, if you open multiple tabs in the same browser. I&#8217;ve never seen something like that before. I disabled the feature by modifying their code and tracking the different tabs on the server side. My code will be published later, so you can copy this, if you like. Another problem with the changing domain names is that you have a hard time to set this up locally in /etc/hosts &#8211; there is no support for wildcards.</p>
+
+<h4 id="config-directly-inside-the-javascript-library">Config directly inside the JavaScript library</h4>
+
+<p>I found it really strange to configure the Ape server URL directly in <em>Build/uncompressed/apeClientJS.js</em>. If you ever update this file, your config will be overwritten. Why not provide the config as a parameter to the load() or constructor function? Again, I modified the code.</p>
+
+<h4 id="based-on-mootools">Based on MooTools</h4>
+
+<p>There are two versions of the client library, one for MooTools and one for other JavaScript frameworks, which includes MooTools. I did not find out yet, why you need MooTools to write an Ajax push library for general usage. I also did not investigate how many files are loaded additionally when the Ape library is included. My feeling tells me, that this whole thing can be improved and that the library should be compressed and put in one single file.</p>
+
+<h4 id="no-standard-protocols">No standard protocols</h4>
+
+<p>Even though it probably is possible to connect Ape to a general usage message server (like <a href="http://activemq.apache.org/">ActiveMQ</a> or <a href="http://www.rabbitmq.com/">RabbitMQ</a>) with some additional work, it does not offer a standard STOMP or AMQP interface by default. The Web site states that the Ape protocol is faster than everything else. So far, I was not able to confirm or reject that claim ;)</p>
+
+<h4 id="javascript-on-the-server-side">JavaScript on the server side</h4>
+
+<p>It is convenient to be able to use JavaScript on the server side. Just let me note that this can lead to previously unexpected errors. JavaScript is a loosely typed language and if you happen to return a number instead of a string as nickname to the server, you will see this exception:</p>
+
+<pre>/var/ape/examples/nickname.js:6:TypeError: params.name.toLowerCase is not a function</pre>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

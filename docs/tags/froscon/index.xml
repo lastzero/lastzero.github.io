@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Froscon on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/tags/froscon/</link>
+    <description>Recent content in Froscon on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Thu, 04 Sep 2008 19:31:21 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/tags/froscon/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple is hard</title>
+      <link>https://blog.liquidbytes.net/2008/09/simple-is-hard/</link>
+      <pubDate>Thu, 04 Sep 2008 19:31:21 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/09/simple-is-hard/</guid>
+      <description>Check out these slides by Rasmus Lerdorf presented at FrOSCon 2008:
+http://talks.php.net/show/froscon08
+Yes, PHP frameworks do suck in terms of performance. CakePHP is the slowest while Zend Framework seems to be the most complex, in terms of include dependencies.</description>
+    </item>
+    
+  </channel>
+</rss>

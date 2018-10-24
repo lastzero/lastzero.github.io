@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Form Validation vs Model Validation" />
+<meta property="og:description" content="This is a follow-up on Why I’m using a separate layer for input data validation that explains the key differences between client-side, input value (form) and model validation.
+In general, model validation operates on trusted data (internal system state) and should ideally be repeatable at any point in time while input validation explicitly operates once on data that comes from untrusted sources (depending on the use case and user privileges)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.liquidbytes.net/2015/11/form-validation-vs-model-validation/" /><meta property="article:published_time" content="2015-11-15T06:28:07&#43;00:00"/>
+<meta property="article:modified_time" content="2015-11-15T06:28:07&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Form Validation vs Model Validation"/>
+<meta name="twitter:description" content="This is a follow-up on Why I’m using a separate layer for input data validation that explains the key differences between client-side, input value (form) and model validation.
+In general, model validation operates on trusted data (internal system state) and should ideally be repeatable at any point in time while input validation explicitly operates once on data that comes from untrusted sources (depending on the use case and user privileges)."/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://blog.liquidbytes.net/2015/11/form-validation-vs-model-validation/">
+
+    
+    <title>Form Validation vs Model Validation &middot; Liquid Bytes</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+    
+
+    
+  </head>
+  <body class="">
+    
+      
+
+
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo right"><img src="/img/logo.png" title="Liquid Bytes" /></a>
+            <ul class="left hide-on-med-and-down">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+            
+            
+
+
+            
+<li>
+    <a class="black-text" href="/">Blog</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/opensource">Open-Source</a>
+</li>
+
+        
+
+
+            
+<li>
+    <a class="black-text" href="/contact">Contact</a>
+</li>
+
+        
+
+
+
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+    
+
+    <main>
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>Form Validation vs Model Validation</h1>
+        </div>
+    </section>
+
+    
+    
+    <div class="row">
+        <div class="col s12 m12 l10 offset-l1">
+            <div class="article-image" style="background-image: url('https://blog.liquidbytes.net/wp-content/uploads/2015/11/4272386826_b35f366c3e_b.jpg');"></div>
+        </div>
+    </div>
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name">Michael Mayer</div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Nov 15, 2015</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            <p>This is a follow-up on <a href="https://lastzero.net/2015/11/why-im-using-a-separate-layer-for-input-data-validation/">Why I’m using a separate layer for input data validation</a> that explains the key differences between client-side, input value (form) and model validation.</p>
+
+<p>In general, <strong>model validation</strong> operates on <strong>trusted</strong> data (internal system state) and should ideally be <strong>repeatable</strong> at any point in time while <strong>input validation</strong> explicitly operates <strong>once</strong> on data that comes from <strong>untrusted</strong> sources (depending on the use case and user privileges).</p>
+
+<p>This separation makes it possible to build <strong>reusable models</strong>, <strong>controllers</strong> and <strong>forms</strong> that can be <strong>loosely coupled</strong> through dependency injection:</p>
+
+<pre><code>class UserController
+{
+    protected $user;
+    protected $form;
+
+    public function __construct(User $user, UserForm $form)
+    {
+        $this-&gt;user = $user;
+        $this-&gt;form = $form;
+    }
+
+    public function putAction($id, Request $request) // Update
+    {
+        $this-&gt;user-&gt;find($id); // Find entity (throws exception, if not found)
+
+        $this-&gt;form-&gt;setDefinedValues($this-&gt;user-&gt;getValues()); // Initialization
+        $this-&gt;form-&gt;setDefinedWritableValues($request-&gt;request-&gt;all()); // Input values
+        $this-&gt;form-&gt;validate(); // Validation
+
+        if($this-&gt;form-&gt;hasErrors()) {
+            throw new FormInvalidException($this-&gt;form-&gt;getFirstError());
+        }
+
+        $this-&gt;user-&gt;update($this-&gt;form-&gt;getValues()); // Update values
+
+        return $this-&gt;user-&gt;getValues(); // Return updated entity values
+    }
+}
+</code></pre>
+
+<p>Think of input validation as <strong>whitelist </strong>validation (&#8220;accept known good&#8221;) and model validation as <strong>blacklist</strong> validation (&#8220;reject known bad&#8221;). Whitelist validation is <strong>more secure</strong> while blacklist validation prevents your model layer from being <strong>overly </strong><strong>constrained</strong> to very specific use cases.</p>
+
+<p>Invalid model data should always cause an <strong>exception</strong> to be thrown (otherwise the application can continue running without noticing the mistake) while invalid input values coming from external sources are <strong>not unexpected</strong>, but rather common (unless you got users that never make mistakes). Validation within a specific model may not be possible, if a set of input values must be validated together (because they depend on each other) but the individual values belong to different models &#8211; at least this can create <strong>additional dependencies</strong> between models that would not be there otherwise up to the point that all models depend on each other. In short: The application may still work as expected, but the code is a mess.</p>
+
+<p>From a theoretical standpoint, any complex system has more <strong>internal state</strong> than it exposes to the outside, thus it is never sufficient to use model validation only &#8211; except the model provides two sets of methods: some that are used internally and some that can be exposed to arbitrary input data from any source. Aside from side-effects such as limited user feedback (exception messages) and bloated model code, this approach may easily lead to serious <strong>security flaws</strong>. Malicious input data is a much higher threat to <strong>multi-user</strong> Web applications than to classical <strong>single-user</strong> desktop applications. Simple blacklist model validation may be fully sufficient for desktop applications, which are in full control of the user interface (view layer).</p>
+
+<p>Client-side (JavaScript or HTML) form validation is always just a convenience feature and <strong>not reliable</strong>. However, you can (at least partly) <strong>reuse existing server-side form validation</strong> rules to perform client-side validation, if they can be easily converted to JSON (for JavaScript) or be passed to template rendering engines such as Twig or Smarty (for HTML). Reusing model layer validation rules in a similar fashion is at least difficult, if not impossible.</p>
+
+<p>See also:</p>
+
+<ul>
+<li><a href="https://www.owasp.org/index.php/Data_Validation#Where_to_include_business_rule_validation" target="_blank">OWASP &#8211; Where to include business rule validation</a></li>
+<li><a href="http://lastzero.github.io/php-input-validation/" target="_blank">InputValidation for PHP &#8211; Easy &amp; secure whitelist validation for input data of any origin</a></li>
+</ul>
+
+        </div>
+    </section>
+</article>
+
+
+    </main>
+
+    
+      <footer class="page-footer grey darken-3 white-text">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="white-text">About the author</h5>
+<p class="white-text">
+    Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s.
+    He has more than 20 years of experience in leading teams and building Web applications.
+</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero">GitHub</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://twitter.com/lastzero">Twitter</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://www.linkedin.com/in/lastzero/">LinkedIn</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+
+<h5 class="white-text">Projects</h5>
+<ul>
+    
+    <li>
+        <a class="white-text" href="https://photoprism.org/">PhotoPrism</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/symlex">Symlex</a>
+    </li>
+    
+    <li>
+        <a class="white-text" href="https://github.com/lastzero/tweethog">TweetHog</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="white-text" style="line-height: 31px">You are free to share if you link back to this blog</span>
+<div class="right">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="/img/license.png" title="CC BY-ND 4.0" /></a>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://blog.liquidbytes.netjs/materialize.js"></script>
+    <script src="https://blog.liquidbytes.netjs/init.js"></script>
+  </body>
+</html>

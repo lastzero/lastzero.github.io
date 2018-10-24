@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript Html Amp Css on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/categories/javascript-html-amp-css/</link>
+    <description>Recent content in Javascript Html Amp Css on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Thu, 20 Jun 2013 14:18:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/categories/javascript-html-amp-css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cloud9 IDE: My first impression</title>
+      <link>https://blog.liquidbytes.net/2013/06/customizing-and-fixing-cloud9-ide/</link>
+      <pubDate>Thu, 20 Jun 2013 14:18:02 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2013/06/customizing-and-fixing-cloud9-ide/</guid>
+      <description>After I could gather some experience with Cloud9 IDE today, I&amp;#8217;m in the process of customizing it to my needs. For example, the run and preview buttons seem useless when using Cloud9 as editor only: Most PHP/JavaScript Web apps are constantly running in another tab anyways and usually don&amp;#8217;t require compilation (as a developer, I know how to use the reload button).
+The basic editor settings are accessible via Preferences and/or the Views menu.</description>
+    </item>
+    
+    <item>
+      <title>Howto: Write an iPhone app with PhoneGap</title>
+      <link>https://blog.liquidbytes.net/2012/10/howto-write-an-iphone-app-with-phonegap/</link>
+      <pubDate>Thu, 18 Oct 2012 07:32:04 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/10/howto-write-an-iphone-app-with-phonegap/</guid>
+      <description>PhoneGap lets you write smartphone apps with HTML, CSS and JavaScript. No need to learn Objective-C or get used to proprietary C/C++ libraries. Sounds good in theory, but how easy is it really?
+I found the official documentation a little bit confusing, so I wrote this streamlined howto while I&amp;#8217;ve been testing PhoneGap myself. If you got about an hour of time, these are the steps to follow to compile &amp;amp; run your own iPhone app:</description>
+    </item>
+    
+    <item>
+      <title>How to use the StealJS file loader as a stand-alone tool</title>
+      <link>https://blog.liquidbytes.net/2012/10/how-to-use-the-stealjs-file-loader-as-a-stand-alone-tool/</link>
+      <pubDate>Tue, 02 Oct 2012 16:02:41 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/10/how-to-use-the-stealjs-file-loader-as-a-stand-alone-tool/</guid>
+      <description>Did you know that JavaScriptMVC comes with a very powerful file loader / dependency management system? It can be used independently of the MVC framework and is (in my opinion) much better than anything else I&amp;#8217;ve seen (including RequireJS). It is not marketed as a stand-alone tool, which probably is the reason people don&amp;#8217;t really notice/use it outside the JavaScriptMVC community so far.
+Why should you use it?  StealJS can not only load JavaScript files, but also CSS, CoffeeScript and Less!</description>
+    </item>
+    
+    <item>
+      <title>Secrets of the JavaScript Ninja</title>
+      <link>https://blog.liquidbytes.net/2011/03/secrets-of-the-javascript-ninja/</link>
+      <pubDate>Mon, 28 Feb 2011 23:26:27 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2011/03/secrets-of-the-javascript-ninja/</guid>
+      <description>On http://www.manning.com/resig/resig_meapch1.pdf you find the first chapter of John Resigs new book &amp;#8220;Secrets of the JavaScript Ninja&amp;#8220;. From what I can see there, the book can be a useful reference, but it does not look like there are any actual secrets revealed. All the bread &amp;amp; butter topics seem covered and John certainly understands JavaScript.
+I think every experienced JavaScript developers agrees with his statement:
+ Browser-based JavaScript development is much more complicated than it seems.</description>
+    </item>
+    
+    <item>
+      <title>Chaotic Pattern: Wiki is online</title>
+      <link>https://blog.liquidbytes.net/2010/11/chaotic-pattern-wiki-is-online/</link>
+      <pubDate>Mon, 01 Nov 2010 21:06:45 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/11/chaotic-pattern-wiki-is-online/</guid>
+      <description>I recently managed to publish my latest project:
+chaoticpattern.net
+While reading the book Sync, I felt that this is the right name &amp;#8211; an explanation can be found on the Web site. There is already some blog with the same name, but it does not seem to be very active. The last post is from May 2009. Hope I don&amp;#8217;t cause any confusion.
+Chaotic Pattern will be used as an incubator/lab.</description>
+    </item>
+    
+    <item>
+      <title>How to contribute to JavaScriptMVC 3.0</title>
+      <link>https://blog.liquidbytes.net/2010/09/how-to-contribute-to-javascriptmvc-3-0/</link>
+      <pubDate>Sat, 04 Sep 2010 12:25:33 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/09/how-to-contribute-to-javascriptmvc-3-0/</guid>
+      <description>If you are reading this, I can safely assume you know what JavaScriptMVC (JMVC) is, what its features are, and what components it consists of, namely:
+ FuncUnit (the test framework) DocumentJS (the documentation engine) jQuery (JavaScriptMVC uses a special fork with added bugfixes) JavaScriptMVC (the core framework) Steal (the code manager / script loader; sometimes referred to as “StealJS”) Phui (component library for JavaScriptMVC, not part of the core)  These partly independent components (together with Selenium) are bundled using git submodules (http://book.</description>
+    </item>
+    
+    <item>
+      <title>Ape: Ajax Push Engine</title>
+      <link>https://blog.liquidbytes.net/2010/09/ape-ajax-push-engine/</link>
+      <pubDate>Fri, 03 Sep 2010 20:20:41 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/09/ape-ajax-push-engine/</guid>
+      <description>Let me say a few words about Ape, an Ajax push server I came across this week:
+http://www.ape-project.org/
+Even though the authors say it&amp;#8217;s a stable 1.0 release and &amp;#8220;insanely great&amp;#8221;, there are some issues you should be aware of. I write this in the hope that it helps others to evaluate the server and to give feedback to the developers. The general idea of combining fast C code with JavaScript is very good.</description>
+    </item>
+    
+    <item>
+      <title>It’s really hard to talk about JavaScript best practices and JMVC</title>
+      <link>https://blog.liquidbytes.net/2010/07/its-really-hard-to-talk-about-javascript-best-practices-and-jmvc/</link>
+      <pubDate>Thu, 15 Jul 2010 09:36:32 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/07/its-really-hard-to-talk-about-javascript-best-practices-and-jmvc/</guid>
+      <description>I was totally enthusiastic, when I first learned about JavaScriptMVC &amp;#8211; because it brings all the best practices you are accustomed to into the JavaScript world. That means the MVC architecture, Object-oriented development with simulated inheritance, EJS templates, easy testing, OpenAjax support, powerful event delegation and so on.
+However, I often have a hard time to convince other developers about those advantages. I guess testing is the easiest one, because no developer would dare to argue against testing, even though many developers don&amp;#8217;t do it or don&amp;#8217;t do it right.</description>
+    </item>
+    
+    <item>
+      <title>Does the status of a developer matter to you?</title>
+      <link>https://blog.liquidbytes.net/2009/09/does-the-status-of-a-developer-matter-to-you/</link>
+      <pubDate>Mon, 21 Sep 2009 09:41:25 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2009/09/does-the-status-of-a-developer-matter-to-you/</guid>
+      <description>Good morning^^
+I feel &amp;#8220;angry&amp;#8221; about the IT community drifting away from each other. There are the hard-core professionals working on enterprise-scale projects, then there are the employed software engineers working at companies like Google or IBM, and last but not least there is an in-homogenous group consisting of Open Source developers, book authors, bloggers, and technology evangelists. In the past, the gap between those groups was not that important, as the market was small and the technology less complex.</description>
+    </item>
+    
+    <item>
+      <title>Object property ordering in Google Chrome</title>
+      <link>https://blog.liquidbytes.net/2009/09/object-property-ordering-in-google-chrome/</link>
+      <pubDate>Sun, 06 Sep 2009 22:26:37 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2009/09/object-property-ordering-in-google-chrome/</guid>
+      <description>Today, I prepared for the upcoming PHP/JS conferences and had a look at the mysterious bug #883 of Google Chrome and those related to it. Also I read though SquirrelFish source, which is used by Safari 4.
+The reason for the odd behavior of Chrome seems to be a if/else construct that is repeated throughout the source of runtime.cc:
+// Check if the name is trivially convertible to an index and get // the element if so.</description>
+    </item>
+    
+    <item>
+      <title>c’t magazine: WebZwoNullTurbo, how to optimize JavaScript</title>
+      <link>https://blog.liquidbytes.net/2009/08/ct-magazine-webzwonullturbo-how-to-optimize-javascript/</link>
+      <pubDate>Tue, 18 Aug 2009 11:36:17 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2009/08/ct-magazine-webzwonullturbo-how-to-optimize-javascript/</guid>
+      <description>There is an article about JavaScript optimization in the current issue of the German c&amp;#8217;t magazine. I read it with great interest and there are some tips that need to be commented:
+1) Declare local variables with the keyword var, to save time for searching it in the global namespace:
+function foo () { var bar = &#39;abc&#39;; return bar; }  This should always be done, for sure. However the article is wrong in that the variable will be created in the local namespace, if you don&amp;#8217;t use var.</description>
+    </item>
+    
+    <item>
+      <title>JavaScriptMVC 1.5 released</title>
+      <link>https://blog.liquidbytes.net/2009/02/javascriptmvc-15-released/</link>
+      <pubDate>Thu, 19 Feb 2009 10:34:23 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2009/02/javascriptmvc-15-released/</guid>
+      <description>A new stable release of the JavaScriptMVC framework was released yesterday :) Justin Meyer developed it, while working with us on a new Web application. Some features like the new custom events are direct results of this project. He did an excellent job!
+New features include:
+ Env.js/Shrinksafe based compression: A custom env to simulate the browser. As the browser encounters script tags, it adds them to a collection and then compresses them.</description>
+    </item>
+    
+    <item>
+      <title>Validation in the MVC design pattern</title>
+      <link>https://blog.liquidbytes.net/2009/01/validation-in-the-mvc-design-pattern/</link>
+      <pubDate>Mon, 05 Jan 2009 22:38:06 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2009/01/validation-in-the-mvc-design-pattern/</guid>
+      <description>Hello Martin,
+your article on Notification implies that validation should be done in
+the Model layer. There are numerous voices that see the need for
+validation in the Controller, as it receives user input in the first
+place. I argue that actually both should be done in Web applications:
+&amp;#8211; First you want to make sure that data integrity is given. You should
+not outsource this essential task to the Controller or the View.</description>
+    </item>
+    
+    <item>
+      <title>Update on “Script error leaving page with applet tag” (jQuery)</title>
+      <link>https://blog.liquidbytes.net/2008/10/update-on-script-error-leaving-page-with-applet-tag-jquery/</link>
+      <pubDate>Fri, 31 Oct 2008 21:10:25 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/10/update-on-script-error-leaving-page-with-applet-tag-jquery/</guid>
+      <description>After 9 months of waiting, there finally might be a fix for jQuery bug #2349: When you hide or remove a Java applet, you get a script error in Firefox. The impact was, that you could not really use jQuery together with Java applets. I&amp;#8217;m really looking forward to jQuery 1.3.0! :D</description>
+    </item>
+    
+    <item>
+      <title>Update on object property reordering in Google Chrome</title>
+      <link>https://blog.liquidbytes.net/2008/10/update-on-object-property-reordering-in-google-chrome/</link>
+      <pubDate>Wed, 29 Oct 2008 12:26:24 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/10/update-on-object-property-reordering-in-google-chrome/</guid>
+      <description>Iterating over an objects properties can result in a seemingly random order, it&amp;#8217;s always the same order in Chrome, but in a different order for other browsers. I posted this as bug #223 a couple of weeks ago. John Resig posted the same issue as ticket #883 a day later. It was confirmed in the meantime by the chromium developers and described as an expected behavior. Very funny.</description>
+    </item>
+    
+    <item>
+      <title>Ajax and Rich Internet Application FAQ</title>
+      <link>https://blog.liquidbytes.net/2008/10/ajax-and-rich-internet-application-faq/</link>
+      <pubDate>Wed, 29 Oct 2008 11:58:57 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/10/ajax-and-rich-internet-application-faq/</guid>
+      <description>Shall I use JSON or XML as AJAX transport format?
+There actually is no reason to use XML instead of JSON, if you don&amp;#8217;t plan to use XSLT. JSON is part of JavaScript which has been around since the dark ages of the web. Also, there are very fast server-side JSON implementations and JSON is the more compact protocol, thus saving bandwidth.
+Isn&amp;#8217;t XSLT much faster than to use JSON and modify the DOM with JavaScript?</description>
+    </item>
+    
+    <item>
+      <title>First Google Chrome bug found</title>
+      <link>https://blog.liquidbytes.net/2008/09/first-google-chrome-bug-found/</link>
+      <pubDate>Tue, 02 Sep 2008 23:30:19 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/09/first-google-chrome-bug-found/</guid>
+      <description>I just found my first bug in Chrome: If you iterate over object properties (using jQuery&amp;#8217;s $.each()) and insert HTML generated inside that loop into the DOM, then that HTML appears in random order. Very funny. Might be a problem with threads or Chrome changes the order of object properties by itself:
+http://code.google.com/p/chromium/issues/detail?id=223</description>
+    </item>
+    
+    <item>
+      <title>JavaScript Components</title>
+      <link>https://blog.liquidbytes.net/2008/07/javascript-components/</link>
+      <pubDate>Sun, 06 Jul 2008 20:05:02 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/07/javascript-components/</guid>
+      <description>My blog was a calm place for a while now, because I&amp;#8217;m terribly busy with writing code (like it should be&amp;#8230;). With this posting, I want to present the prototype of JavaScript Components, which are comparable to Swing Components in Java. They make use of the Composite Pattern. That means every Component can act as a container for other Components. Together with Models, Views and a Controller (Event Dispatcher), they can form reusable widgets.</description>
+    </item>
+    
+    <item>
+      <title>Yes, there is a memory leak…</title>
+      <link>https://blog.liquidbytes.net/2008/05/yes-there-is-a-memory-leak/</link>
+      <pubDate>Sun, 25 May 2008 04:49:10 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/yes-there-is-a-memory-leak/</guid>
+      <description>If somebody ever said, there is no memory leak in Firefox, here&amp;#8217;s the proof:
+
+It can&amp;#8217;t be, that a browser with 4 open tabs requires about 600 MB of memory. That&amp;#8217;s 150 MB per Web site, which seems a bit too much ;)
+Safari, by the way, requires 128 MB for 5 open tabs.
+ If you find that Firefox&amp;#8217;s memory usage continues to grow after long periods of being open, you may want to consider periodically restarting Firefox to bring the memory usage back to reasonable levels.</description>
+    </item>
+    
+    <item>
+      <title>Safari rocks!</title>
+      <link>https://blog.liquidbytes.net/2008/05/safari-rocks/</link>
+      <pubDate>Thu, 08 May 2008 16:56:30 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/safari-rocks/</guid>
+      <description>I forgot to mention why I had to install Privoxy (see my last post): Because I started using Safari, which doesn&amp;#8217;t care about my privacy and security in the same way as Firefox does. Sadly, Firefox crashes every couple of minutes since the last update. Another reason for using Safari is it&amp;#8217;s JavaScript performance:
+The results show the final time in ms for the tests on http://www.domassistant.com/slickspeed/.
+I&amp;#8217;ve also done the same test on my Linux notebook (which is of course a bit slower than the 64bit Windows XP workstation) with Opera, Epiphany and Firefox:</description>
+    </item>
+    
+    <item>
+      <title>Flickr RSS plugin for jQuery</title>
+      <link>https://blog.liquidbytes.net/2008/05/flickr-rss-feed-plugin-for-jquery-and-wordpress/</link>
+      <pubDate>Tue, 06 May 2008 21:45:42 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/flickr-rss-feed-plugin-for-jquery-and-wordpress/</guid>
+      <description>After searching for a suitable Flickr WordPress plugin for ages, I developed my own in less than 40 lines of JavaScript code. It&amp;#8217;s free! You may download and use it for your own blog. I recommend to save it as /wp-content/plugins/flickr/flickr.js, if you are using WordPress. As the plugin does not depend on WordPress, you can use it with any other CMS like Drupal too. Even with plain HTML, if you like.</description>
+    </item>
+    
+    <item>
+      <title>Using Gdata with jQuery</title>
+      <link>https://blog.liquidbytes.net/2008/05/using-gdata-with-jquery/</link>
+      <pubDate>Tue, 06 May 2008 06:12:32 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/using-gdata-with-jquery/</guid>
+      <description>This morning, I had the unbearable desire to find out why I can&amp;#8217;t call Google&amp;#8217;s AJAX Feed API with jQuery 1.2.3 directly, but using a small proxy script. In theory, it&amp;#8217;s just including a script tag which then loads the remote JavaScript and executes a callback function (thus, bypassing the same-origin policy of JavaScript, which would apply for a normal XMLHttpRequest):
+ $.getScript(&amp;#8216;http://adwordsapi.blogspot.com/atom.xml?alt=json-in-script&amp;amp;callback=someCallbackFunction&amp;amp;#8217;);
+ or
+ $.get(&amp;#8216;http://adwordsapi.blogspot.com/atom.xml?alt=json-in-script&amp;amp;#8217;, null, someCallbackFunction, &amp;#8216;jsonp&amp;#8217;);</description>
+    </item>
+    
+    <item>
+      <title>Google Developer Day 2007</title>
+      <link>https://blog.liquidbytes.net/2007/05/hamburg-google-developer-day-2007/</link>
+      <pubDate>Thu, 31 May 2007 13:40:32 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2007/05/hamburg-google-developer-day-2007/</guid>
+      <description>Heute ist der Google Entwickler Tag. Ich wurde eingeladen hier im Side Hotel in Hamburg teilzunehmen. Die Firma mit den bunten Buchstaben will heute ueber ihre API sprechen (und etwas zu Essen gibt es angeblich auch, was sicher mit ein Grund war die Einladung anzunehnmen).
+Da ich seit gestern eine Vodafone UMTS Karte in meinem Notebook habe, werde ich so frei sein und live ueber den Event schreiben. Ich glaube zwar nicht, dass der Tag heute in die Geschichte eingehen wird, aber was macht man sonst mit einer UMTS-Flatrate?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Liquid Bytes</title>
+    <link>https://blog.liquidbytes.net/categories/linux/</link>
+    <description>Recent content in Linux on Liquid Bytes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>You are free to share if you link back to this blog</copyright>
+    <lastBuildDate>Thu, 20 Jun 2013 14:18:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.liquidbytes.net/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cloud9 IDE: My first impression</title>
+      <link>https://blog.liquidbytes.net/2013/06/customizing-and-fixing-cloud9-ide/</link>
+      <pubDate>Thu, 20 Jun 2013 14:18:02 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2013/06/customizing-and-fixing-cloud9-ide/</guid>
+      <description>After I could gather some experience with Cloud9 IDE today, I&amp;#8217;m in the process of customizing it to my needs. For example, the run and preview buttons seem useless when using Cloud9 as editor only: Most PHP/JavaScript Web apps are constantly running in another tab anyways and usually don&amp;#8217;t require compilation (as a developer, I know how to use the reload button).
+The basic editor settings are accessible via Preferences and/or the Views menu.</description>
+    </item>
+    
+    <item>
+      <title>Howto: Install Cloud9 IDE on CentOS 6.3 / Linux</title>
+      <link>https://blog.liquidbytes.net/2013/06/howto-installing-cloud9-ide-on-centos-6-3-linux/</link>
+      <pubDate>Wed, 19 Jun 2013 22:13:55 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2013/06/howto-installing-cloud9-ide-on-centos-6-3-linux/</guid>
+      <description>There is an interesting (and free) alternative for those who are sick of (re-)installing Eclipse, Aptana, Zend Studio, PhpStorm, NetBeans or other IDEs on each new computer they use &amp;#8211; or for those who don&amp;#8217;t have 1 GB of RAM left to waste just to run a source code editor. I used to work with gedit mainly for performance reasons, but this option is (sadly) not viable on OS X (there is a working gedit version for OS X, but IMHO it is not really usable in practice).</description>
+    </item>
+    
+    <item>
+      <title>Configuring Ubuntu/Xubuntu and Apache 2 for local development environments</title>
+      <link>https://blog.liquidbytes.net/2012/10/configuring-ubuntu-and-apache-2-for-development-environments/</link>
+      <pubDate>Tue, 23 Oct 2012 19:10:12 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/10/configuring-ubuntu-and-apache-2-for-development-environments/</guid>
+      <description>Most Web server howtos out there are concerned with production environments, where you need a high level of performance and security. As a developer who runs Apache 2 on localhost, you have other requirements, such as quick configuration and flexibility. It&amp;#8217;s inconvenient to edit (usually copy &amp;amp; paste) your virtual hosts configuration and add entries to /etc/hosts whenever you are working on new projects (e.g. on GitHub) &amp;#8211; especially, if you just want to test something.</description>
+    </item>
+    
+    <item>
+      <title>Replacing OpenJDK with Oracle JDK</title>
+      <link>https://blog.liquidbytes.net/2012/03/replacing-openjdk-with-oracle-jdk/</link>
+      <pubDate>Tue, 06 Mar 2012 15:14:46 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/03/replacing-openjdk-with-oracle-jdk/</guid>
+      <description>Since I can&amp;#8217;t use OpenJDK for most applications (see last post), I was looking for a way to easily replace it with the original JDK. Thankfully I found a good howto. The short version:
+# Download Java from Oracle * and extract the contents of the tar.gz archive to &#34;java-7-oracle&#34; sudo mv java-7-oracle/ /usr/lib/jvm/ sudo add-apt-repository ppa:nilarimogard/webupd8 sudo apt-get update sudo apt-get install update-java sudo update-java  http://www.oracle.com/technetwork/java/javase/downloads/java-se-jdk-7-download-432154.html  This should work for Ubuntu 11.</description>
+    </item>
+    
+    <item>
+      <title>OpenJDK</title>
+      <link>https://blog.liquidbytes.net/2012/03/openjdk/</link>
+      <pubDate>Tue, 06 Mar 2012 12:03:35 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2012/03/openjdk/</guid>
+      <description>When OpenJDK as a Free Software alternative to Sun/Oracle Java was announced I thought this is a great idea. I don&amp;#8217;t like proprietary software too much and since I&amp;#8217;m a PHP, JavaScript and SQL developer, I didn&amp;#8217;t expect any &amp;#8220;bad&amp;#8221; consequences for my work. It&amp;#8217;s not like you expect any fancy or enterprise features, if you use the &amp;#8220;free&amp;#8221; version of some commercial software. That said, there are a lot of useful Java tools that you frequently need as a Web developer, such as</description>
+    </item>
+    
+    <item>
+      <title>Ape: Ajax Push Engine</title>
+      <link>https://blog.liquidbytes.net/2010/09/ape-ajax-push-engine/</link>
+      <pubDate>Fri, 03 Sep 2010 20:20:41 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/09/ape-ajax-push-engine/</guid>
+      <description>Let me say a few words about Ape, an Ajax push server I came across this week:
+http://www.ape-project.org/
+Even though the authors say it&amp;#8217;s a stable 1.0 release and &amp;#8220;insanely great&amp;#8221;, there are some issues you should be aware of. I write this in the hope that it helps others to evaluate the server and to give feedback to the developers. The general idea of combining fast C code with JavaScript is very good.</description>
+    </item>
+    
+    <item>
+      <title>Howto: Connect to a Cisco VPN using Ubuntu Linux 10.04</title>
+      <link>https://blog.liquidbytes.net/2010/06/cisco-client-vpn-vpnc-ubuntu-linux-10-04/</link>
+      <pubDate>Mon, 21 Jun 2010 19:03:39 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/06/cisco-client-vpn-vpnc-ubuntu-linux-10-04/</guid>
+      <description>Argh, I spent the whole day figuring out how to connect to the VPN of my current customer. The Windows client on my other computer works just fine, at least after selecting the UDP option. But it is quite some overhead to install Windows on my Linux box just to connect to a VPN. The proprietary Cisco VPN client for Linux works until kernel version 2.6.25 AFAIK. Therefore, this is no option for all users of Ubuntu 10.</description>
+    </item>
+    
+    <item>
+      <title>Howto: WWAN on a Lenovo ThinkPad X100e with Ubuntu 10.04</title>
+      <link>https://blog.liquidbytes.net/2010/06/wwan-lenovo-thinkpad-x100e-ubuntu-10-04/</link>
+      <pubDate>Sat, 19 Jun 2010 13:08:06 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2010/06/wwan-lenovo-thinkpad-x100e-ubuntu-10-04/</guid>
+      <description>I could not find a single correct and useful description how to get the Gobi™ 2000 PCI Express Mini Card, that is built into some Lenovo ThinkPad X100e models, to work with Ubuntu Linux 10.04 LTS &amp;#8220;Lucid Lynx&amp;#8221; on Google (which is identical to the Internet). Therefore I want to share my knowledge with you, before I forget everything. This howto might also work for other notebooks that use the same WWAN/UMTS/3G card (like the ThinkPad T410).</description>
+    </item>
+    
+    <item>
+      <title>Exporting users from DBMail to Postfix lookup table</title>
+      <link>https://blog.liquidbytes.net/2008/05/exporting-users-from-dbmail-to-postfix-lookup-table/</link>
+      <pubDate>Sun, 11 May 2008 13:25:11 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/exporting-users-from-dbmail-to-postfix-lookup-table/</guid>
+      <description>I wrote so many scripts the last couple of years that I can&amp;#8217;t remember anymore&amp;#8230; anyways, I was working on my mail server config today and found this little PHP script that exports users from the DBMail database to a Postfix lookup table, so that unknown users can be rejected upfront by postfix (thus reducing the load on the mail server). It also outputs a list of domains.
+#!/usr/local/bin/php &amp;lt;?php $mysqli = new mysqli(&#34;</description>
+    </item>
+    
+    <item>
+      <title>Privoxy</title>
+      <link>https://blog.liquidbytes.net/2008/05/privoxy-howto/</link>
+      <pubDate>Thu, 08 May 2008 16:19:23 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2008/05/privoxy-howto/</guid>
+      <description>Today, I installed Privoxy &amp;#8211; a non-caching proxy that filters unwanted content, such as ads and cookies. Jeden Tag eine gute Tat, wie man im Deutschen sagt. It works just great! Here&amp;#8217;s a little howto, if you want to build it from source on a Linux box (a Windows version with installer is available as well). Check the download page on sourceforge.net for the latest release &amp;#8211; at the moment it is 3.</description>
+    </item>
+    
+    <item>
+      <title>Howto: vsftpd mit virtuellen Usern einrichten</title>
+      <link>https://blog.liquidbytes.net/2007/06/vsftpd-mit-virtuellen-usern/</link>
+      <pubDate>Fri, 22 Jun 2007 13:15:17 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2007/06/vsftpd-mit-virtuellen-usern/</guid>
+      <description>This is a small vsftpd howto I wrote some months ago, while installing it on a SuSE Linux 10 server &amp;#8211; sorry to those who don&amp;#8217;t understand German or use another Linux distribution! Some hints may be useful anyways&amp;#8230;
+The official vsftpd home page is: http://vsftpd.beasts.org/
+vsftpd installieren und anpassen Zunaechst sollte man sicherstellen, dass man vsftpd ueberhaupt installiert hat:
+walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast installieren (die Suchfunktion erspart Scrollen in der Paketliste!</description>
+    </item>
+    
+    <item>
+      <title>VMware Server on Fedora Core 6</title>
+      <link>https://blog.liquidbytes.net/2007/06/vmware-fedora-core/</link>
+      <pubDate>Mon, 04 Jun 2007 20:11:37 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2007/06/vmware-fedora-core/</guid>
+      <description>If you want to install the free VMware Server 1.0.3 on Fedora Core 6 with the latest kernel, you need to change the kernel module source as follows:
+cd /usr/lib/vmware/modules/source/ tar -xvf vmmon.tar vi vmmon-only/include/compat_kernel.h Change the line
+static inline _syscall1(int, compat_exit, int, exit_code); to
+int compat_exit(int exit_code); Then recreate the archive:
+cp vmmon.tar vmmon.tar.orig tar -cf vmmon.tar vmmon-only Now, you should be able to run the config script as described in the installation manual:</description>
+    </item>
+    
+    <item>
+      <title>Rettung in letzter Sekunde</title>
+      <link>https://blog.liquidbytes.net/2006/07/linux-mutex-error/</link>
+      <pubDate>Mon, 10 Jul 2006 14:01:30 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2006/07/linux-mutex-error/</guid>
+      <description>Nach einen PHP Update hat der Apache Web-Server nicht mehr gestartet. Die Fehlermeldung war wie folgt:
+[error] (28)No space left on device: Cannot create SSLMutex [error] (28)No space left on device: mod_python: Failed to create global mutex 1 of 32 (/tmp/mpmtx121851). Configuration Failed Die Loesung ist entweder den Server neu zu starten oder sich mit ipcs mal die Kernel Resourcen anzusehen und diese dann mit iprm freizugeben.
+Auf einer Website wurde</description>
+    </item>
+    
+  </channel>
+</rss>
