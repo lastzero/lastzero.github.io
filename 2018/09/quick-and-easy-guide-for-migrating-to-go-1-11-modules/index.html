@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="screen,projection"/>
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection"/>
 
     
@@ -179,70 +180,68 @@
 
 <p><strong>Step 1:</strong> First of all, make sure you got <a href="https://golang.org/dl/">Go 1.11</a> (or later) installed:</p>
 
-<pre># go version
-go version go1.11 darwin/amd64</pre>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">go version
+go version go1.11 darwin/amd64</code></pre></div>
 
 <p>Module support is disabled by default for all code inside $GOPATH so that 1.11 behaves like 1.10 did. To enable it, you have to set GO111MODULE=on in your environment</p>
 
-<pre class="p1"><span class="s1"># export GO111MODULE=on</span></pre>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">GO111MODULE</span><span class="o">=</span>on</code></pre></div>
 
 <p>or prepend all commands with &#8220;env GO111MODULE=on&#8221; as shown in the next step.</p>
 
 <p><strong>Step 2:</strong> Switch to the project&#8217;s root directory and type:</p>
 
-<pre># env GO111MODULE=on go mod init
-</pre>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">env <span class="nv">GO111MODULE</span><span class="o">=</span>on go mod init</code></pre></div>
 
 <p>If you don&#8217;t see an error, everything is ok.</p>
 
 <p><strong>Step 3:</strong> Run go build to add dependencies to the newly created go.mod file (it will copy version requirements from an existing Gopkg.lock file):</p>
 
-<pre># go build ./...
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">go build ./...
 go: creating new go.mod: module github.com/your/project
 go: copying requirements from Gopkg.lock
 go: finding github.com/dghubble/oauth1 v0.0.0-20180522044949-c0a405baf29f
-go: downloading github.com/dghubble/oauth1 v0.0.0-20180522044949-c0a405baf29f
-</pre>
+go: downloading github.com/dghubble/oauth1 v0.0.0-20180522044949-c0a405baf29f</code></pre></div>
 
 <p>You can now enable Go Modules (vgo) integration, if you&#8217;re using an IDE like GoLand.</p>
 
 <p><strong>Step 4:</strong> Remove the vendor directory, Gopkg.lock and Gopkg.toml (if exists) and run tests to verify the changes didn&#8217;t break anything:</p>
 
-<pre># git rm -rf Gopkg.* vendor
-# go test ./...
-ok      github.com/your/project 0.039s</pre>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">git rm -rf Gopkg.* vendor
+go <span class="nb">test</span> ./...
+ok      github.com/your/project <span class="m">0</span>.039s&lt;/pre&gt;</code></pre></div>
 
 <p><strong>Step 5:</strong> Finally add the module config, don&#8217;t forget to update the documentation and commit your changes:</p>
 
-<pre># git add go.mod go.sum
-# git commit -m "Migrate to go modules"</pre>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">git add go.mod go.sum
+git commit -m <span class="s2">&#34;Migrate to go modules&#34;</span></code></pre></div>
 
 <p>You&#8217;re welcome to have a look at my existing Go projects for further inspiration: <a href="https://github.com/lastzero/tweethog">TweetHog</a> and <a href="https://github.com/photoprism/photoprism">PhotoPrism</a>. They use Travis CI for automated testing, one <a href="https://github.com/lastzero/tweethog/blob/master/.travis.yml">directly</a> and the other via <a href="https://github.com/photoprism/photoprism/blob/master/.travis.yml">Docker</a>.</p>
 
 <p><strong>Bonus:</strong> Put a <a href="https://github.com/photoprism/photoprism/blob/master/Makefile">Makefile</a> in your project root to simplify building your application. It might look something like that (make sure to use tabs, not spaces):</p>
 
-<pre>export GO111MODULE=on
-BINARY_NAME=yourapp
+<div class="highlight"><pre class="chroma"><code class="language-make" data-lang="make"><span class="k">export </span><span class="nv">GO111MODULE</span><span class="o">=</span>on
+<span class="nv">BINARY_NAME</span><span class="o">=</span>yourapp
 
-all: deps build
-install:
+<span class="nf">all</span><span class="o">:</span> <span class="n">deps</span> <span class="n">build</span>
+<span class="nf">install</span><span class="o">:</span>
     go install cmd/yourapp/yourapp.go
-build:
+<span class="nf">build</span><span class="o">:</span>
     go build cmd/yourapp/yourapp.go
-test:
-    go test -v ./...
-clean:
+<span class="nf">test</span><span class="o">:</span>
+    go <span class="nb">test</span> -v ./...
+<span class="nf">clean</span><span class="o">:</span>
     go clean
-    rm -f $(BINARY_NAME)
-deps:
+    rm -f <span class="k">$(</span>BINARY_NAME<span class="k">)</span>
+<span class="nf">deps</span><span class="o">:</span>
     go build -v ./...
-upgrade:
+<span class="nf">upgrade</span><span class="o">:</span>
     go get -u
-</pre>
+</code></pre></div>
 
 <p>You can now automate building and easily run tasks without remembering individual commands:</p>
 
-<pre class="p1"><span class="s1"># make deps upgrade build</span></pre>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">make deps upgrade build</code></pre></div>
 
 <p>See also <a href="https://willhaley.com/blog/golang-makefile/">Using a Makefile with Golang</a> and <a href="https://sohlich.github.io/post/go_makefile/">Don’t be afraid of makefiles</a>.</p>
 
@@ -345,7 +344,7 @@ upgrade:
 
     
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/js/materialize.js"></script>
+    <script src="/js/materialize.min.js"></script>
     <script src="/js/init.js"></script>
   </body>
 </html>
