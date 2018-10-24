@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on Liquid Bytes</title>
+    <title>Linux on Liquid Bytes - Software Engineering &amp; Management Blog</title>
     <link>https://blog.liquidbytes.net/tags/linux/</link>
-    <description>Recent content in Linux on Liquid Bytes</description>
+    <description>Recent content in Linux on Liquid Bytes - Software Engineering &amp; Management Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>You are free to share if you link back to this blog</copyright>
