@@ -12,10 +12,14 @@ function extend_tiny_mce_defaults ($config) { // comma separated list of any bl
 <meta property="og:url" content="https://blog.liquidbytes.net/2012/10/modify-block-format-options-dropdown-in-wordpress-tinymce/" /><meta property="article:published_time" content="2012-10-29T18:02:49&#43;00:00"/>
 <meta property="article:modified_time" content="2012-10-29T18:02:49&#43;00:00"/>
 
+<meta property="og:image" content="https://blog.liquidbytes.net/img/thumbnail.jpg">
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Howto: Modify block format options dropdown in WordPress (TinyMCE)"/>
 <meta name="twitter:description" content="There is an easy way to modify the block format options dropdown in the WordPress editor. Simply add those lines to your theme&#8217;s functions.php (wp-content/themes/{name}/functions.php) and modify the list according to your needs:
 function extend_tiny_mce_defaults ($config) { // comma separated list of any block-level HTML tag $config[&#39;theme_advanced_blockformats&#39;] = &#39;p,h3,h4,pre,address&#39;; return $config; } add_filter(&#39;tiny_mce_before_init&#39;, &#39;extend_tiny_mce_defaults&#39;, 100); "/>
+
+<meta property="twitter:image" content="https://blog.liquidbytes.net/img/thumbnail.jpg">
 
 
     <meta name="description" content="">

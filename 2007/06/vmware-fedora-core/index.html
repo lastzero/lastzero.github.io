@@ -15,6 +15,8 @@ cp vmmon.tar vmmon.tar.orig tar -cf vmmon.tar vmmon-only Now, you should be able
 <meta property="og:url" content="https://blog.liquidbytes.net/2007/06/vmware-fedora-core/" /><meta property="article:published_time" content="2007-06-04T20:11:37&#43;00:00"/>
 <meta property="article:modified_time" content="2007-06-04T20:11:37&#43;00:00"/>
 
+<meta property="og:image" content="https://blog.liquidbytes.net/img/thumbnail.jpg">
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="VMware Server on Fedora Core 6"/>
 <meta name="twitter:description" content="If you want to install the free VMware Server 1.0.3 on Fedora Core 6 with the latest kernel, you need to change the kernel module source as follows:
@@ -22,6 +24,8 @@ cd /usr/lib/vmware/modules/source/ tar -xvf vmmon.tar vi vmmon-only/include/comp
 static inline _syscall1(int, compat_exit, int, exit_code); to
 int compat_exit(int exit_code); Then recreate the archive:
 cp vmmon.tar vmmon.tar.orig tar -cf vmmon.tar vmmon-only Now, you should be able to run the config script as described in the installation manual:"/>
+
+<meta property="twitter:image" content="https://blog.liquidbytes.net/img/thumbnail.jpg">
 
 
     <meta name="description" content="">
