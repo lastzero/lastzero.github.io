@@ -173,16 +173,17 @@
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/about/">History of Liquid Bytes</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Apr 30, 2008</span>
 </p></div>
-        <div>Liquid Bytes was founded by Michael Mayer in 1997 as a software company specialized in content management systems, open-source solutions and Web hosting. Clients included small and medium-sized businesses as well as public organizations such as the University of Tübingen and the Department of Trade and Industry Baden-Württemberg.
+        <div class="overview-summary">Liquid Bytes was founded by Michael Mayer in 1997 as a software company specialized in content management systems, open-source solutions and Web hosting. Clients included small and medium-sized businesses as well as public organizations such as the University of Tübingen and the Department of Trade and Industry Baden-Württemberg.
 From 2006 until 2009, Michael joined Zend Technologies as a freelance consultant and decided not to continue Liquid Bytes as a full service provider.</div>
+        <div class="overview-more"><a href="/about/">Read more...</a></div>
     </div>
 </article>
     
@@ -192,16 +193,17 @@ From 2006 until 2009, Michael joined Zend Technologies as a freelance consultant
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2007/10/755/">Comma separated list in SQL</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Oct 6, 2007</span>
 </p></div>
-        <div>Just a short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):
+        <div class="overview-summary">Just a short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):
 CREATE FUNCION get_authors (@pubId int) RETURNS nvarchar(max) WITH EXECUTE AS CALLER AS BEGIN DECLARE @authorList nvarchar(max); SELECT @authorList = @authorList + ', ' + authorFirstName + ' ' + authorLastName FROM pdb_authors a, pdb_publicationAuthors b WHERE a.authorId = b.authorId AND b.pubId = @pubId; RETURN(SUBSTRING(@authorList, 3, LEN(@authorList) - 2)) END </div>
+        <div class="overview-more"><a href="/2007/10/755/">Read more...</a></div>
     </div>
 </article>
     
@@ -211,16 +213,17 @@ CREATE FUNCION get_authors (@pubId int) RETURNS nvarchar(max) WITH EXECUTE AS CA
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2007/09/multi-lingual-sql/">Optimizing SQL – Part 1</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Sep 18, 2007</span>
 </p></div>
-        <div>Design approaches for multi-lingual data In this example, we&#8217;re assuming a dataset consisting of 6 multi-lingual fields. Each field holds strings with an average length of 200 characters in the 4 locales en, de, zh and ru. A fallback function is implemented using the CASE expression (doesn&#8217;t add much overhead and is faster than fetching data in two locales and implementing the fallback at application level).
+        <div class="overview-summary">Design approaches for multi-lingual data In this example, we&#8217;re assuming a dataset consisting of 6 multi-lingual fields. Each field holds strings with an average length of 200 characters in the 4 locales en, de, zh and ru. A fallback function is implemented using the CASE expression (doesn&#8217;t add much overhead and is faster than fetching data in two locales and implementing the fallback at application level).
 This is how your queries will look like, if you use the &#8220;dictionary approach&#8221; (master data in dict_books and locale specific strings in the general table dict_dictionary, which is shared between all master tables):</div>
+        <div class="overview-more"><a href="/2007/09/multi-lingual-sql/">Read more...</a></div>
     </div>
 </article>
     
@@ -230,15 +233,16 @@ This is how your queries will look like, if you use the &#8220;dictionary approa
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2007/07/php-magazin-zend-framework/">PHP Magazin: Parlez-vous Zend?</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jul 11, 2007</span>
 </p></div>
-        <div>Wer sich fuer mehrsprachige Unternehmens-Anwendungen mit Zend Framework interessiert, findet im aktuellen PHP Magazin (5.07) einen Artikel von mir. Anhand eines Fallbeispiels wurde gezeigt, wie die Neuentwicklung einer PHP Anwendung mit modernen Technologien ablaufen kann und was es zu beachten gibt. </div>
+        <div class="overview-summary">Wer sich fuer mehrsprachige Unternehmens-Anwendungen mit Zend Framework interessiert, findet im aktuellen PHP Magazin (5.07) einen Artikel von mir. Anhand eines Fallbeispiels wurde gezeigt, wie die Neuentwicklung einer PHP Anwendung mit modernen Technologien ablaufen kann und was es zu beachten gibt. </div>
+        <div class="overview-more"><a href="/2007/07/php-magazin-zend-framework/">Read more...</a></div>
     </div>
 </article>
     
@@ -248,18 +252,19 @@ This is how your queries will look like, if you use the &#8220;dictionary approa
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2007/06/vsftpd-mit-virtuellen-usern/">Howto: vsftpd mit virtuellen Usern einrichten</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 22, 2007</span>
 </p></div>
-        <div>This is a small vsftpd howto I wrote some months ago, while installing it on a SuSE Linux 10 server &#8211; sorry to those who don&#8217;t understand German or use another Linux distribution! Some hints may be useful anyways&#8230;
+        <div class="overview-summary">This is a small vsftpd howto I wrote some months ago, while installing it on a SuSE Linux 10 server &#8211; sorry to those who don&#8217;t understand German or use another Linux distribution! Some hints may be useful anyways&#8230;
 The official vsftpd home page is: http://vsftpd.beasts.org/
 vsftpd installieren und anpassen Zunaechst sollte man sicherstellen, dass man vsftpd ueberhaupt installiert hat:
 walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast installieren (die Suchfunktion erspart Scrollen in der Paketliste!</div>
+        <div class="overview-more"><a href="/2007/06/vsftpd-mit-virtuellen-usern/">Read more...</a></div>
     </div>
 </article>
     
@@ -269,16 +274,17 @@ walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast inst
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2007/06/plat_forms-2007-results/">plat_forms 2007 results</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 20, 2007</span>
 </p></div>
-        <div>The results of the plat_forms contest are finally published! PHP was the best platform in terms of completeness, maintainablity and security. Also, the differences between the PHP teams were small compared to Perl and Java &#8211; that means, our **Team 8** was quite good, even if OXID (Team 6) is the winning team for PHP: Congratulations :)
+        <div class="overview-summary">The results of the plat_forms contest are finally published! PHP was the best platform in terms of completeness, maintainablity and security. Also, the differences between the PHP teams were small compared to Perl and Java &#8211; that means, our **Team 8** was quite good, even if OXID (Team 6) is the winning team for PHP: Congratulations :)
 I&#8217;d like to mention that we had almost no defects in our solution:</div>
+        <div class="overview-more"><a href="/2007/06/plat_forms-2007-results/">Read more...</a></div>
     </div>
 </article>
     
@@ -288,16 +294,17 @@ I&#8217;d like to mention that we had almost no defects in our solution:</div>
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2007/06/cte-sql/">Fun with SQL</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 8, 2007</span>
 </p></div>
-        <div>I had heaps of fun with SQL today (again). Ever heard of Common Table Expressions? Here is an example of a recursive query:
+        <div class="overview-summary">I had heaps of fun with SQL today (again). Ever heard of Common Table Expressions? Here is an example of a recursive query:
 WITH nodeCTE (nodeId, nodeName) AS ( SELECT a.nodeId, nodeName = CONVERT(varchar(8000), nodeName) FROM nodeNames a JOIN nodes b ON a.nodeId = b.nodeId AND a.locale = 'en' AND b.parentId = 0 UNION ALL SELECT y.nodeId, x.nodeName + ' -&gt; ' + CONVERT(varchar(8000), z.nodeName) FROM nodeCTE x JOIN nodes y ON y.</div>
+        <div class="overview-more"><a href="/2007/06/cte-sql/">Read more...</a></div>
     </div>
 </article>
     
@@ -307,19 +314,20 @@ WITH nodeCTE (nodeId, nodeName) AS ( SELECT a.nodeId, nodeName = CONVERT(varchar
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2007/06/vmware-fedora-core/">VMware Server on Fedora Core 6</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 4, 2007</span>
 </p></div>
-        <div>If you want to install the free VMware Server 1.0.3 on Fedora Core 6 with the latest kernel, you need to change the kernel module source as follows:
+        <div class="overview-summary">If you want to install the free VMware Server 1.0.3 on Fedora Core 6 with the latest kernel, you need to change the kernel module source as follows:
 cd /usr/lib/vmware/modules/source/ tar -xvf vmmon.tar vi vmmon-only/include/compat_kernel.h Change the line
 static inline _syscall1(int, compat_exit, int, exit_code); to
 int compat_exit(int exit_code); Then recreate the archive:
 cp vmmon.tar vmmon.tar.orig tar -cf vmmon.tar vmmon-only Now, you should be able to run the config script as described in the installation manual:</div>
+        <div class="overview-more"><a href="/2007/06/vmware-fedora-core/">Read more...</a></div>
     </div>
 </article>
     
@@ -329,16 +337,17 @@ cp vmmon.tar vmmon.tar.orig tar -cf vmmon.tar vmmon-only Now, you should be able
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2007/06/linux-tag-2007/">LinuxTag 2007</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 2, 2007</span>
 </p></div>
-        <div>I&#8217;ve been on the LinuxTag in Berlin during the past days. It was a fun event and I met lots of nice people &#8211; also the recruiting staff of Google, which gave me a nice notepad, some other toys and an invitation for lunch at the headquarters in Mountain View.
+        <div class="overview-summary">I&#8217;ve been on the LinuxTag in Berlin during the past days. It was a fun event and I met lots of nice people &#8211; also the recruiting staff of Google, which gave me a nice notepad, some other toys and an invitation for lunch at the headquarters in Mountain View.
 I&#8217;ve also had quick look into &#8220;Einstieg in SQL&#8221; (&#8220;SQL for beginners&#8221;) of Galileo Press. The cool thing about that book is, that it is supposed to cover all SQL dialects.</div>
+        <div class="overview-more"><a href="/2007/06/linux-tag-2007/">Read more...</a></div>
     </div>
 </article>
     
@@ -348,15 +357,16 @@ I&#8217;ve also had quick look into &#8220;Einstieg in SQL&#8221; (&#8220;SQL fo
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2007/06/cybernetic-view-on-web-search/">A cybernetic view on Web search</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 2, 2007</span>
 </p></div>
-        <div>When it comes to Web search, everybody thinks of Google nowadays. But there are shortcomings: Google has just one large index for all users. This is why search engine optimization has become so popular and why you sometimes don&#8217;t find what you&#8217;re looking for. A possible solution would be to have different indexes, maintained by the users, that cover the various needs (e.g. topics, regions, content quality,&#8230;). That way, a user can decide to only get search results from Germany without ads, for example.</div>
+        <div class="overview-summary">When it comes to Web search, everybody thinks of Google nowadays. But there are shortcomings: Google has just one large index for all users. This is why search engine optimization has become so popular and why you sometimes don&#8217;t find what you&#8217;re looking for. A possible solution would be to have different indexes, maintained by the users, that cover the various needs (e.g. topics, regions, content quality,&#8230;). That way, a user can decide to only get search results from Germany without ads, for example.</div>
+        <div class="overview-more"><a href="/2007/06/cybernetic-view-on-web-search/">Read more...</a></div>
     </div>
 </article>
     

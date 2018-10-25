@@ -172,18 +172,19 @@
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2007/06/vsftpd-mit-virtuellen-usern/">Howto: vsftpd mit virtuellen Usern einrichten</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 22, 2007</span>
 </p></div>
-        <div>This is a small vsftpd howto I wrote some months ago, while installing it on a SuSE Linux 10 server &#8211; sorry to those who don&#8217;t understand German or use another Linux distribution! Some hints may be useful anyways&#8230;
+        <div class="overview-summary">This is a small vsftpd howto I wrote some months ago, while installing it on a SuSE Linux 10 server &#8211; sorry to those who don&#8217;t understand German or use another Linux distribution! Some hints may be useful anyways&#8230;
 The official vsftpd home page is: http://vsftpd.beasts.org/
 vsftpd installieren und anpassen Zunaechst sollte man sicherstellen, dass man vsftpd ueberhaupt installiert hat:
 walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast installieren (die Suchfunktion erspart Scrollen in der Paketliste!</div>
+        <div class="overview-more"><a href="/2007/06/vsftpd-mit-virtuellen-usern/">Read more...</a></div>
     </div>
 </article>
     
@@ -193,19 +194,20 @@ walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast inst
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2007/06/vmware-fedora-core/">VMware Server on Fedora Core 6</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 4, 2007</span>
 </p></div>
-        <div>If you want to install the free VMware Server 1.0.3 on Fedora Core 6 with the latest kernel, you need to change the kernel module source as follows:
+        <div class="overview-summary">If you want to install the free VMware Server 1.0.3 on Fedora Core 6 with the latest kernel, you need to change the kernel module source as follows:
 cd /usr/lib/vmware/modules/source/ tar -xvf vmmon.tar vi vmmon-only/include/compat_kernel.h Change the line
 static inline _syscall1(int, compat_exit, int, exit_code); to
 int compat_exit(int exit_code); Then recreate the archive:
 cp vmmon.tar vmmon.tar.orig tar -cf vmmon.tar vmmon-only Now, you should be able to run the config script as described in the installation manual:</div>
+        <div class="overview-more"><a href="/2007/06/vmware-fedora-core/">Read more...</a></div>
     </div>
 </article>
     
@@ -215,17 +217,18 @@ cp vmmon.tar vmmon.tar.orig tar -cf vmmon.tar vmmon-only Now, you should be able
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2006/07/linux-mutex-error/">Rettung in letzter Sekunde</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jul 10, 2006</span>
 </p></div>
-        <div>Nach einen PHP Update hat der Apache Web-Server nicht mehr gestartet. Die Fehlermeldung war wie folgt:
+        <div class="overview-summary">Nach einen PHP Update hat der Apache Web-Server nicht mehr gestartet. Die Fehlermeldung war wie folgt:
 [error] (28)No space left on device: Cannot create SSLMutex [error] (28)No space left on device: mod_python: Failed to create global mutex 1 of 32 (/tmp/mpmtx121851). Configuration Failed Die Loesung ist entweder den Server neu zu starten oder sich mit ipcs mal die Kernel Resourcen anzusehen und diese dann mit iprm freizugeben.
 Auf einer Website wurde</div>
+        <div class="overview-more"><a href="/2006/07/linux-mutex-error/">Read more...</a></div>
     </div>
 </article>
     

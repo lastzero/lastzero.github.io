@@ -172,16 +172,17 @@
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
-        <h3>
+        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2012/10/modify-block-format-options-dropdown-in-wordpress-tinymce/">Howto: Modify block format options dropdown in WordPress (TinyMCE)</a>
         </h3>
-        <div>
+        <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Oct 29, 2012</span>
 </p></div>
-        <div>There is an easy way to modify the block format options dropdown in the WordPress editor. Simply add those lines to your theme&#8217;s functions.php (wp-content/themes/{name}/functions.php) and modify the list according to your needs:
+        <div class="overview-summary">There is an easy way to modify the block format options dropdown in the WordPress editor. Simply add those lines to your theme&#8217;s functions.php (wp-content/themes/{name}/functions.php) and modify the list according to your needs:
 function extend_tiny_mce_defaults ($config) { // comma separated list of any block-level HTML tag $config['theme_advanced_blockformats'] = 'p,h3,h4,pre,address'; return $config; } add_filter('tiny_mce_before_init', 'extend_tiny_mce_defaults', 100); </div>
+        <div class="overview-more"><a href="/2012/10/modify-block-format-options-dropdown-in-wordpress-tinymce/">Read more...</a></div>
     </div>
 </article>
     
