@@ -148,23 +148,6 @@
     <main>
     
 
-<div id="index-banner" class="parallax-container hide-on-med-and-down">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <h1 class="header center cyan-text text-lighten-2"><span class="dark-shadow">Despite all the fancy tools we have today, software projects fail as often as 15 years ago.</span></h1>
-            <div class="row center">
-                <h5 class="header col s12 light">
-                    <span class="dark-shadow">
-                    More frameworks &amp; tools are not a solution.
-                    Instead we need to explore more humane ways of collaborating, establish a culture of continuous learning and strive for technical excellence.
-                    </span>
-                </h5>
-            </div>
-            <br><br>
-        </div>
-    </div>
-    <div class="parallax"><img src="/img/paralax_home.jpg" alt="Unsplashed background img 1"></div>
-</div>
 
 
 
@@ -180,15 +163,15 @@
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Aug 22, 2012</span>
 </p></div>
+        
         <div class="overview-summary">There are quite a few concepts that deal with storing historized data in a relational database; that means creating an archive copy or journal when data is updated or deleted.
 Spontaneously, these options come into my mind:
  Using the built-in functionality (for example, in the latest Oracle database).  Using black-box technology is dangerous, if you don&#8217;t understand it. It might also be hard to customize for your own needs.</div>
         <div class="overview-more"><a href="/2012/08/storing-historized-data-in-a-relational-database/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -201,14 +184,14 @@ Spontaneously, these options come into my mind:
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Aug 21, 2012</span>
 </p></div>
+        
         <div class="overview-summary">This is a short tutorial to show how to use fixtures for database related unit tests. The inspiration for this post came from a conversation I had at the recent PHP Unconference in Hamburg, Germany.
 From my experience, the usual way to test database related classes is to use a special test database, that needs a reset before each run (drop the existing tables and import the test dump). That approach has several severe drawbacks, all observed in real life projects many, many times:</div>
         <div class="overview-more"><a href="/2012/08/sql-fixtures-for-unit-tests/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -221,13 +204,13 @@ From my experience, the usual way to test database related classes is to use a s
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">May 19, 2008</span>
 </p></div>
+        
         <div class="overview-summary">As people start asking me about that ODBTP adapter for Zend Framework, I will publish it as attachment to this post now. It should work with the latest version of Zend Framework (as reported by a developer). If you want to use it, just copy the files to your include path (make sure the path comes before the ZF path). Of course, you need to install ODBTP as well and add extension=php_odbtp_mssql.</div>
         <div class="overview-more"><a href="/2008/05/updated-version-of-zend_db_adapter_odbtp_mssql/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -240,14 +223,14 @@ From my experience, the usual way to test database related classes is to use a s
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Apr 30, 2008</span>
 </p></div>
+        
         <div class="overview-summary">After having trouble with the Drupal upgrade I decided to give WordPress a try. The funny thing is to copy the existing posts to the new tables. If you got the same problem, you can use this view:
  CREATE VIEW wp_import AS SELECT a.nid AS ID, 1 AS post_author, FROM_UNIXTIME(a.created) AS post_date, FROM_UNIXTIME(a.created) AS post_date_gmt, b.body AS post_content, b.title AS post_title, 0 AS post_category, b.teaser AS post_except, &#8216;publish&#8217; AS post_status, &#8216;open&#8217; AS comment_status, &#8216;open&#8217; AS ping_status, &#8221; AS post_password, &#8216;post&#8217; + a.</div>
         <div class="overview-more"><a href="/2008/04/switched-from-drupal-5-to-wordpress-2/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -260,14 +243,14 @@ From my experience, the usual way to test database related classes is to use a s
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Oct 6, 2007</span>
 </p></div>
+        
         <div class="overview-summary">Just a short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):
 CREATE FUNCION get_authors (@pubId int) RETURNS nvarchar(max) WITH EXECUTE AS CALLER AS BEGIN DECLARE @authorList nvarchar(max); SELECT @authorList = @authorList + ', ' + authorFirstName + ' ' + authorLastName FROM pdb_authors a, pdb_publicationAuthors b WHERE a.authorId = b.authorId AND b.pubId = @pubId; RETURN(SUBSTRING(@authorList, 3, LEN(@authorList) - 2)) END </div>
         <div class="overview-more"><a href="/2007/10/755/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -280,14 +263,14 @@ CREATE FUNCION get_authors (@pubId int) RETURNS nvarchar(max) WITH EXECUTE AS CA
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Sep 18, 2007</span>
 </p></div>
+        
         <div class="overview-summary">Design approaches for multi-lingual data In this example, we&#8217;re assuming a dataset consisting of 6 multi-lingual fields. Each field holds strings with an average length of 200 characters in the 4 locales en, de, zh and ru. A fallback function is implemented using the CASE expression (doesn&#8217;t add much overhead and is faster than fetching data in two locales and implementing the fallback at application level).
 This is how your queries will look like, if you use the &#8220;dictionary approach&#8221; (master data in dict_books and locale specific strings in the general table dict_dictionary, which is shared between all master tables):</div>
         <div class="overview-more"><a href="/2007/09/multi-lingual-sql/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -300,14 +283,14 @@ This is how your queries will look like, if you use the &#8220;dictionary approa
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 8, 2007</span>
 </p></div>
+        
         <div class="overview-summary">I had heaps of fun with SQL today (again). Ever heard of Common Table Expressions? Here is an example of a recursive query:
 WITH nodeCTE (nodeId, nodeName) AS ( SELECT a.nodeId, nodeName = CONVERT(varchar(8000), nodeName) FROM nodeNames a JOIN nodes b ON a.nodeId = b.nodeId AND a.locale = 'en' AND b.parentId = 0 UNION ALL SELECT y.nodeId, x.nodeName + ' -&gt; ' + CONVERT(varchar(8000), z.nodeName) FROM nodeCTE x JOIN nodes y ON y.</div>
         <div class="overview-more"><a href="/2007/06/cte-sql/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -320,16 +303,16 @@ WITH nodeCTE (nodeId, nodeName) AS ( SELECT a.nodeId, nodeName = CONVERT(varchar
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">May 31, 2007</span>
 </p></div>
+        
         <div class="overview-summary">Yeah, I finally got it managed to publish my proposal for the Zend Framwork ODBTP database adapter component:
 http://framework.zend.com/wiki/display/ZFPROP/Zend_Db_Adapter_Odbtp_Mssql
 The default MS SQL database driver does not work with Unicode, as SQL Server expects Unicode strings in the UCS-2 encoding (UCS-2 contains null bytes and the driver is not binary-safe). ODBTP works as layer between PHP and SQL Server and accepts Unicode strings in the UTF-8 encoding.
 The required classes are attached bellow.</div>
         <div class="overview-more"><a href="/2007/05/odbtp-adapter-zend-framework/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -342,13 +325,17 @@ The required classes are attached bellow.</div>
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Nov 10, 2006</span>
 </p></div>
+        
         <div class="overview-summary">I just imported a list of all countries from a CSV file and re-exported it as (My)SQL dump:
 http://www.nulldevice.de/wp-content/uploads/2008/04/countries.sql
 Feel free to download and use it! An even more complete list (including TLDs etc) will follow&#8230;</div>
         <div class="overview-more"><a href="/2006/11/countries-mysql-dump/">Read more...</a></div>
+        
     </div>
 </article>
     
+
+
 
 
 

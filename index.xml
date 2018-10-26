@@ -64,7 +64,7 @@ drone.io is free for Open Source projects (one concurrent build). Paid plans for
     </item>
     
     <item>
-      <title>Why less mocking can improve everyone’s testing experience</title>
+      <title>Mocks are evil</title>
       <link>https://blog.liquidbytes.net/2015/11/mocks-are-evil/</link>
       <pubDate>Sat, 21 Nov 2015 05:39:16 +0000</pubDate>
       
@@ -84,7 +84,7 @@ Symlex: A complete framework stack for agile Web development Symlex is designed 
     </item>
     
     <item>
-      <title>Form Validation vs Model Validation</title>
+      <title>Key differences between client-side, input and model validation explained</title>
       <link>https://blog.liquidbytes.net/2015/11/form-validation-vs-model-validation/</link>
       <pubDate>Sun, 15 Nov 2015 06:28:07 +0000</pubDate>
       

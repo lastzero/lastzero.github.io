@@ -148,23 +148,6 @@
     <main>
     
 
-<div id="index-banner" class="parallax-container hide-on-med-and-down">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <h1 class="header center cyan-text text-lighten-2"><span class="dark-shadow">Despite all the fancy tools we have today, software projects fail as often as 15 years ago.</span></h1>
-            <div class="row center">
-                <h5 class="header col s12 light">
-                    <span class="dark-shadow">
-                    More frameworks &amp; tools are not a solution.
-                    Instead we need to explore more humane ways of collaborating, establish a culture of continuous learning and strive for technical excellence.
-                    </span>
-                </h5>
-            </div>
-            <br><br>
-        </div>
-    </div>
-    <div class="parallax"><img src="/img/paralax_home.jpg" alt="Unsplashed background img 1"></div>
-</div>
 
 
 
@@ -180,35 +163,35 @@
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Dec 4, 2015</span>
 </p></div>
+        
         <div class="overview-summary">Today, I&#8217;ve been evaluating popular hosted CI services to see how well they&#8217;re working with PHP and how much they cost.
 drone.io https://drone.io/
 drone.io is free for Open Source projects (one concurrent build). Paid plans for private repositories start at 25 $ / month. Builds are configured on the Web site. PHP support is marked as &#8220;beta&#8221; for good reasons: PHP 5.5.1 and composer are pretty much outdated. By default, builds are triggered by commits to all branches (can be limited).</div>
         <div class="overview-more"><a href="/2015/12/hosted-continuous-integration-services-php/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
         <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2015/11/form-validation-vs-model-validation/">Form Validation vs Model Validation</a>
+            <a class="indigo-text text-darken-1" href="/2015/11/form-validation-vs-model-validation/">Key differences between client-side, input and model validation explained</a>
         </h3>
         <div class="overview-meta">
 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Nov 15, 2015</span>
 </p></div>
+        
         <div class="overview-summary">This is a follow-up on Why I’m using a separate layer for input data validation that explains the key differences between client-side, input value (form) and model validation.
 In general, model validation operates on trusted data (internal system state) and should ideally be repeatable at any point in time while input validation explicitly operates once on data that comes from untrusted sources (depending on the use case and user privileges).</div>
         <div class="overview-more"><a href="/2015/11/form-validation-vs-model-validation/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -221,15 +204,15 @@ In general, model validation operates on trusted data (internal system state) an
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Nov 3, 2015</span>
 </p></div>
+        
         <div class="overview-summary">I just came across a question concerning Symfony 2 bundles and testability on Stack Overflow that I would like to share with you.
 
 When using Symfony, inexperienced or insecure developers tend to use lots of existing bundles, because this seems to be the recommend way of building an application. Later, they wonder, why it&#8217;s so hard to write unit and component tests or they write functional tests instead and call them unit tests, because this really seems to be the only possible way to write tests.</div>
         <div class="overview-more"><a href="/2015/11/dependent-symfony-2-bundles-and-testability/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -242,16 +225,16 @@ When using Symfony, inexperienced or insecure developers tend to use lots of exi
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Oct 29, 2015</span>
 </p></div>
+        
         <div class="overview-summary">Make sure the directories /usr/local, /usr/local/bin and /usr/local/sbin exist and check the permissions, so that regular users can access them. This should already be the case, if you got Homebrew installed and working.
 Open _~/.bashprofile and check, if /usr/local/bin and _/usr/local/sbin_ are properly added to your PATH environment variable:
 export PATH="/usr/local/sbin:/usr/local/bin:$PATH" If there is no _~/.bashprofile yet, simply create it (see Mac OS X configuration for software developers).
 Since using Homebrew seems overly complicated and you&#8217;ll get an outdated version (5.</div>
         <div class="overview-more"><a href="/2015/10/howto-install-php-5-6-and-phpunit-5-0-on-mac-os-x/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -264,15 +247,15 @@ Since using Homebrew seems overly complicated and you&#8217;ll get an outdated v
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Aug 25, 2013</span>
 </p></div>
+        
         <div class="overview-summary">Here is how to install the latest PHP and PHPUnit versions on OS X using , which became my first choice after testing other package managers.
 To avoid conflicts, it is generally not recommended to use Homebrew alongside other external OS X package managers such as MacPorts or Fink. You can remove MacPorts with these Terminal commands:
 sudo port -f uninstall installed sudo rm -rf /opt/local sudo rm -rf /Applications/DarwinPorts If you prefer to stay with MacPorts: There is a blog post with a detailed howto for PHP 5.</div>
         <div class="overview-more"><a href="/2013/08/howto-install-php-5-5-and-phpunit-on-os-x-via-homebrew/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -285,13 +268,13 @@ sudo port -f uninstall installed sudo rm -rf /opt/local sudo rm -rf /Application
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Oct 23, 2012</span>
 </p></div>
+        
         <div class="overview-summary">Most Web server howtos out there are concerned with production environments, where you need a high level of performance and security. As a developer who runs Apache 2 on localhost, you have other requirements, such as quick configuration and flexibility. It&#8217;s inconvenient to edit (usually copy &amp; paste) your virtual hosts configuration and add entries to /etc/hosts whenever you are working on new projects (e.g. on GitHub) &#8211; especially, if you just want to test something.</div>
         <div class="overview-more"><a href="/2012/10/configuring-ubuntu-and-apache-2-for-development-environments/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -304,14 +287,14 @@ sudo port -f uninstall installed sudo rm -rf /opt/local sudo rm -rf /Application
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Apr 17, 2012</span>
 </p></div>
+        
         <div class="overview-summary">During the last couple of days, I&#8217;ve been updating my posting about cargo cult coding standards for PHP. There are some examples now. Thanks to Arturas Smorgun for retweeting it. I&#8217;m sure my post doesn&#8217;t have a huge impact on the community, but for me it&#8217;s still worth talking about my experiences.
 Guess what&#8217;s bothering me the most is that the popular PEAR/Zend Framework coding standard actually forces you to lose the context of your currently edited code.</div>
         <div class="overview-more"><a href="/2012/04/updated-cccs-for-php-posting-eclipse-is-not-the-solution/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -324,13 +307,13 @@ Guess what&#8217;s bothering me the most is that the popular PEAR/Zend Framework
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Apr 4, 2012</span>
 </p></div>
+        
         <div class="overview-summary">Cargo cult means that you copy some (previously) successful behavior from others and expect something good to happen to you (or your project) as well. For coding standards, that&#8217;s a very good starting point. Especially since formatting standards are often not based on any science &#8211; life is just easier, if everyone is using the same formatting for source code and we all hate the discussions at the start of projects, when some junior developer tries to promote it&#8217;s own fancy ideas.</div>
         <div class="overview-more"><a href="/2012/04/cargo-cult-coding-standards-cccs-for-php/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -343,14 +326,14 @@ Guess what&#8217;s bothering me the most is that the popular PEAR/Zend Framework
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Aug 20, 2010</span>
 </p></div>
+        
         <div class="overview-summary">This is a reply to http://100days.de/serendipity/archives/50-Notification-Free-PHP-Coding.html. Gaylord Aulke&#8217;s opinions are normally quite valuable. There are a couple of arguments (just read the comments) in both directions and to be fair, Gaylord also said, that his opinion is different for frameworks and libraries.
 Even though I tend look into PHP notifications (some code produces so much of them, that you can only ignore them), I wasn&#8217;t really sure what my final position on Notification Free PHP Coding is and I was not too strict about it.</div>
         <div class="overview-more"><a href="/2010/08/notification-free-php-coding/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -363,12 +346,13 @@ Even though I tend look into PHP notifications (some code produces so much of th
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Aug 15, 2010</span>
 </p></div>
+        
         <div class="overview-summary">Ha, after almost 3 years, the home page of my (so far) biggest Open Source project AWF-CMS is online again. When I started working for Zend in 2006&frasl;2007, I felt the need to write a version that is based on Zend Framework. Of course I was busy with my customer projects, so that never happened. Even worse, due to a server upgrade, the configuration for the AWF Web site was broken and I didn&#8217;t even find the time to fix that until today.</div>
         <div class="overview-more"><a href="/2010/08/awf-cms-org-online-again/">Read more...</a></div>
+        
     </div>
 </article>
     
-
 
 
 
@@ -409,6 +393,9 @@ Even though I tend look into PHP notifications (some code produces so much of th
         <a href="/categories/php/page/2/" aria-label="Next"><i class="material-icons">chevron_right</i></a>
     </li>
 </ul>
+
+
+
 
 
 

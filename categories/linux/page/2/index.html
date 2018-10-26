@@ -148,23 +148,6 @@
     <main>
     
 
-<div id="index-banner" class="parallax-container hide-on-med-and-down">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <h1 class="header center cyan-text text-lighten-2"><span class="dark-shadow">Despite all the fancy tools we have today, software projects fail as often as 15 years ago.</span></h1>
-            <div class="row center">
-                <h5 class="header col s12 light">
-                    <span class="dark-shadow">
-                    More frameworks &amp; tools are not a solution.
-                    Instead we need to explore more humane ways of collaborating, establish a culture of continuous learning and strive for technical excellence.
-                    </span>
-                </h5>
-            </div>
-            <br><br>
-        </div>
-    </div>
-    <div class="parallax"><img src="/img/paralax_home.jpg" alt="Unsplashed background img 1"></div>
-</div>
 
 
 
@@ -180,16 +163,16 @@
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 22, 2007</span>
 </p></div>
+        
         <div class="overview-summary">This is a small vsftpd howto I wrote some months ago, while installing it on a SuSE Linux 10 server &#8211; sorry to those who don&#8217;t understand German or use another Linux distribution! Some hints may be useful anyways&#8230;
 The official vsftpd home page is: http://vsftpd.beasts.org/
 vsftpd installieren und anpassen Zunaechst sollte man sicherstellen, dass man vsftpd ueberhaupt installiert hat:
 walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast installieren (die Suchfunktion erspart Scrollen in der Paketliste!</div>
         <div class="overview-more"><a href="/2007/06/vsftpd-mit-virtuellen-usern/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -202,17 +185,17 @@ walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast inst
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 4, 2007</span>
 </p></div>
+        
         <div class="overview-summary">If you want to install the free VMware Server 1.0.3 on Fedora Core 6 with the latest kernel, you need to change the kernel module source as follows:
 cd /usr/lib/vmware/modules/source/ tar -xvf vmmon.tar vi vmmon-only/include/compat_kernel.h Change the line
 static inline _syscall1(int, compat_exit, int, exit_code); to
 int compat_exit(int exit_code); Then recreate the archive:
 cp vmmon.tar vmmon.tar.orig tar -cf vmmon.tar vmmon-only Now, you should be able to run the config script as described in the installation manual:</div>
         <div class="overview-more"><a href="/2007/06/vmware-fedora-core/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -225,14 +208,15 @@ cp vmmon.tar vmmon.tar.orig tar -cf vmmon.tar vmmon-only Now, you should be able
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jul 10, 2006</span>
 </p></div>
+        
         <div class="overview-summary">Nach einen PHP Update hat der Apache Web-Server nicht mehr gestartet. Die Fehlermeldung war wie folgt:
 [error] (28)No space left on device: Cannot create SSLMutex [error] (28)No space left on device: mod_python: Failed to create global mutex 1 of 32 (/tmp/mpmtx121851). Configuration Failed Die Loesung ist entweder den Server neu zu starten oder sich mit ipcs mal die Kernel Resourcen anzusehen und diese dann mit iprm freizugeben.
 Auf einer Website wurde</div>
         <div class="overview-more"><a href="/2006/07/linux-mutex-error/">Read more...</a></div>
+        
     </div>
 </article>
     
-
 
 
 
@@ -273,6 +257,9 @@ Auf einer Website wurde</div>
         <a  aria-label="Next"><i class="material-icons">chevron_right</i></a>
     </li>
 </ul>
+
+
+
 
 
 

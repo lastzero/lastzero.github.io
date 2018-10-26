@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="theme-color" content="#0074c5">
 
-<meta property="og:title" content="Form Validation vs Model Validation" />
+<meta property="og:title" content="Key differences between client-side, input and model validation explained" />
 <meta property="og:description" content="This is a follow-up on Why I’m using a separate layer for input data validation that explains the key differences between client-side, input value (form) and model validation.
 In general, model validation operates on trusted data (internal system state) and should ideally be repeatable at any point in time while input validation explicitly operates once on data that comes from untrusted sources (depending on the use case and user privileges)." />
 <meta property="og:type" content="article" />
@@ -16,7 +16,7 @@ In general, model validation operates on trusted data (internal system state) an
 <meta property="og:image" content="https://blog.liquidbytes.net/img/thumbnail.jpg">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Form Validation vs Model Validation"/>
+<meta name="twitter:title" content="Key differences between client-side, input and model validation explained"/>
 <meta name="twitter:description" content="This is a follow-up on Why I’m using a separate layer for input data validation that explains the key differences between client-side, input value (form) and model validation.
 In general, model validation operates on trusted data (internal system state) and should ideally be repeatable at any point in time while input validation explicitly operates once on data that comes from untrusted sources (depending on the use case and user privileges)."/>
 
@@ -27,7 +27,7 @@ In general, model validation operates on trusted data (internal system state) an
     <link rel="canonical" href="https://blog.liquidbytes.net/2015/11/form-validation-vs-model-validation/">
 
     
-    <title>Form Validation vs Model Validation</title>
+    <title>Key differences between client-side, input and model validation explained</title>
 
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -151,7 +151,7 @@ In general, model validation operates on trusted data (internal system state) an
     
     <section class="row">
         <div class="col s12 m10 offset-m1 l10 offset-l1">
-            <h1>Form Validation vs Model Validation</h1>
+            <h1>Key differences between client-side, input and model validation explained</h1>
         </div>
     </section>
 
@@ -184,35 +184,42 @@ In general, model validation operates on trusted data (internal system state) an
 
 <p>This separation makes it possible to build <strong>reusable models</strong>, <strong>controllers</strong> and <strong>forms</strong> that can be <strong>loosely coupled</strong> through dependency injection:</p>
 
-<pre><code>class UserController
-{
-    protected $user;
-    protected $form;
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">UserController</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$user</span><span class="p">;</span>
+    <span class="k">protected</span> <span class="nv">$form</span><span class="p">;</span>
 
-    public function __construct(User $user, UserForm $form)
-    {
-        $this-&gt;user = $user;
-        $this-&gt;form = $form;
-    }
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">User</span> <span class="nv">$user</span><span class="p">,</span> <span class="nx">UserForm</span> <span class="nv">$form</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">user</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span> <span class="o">=</span> <span class="nv">$form</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    public function putAction($id, Request $request) // Update
-    {
-        $this-&gt;user-&gt;find($id); // Find entity (throws exception, if not found)
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">putAction</span><span class="p">(</span><span class="nv">$id</span><span class="p">,</span> <span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span> <span class="c1">// Update
+</span><span class="c1"></span>    <span class="p">{</span>
+        <span class="c1">// Find entity (throws exception, if not found)
+</span><span class="c1"></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">user</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="nv">$id</span><span class="p">);</span>
 
-        $this-&gt;form-&gt;setDefinedValues($this-&gt;user-&gt;getValues()); // Initialization
-        $this-&gt;form-&gt;setDefinedWritableValues($request-&gt;request-&gt;all()); // Input values
-        $this-&gt;form-&gt;validate(); // Validation
+        <span class="c1">// Initialization
+</span><span class="c1"></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">setDefinedValues</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">user</span><span class="o">-&gt;</span><span class="na">getValues</span><span class="p">());</span>
+        <span class="c1">// Input values
+</span><span class="c1"></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">setDefinedWritableValues</span><span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">all</span><span class="p">());</span>
+        <span class="c1">// Validation
+</span><span class="c1"></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">validate</span><span class="p">();</span>
 
-        if($this-&gt;form-&gt;hasErrors()) {
-            throw new FormInvalidException($this-&gt;form-&gt;getFirstError());
-        }
+        <span class="k">if</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">hasErrors</span><span class="p">())</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nx">FormInvalidException</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">getFirstError</span><span class="p">());</span>
+        <span class="p">}</span>
 
-        $this-&gt;user-&gt;update($this-&gt;form-&gt;getValues()); // Update values
+        <span class="c1">// Update values
+</span><span class="c1"></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">user</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">getValues</span><span class="p">());</span>
 
-        return $this-&gt;user-&gt;getValues(); // Return updated entity values
-    }
-}
-</code></pre>
+        <span class="c1">// Return updated entity values
+</span><span class="c1"></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">user</span><span class="o">-&gt;</span><span class="na">getValues</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <p>Think of input validation as <strong>whitelist </strong>validation (&#8220;accept known good&#8221;) and model validation as <strong>blacklist</strong> validation (&#8220;reject known bad&#8221;). Whitelist validation is <strong>more secure</strong> while blacklist validation prevents your model layer from being <strong>overly </strong><strong>constrained</strong> to very specific use cases.</p>
 

@@ -148,23 +148,6 @@
     <main>
     
 
-<div id="index-banner" class="parallax-container hide-on-med-and-down">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <h1 class="header center cyan-text text-lighten-2"><span class="dark-shadow">Despite all the fancy tools we have today, software projects fail as often as 15 years ago.</span></h1>
-            <div class="row center">
-                <h5 class="header col s12 light">
-                    <span class="dark-shadow">
-                    More frameworks &amp; tools are not a solution.
-                    Instead we need to explore more humane ways of collaborating, establish a culture of continuous learning and strive for technical excellence.
-                    </span>
-                </h5>
-            </div>
-            <br><br>
-        </div>
-    </div>
-    <div class="parallax"><img src="/img/paralax_home.jpg" alt="Unsplashed background img 1"></div>
-</div>
 
 
 
@@ -180,13 +163,13 @@
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jul 11, 2007</span>
 </p></div>
+        
         <div class="overview-summary">Wer sich fuer mehrsprachige Unternehmens-Anwendungen mit Zend Framework interessiert, findet im aktuellen PHP Magazin (5.07) einen Artikel von mir. Anhand eines Fallbeispiels wurde gezeigt, wie die Neuentwicklung einer PHP Anwendung mit modernen Technologien ablaufen kann und was es zu beachten gibt. </div>
         <div class="overview-more"><a href="/2007/07/php-magazin-zend-framework/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -199,16 +182,16 @@
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 22, 2007</span>
 </p></div>
+        
         <div class="overview-summary">This is a small vsftpd howto I wrote some months ago, while installing it on a SuSE Linux 10 server &#8211; sorry to those who don&#8217;t understand German or use another Linux distribution! Some hints may be useful anyways&#8230;
 The official vsftpd home page is: http://vsftpd.beasts.org/
 vsftpd installieren und anpassen Zunaechst sollte man sicherstellen, dass man vsftpd ueberhaupt installiert hat:
 walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast installieren (die Suchfunktion erspart Scrollen in der Paketliste!</div>
         <div class="overview-more"><a href="/2007/06/vsftpd-mit-virtuellen-usern/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -221,14 +204,14 @@ walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast inst
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 20, 2007</span>
 </p></div>
+        
         <div class="overview-summary">The results of the plat_forms contest are finally published! PHP was the best platform in terms of completeness, maintainablity and security. Also, the differences between the PHP teams were small compared to Perl and Java &#8211; that means, our **Team 8** was quite good, even if OXID (Team 6) is the winning team for PHP: Congratulations :)
 I&#8217;d like to mention that we had almost no defects in our solution:</div>
         <div class="overview-more"><a href="/2007/06/plat_forms-2007-results/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -241,14 +224,14 @@ I&#8217;d like to mention that we had almost no defects in our solution:</div>
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 8, 2007</span>
 </p></div>
+        
         <div class="overview-summary">I had heaps of fun with SQL today (again). Ever heard of Common Table Expressions? Here is an example of a recursive query:
 WITH nodeCTE (nodeId, nodeName) AS ( SELECT a.nodeId, nodeName = CONVERT(varchar(8000), nodeName) FROM nodeNames a JOIN nodes b ON a.nodeId = b.nodeId AND a.locale = 'en' AND b.parentId = 0 UNION ALL SELECT y.nodeId, x.nodeName + ' -&gt; ' + CONVERT(varchar(8000), z.nodeName) FROM nodeCTE x JOIN nodes y ON y.</div>
         <div class="overview-more"><a href="/2007/06/cte-sql/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -261,17 +244,17 @@ WITH nodeCTE (nodeId, nodeName) AS ( SELECT a.nodeId, nodeName = CONVERT(varchar
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 4, 2007</span>
 </p></div>
+        
         <div class="overview-summary">If you want to install the free VMware Server 1.0.3 on Fedora Core 6 with the latest kernel, you need to change the kernel module source as follows:
 cd /usr/lib/vmware/modules/source/ tar -xvf vmmon.tar vi vmmon-only/include/compat_kernel.h Change the line
 static inline _syscall1(int, compat_exit, int, exit_code); to
 int compat_exit(int exit_code); Then recreate the archive:
 cp vmmon.tar vmmon.tar.orig tar -cf vmmon.tar vmmon-only Now, you should be able to run the config script as described in the installation manual:</div>
         <div class="overview-more"><a href="/2007/06/vmware-fedora-core/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -284,14 +267,14 @@ cp vmmon.tar vmmon.tar.orig tar -cf vmmon.tar vmmon-only Now, you should be able
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 2, 2007</span>
 </p></div>
+        
         <div class="overview-summary">I&#8217;ve been on the LinuxTag in Berlin during the past days. It was a fun event and I met lots of nice people &#8211; also the recruiting staff of Google, which gave me a nice notepad, some other toys and an invitation for lunch at the headquarters in Mountain View.
 I&#8217;ve also had quick look into &#8220;Einstieg in SQL&#8221; (&#8220;SQL for beginners&#8221;) of Galileo Press. The cool thing about that book is, that it is supposed to cover all SQL dialects.</div>
         <div class="overview-more"><a href="/2007/06/linux-tag-2007/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -304,13 +287,13 @@ I&#8217;ve also had quick look into &#8220;Einstieg in SQL&#8221; (&#8220;SQL fo
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">Jun 2, 2007</span>
 </p></div>
+        
         <div class="overview-summary">When it comes to Web search, everybody thinks of Google nowadays. But there are shortcomings: Google has just one large index for all users. This is why search engine optimization has become so popular and why you sometimes don&#8217;t find what you&#8217;re looking for. A possible solution would be to have different indexes, maintained by the users, that cover the various needs (e.g. topics, regions, content quality,&#8230;). That way, a user can decide to only get search results from Germany without ads, for example.</div>
         <div class="overview-more"><a href="/2007/06/cybernetic-view-on-web-search/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -323,14 +306,14 @@ I&#8217;ve also had quick look into &#8220;Einstieg in SQL&#8221; (&#8220;SQL fo
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">May 31, 2007</span>
 </p></div>
+        
         <div class="overview-summary">Heute ist der Google Entwickler Tag. Ich wurde eingeladen hier im Side Hotel in Hamburg teilzunehmen. Die Firma mit den bunten Buchstaben will heute ueber ihre API sprechen (und etwas zu Essen gibt es angeblich auch, was sicher mit ein Grund war die Einladung anzunehnmen).
 Da ich seit gestern eine Vodafone UMTS Karte in meinem Notebook habe, werde ich so frei sein und live ueber den Event schreiben. Ich glaube zwar nicht, dass der Tag heute in die Geschichte eingehen wird, aber was macht man sonst mit einer UMTS-Flatrate?</div>
         <div class="overview-more"><a href="/2007/05/hamburg-google-developer-day-2007/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -343,16 +326,16 @@ Da ich seit gestern eine Vodafone UMTS Karte in meinem Notebook habe, werde ich 
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">May 31, 2007</span>
 </p></div>
+        
         <div class="overview-summary">Yeah, I finally got it managed to publish my proposal for the Zend Framwork ODBTP database adapter component:
 http://framework.zend.com/wiki/display/ZFPROP/Zend_Db_Adapter_Odbtp_Mssql
 The default MS SQL database driver does not work with Unicode, as SQL Server expects Unicode strings in the UCS-2 encoding (UCS-2 contains null bytes and the driver is not binary-safe). ODBTP works as layer between PHP and SQL Server and accepts Unicode strings in the UTF-8 encoding.
 The required classes are attached bellow.</div>
         <div class="overview-more"><a href="/2007/05/odbtp-adapter-zend-framework/">Read more...</a></div>
+        
     </div>
 </article>
     
-
-
 
     
         <article class="row max-width">
@@ -365,15 +348,16 @@ The required classes are attached bellow.</div>
 <p class="article-meta">
 <span class="article-meta-published-at grey-text text-darken-1">May 29, 2007</span>
 </p></div>
+        
         <div class="overview-summary">Some of the photos from the plat_forms 2007 contest are published now!
 
  A short description of plat_forms:
 Software development platforms for web applications (such as Java EE, .NET, Perl, PHP, Python, Ruby on Rails, etc.) are among the most critical factors of development productivity today. The pros and cons of the various platforms are by-and-large known in principle, but how the pros trade off against the cons in one platform and how that compares to another platform is the topic of quasi-religious wars only, not a subject of objective analysis, as almost no data is available that allows such direct comparison.</div>
         <div class="overview-more"><a href="/2007/05/plat_forms-fotos/">Read more...</a></div>
+        
     </div>
 </article>
     
-
 
 
 
@@ -533,6 +517,9 @@ Software development platforms for web applications (such as Java EE, .NET, Perl
         <a href="/posts/page/13/" aria-label="Next"><i class="material-icons">chevron_right</i></a>
     </li>
 </ul>
+
+
+
 
 
 

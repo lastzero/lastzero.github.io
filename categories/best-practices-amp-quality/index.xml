@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>Why less mocking can improve everyone’s testing experience</title>
+      <title>Mocks are evil</title>
       <link>https://blog.liquidbytes.net/2015/11/mocks-are-evil/</link>
       <pubDate>Sat, 21 Nov 2015 05:39:16 +0000</pubDate>
       
@@ -23,7 +23,7 @@ Despite the success of this approach, many developers are still plagued by conce
     </item>
     
     <item>
-      <title>Form Validation vs Model Validation</title>
+      <title>Key differences between client-side, input and model validation explained</title>
       <link>https://blog.liquidbytes.net/2015/11/form-validation-vs-model-validation/</link>
       <pubDate>Sun, 15 Nov 2015 06:28:07 +0000</pubDate>
       
