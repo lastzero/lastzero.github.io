@@ -165,9 +165,9 @@
 <span class="article-meta-published-at grey-text text-darken-1">Oct 29, 2012</span>
 </p></div>
         
-        <div class="overview-summary">There is an easy way to modify the block format options dropdown in the WordPress editor. Simply add those lines to your theme&#8217;s functions.php (wp-content/themes/{name}/functions.php) and modify the list according to your needs:
-function extend_tiny_mce_defaults ($config) { // comma separated list of any block-level HTML tag $config['theme_advanced_blockformats'] = 'p,h3,h4,pre,address'; return $config; } add_filter('tiny_mce_before_init', 'extend_tiny_mce_defaults', 100); </div>
-        <div class="overview-more"><a href="/2012/10/modify-block-format-options-dropdown-in-wordpress-tinymce/">Read more...</a></div>
+        <p class="overview-summary">There is an easy way to modify the block format options dropdown in the WordPress editor. Simply add those lines to your theme&#8217;s functions.php (wp-content/themes/{name}/functions.php) and modify the list according to your needs:
+function extend_tiny_mce_defaults ($config) { // comma separated list of any block-level HTML tag $config['theme_advanced_blockformats'] = 'p,h3,h4,pre,address'; return $config; } add_filter('tiny_mce_before_init', 'extend_tiny_mce_defaults', 100); </p>
+        <div class="overview-more no-print"><a href="/2012/10/modify-block-format-options-dropdown-in-wordpress-tinymce/">Read more...</a></div>
         
     </div>
 </article>
@@ -185,9 +185,9 @@ function extend_tiny_mce_defaults ($config) { // comma separated list of any bl
 <span class="article-meta-published-at grey-text text-darken-1">Apr 30, 2008</span>
 </p></div>
         
-        <div class="overview-summary">After having trouble with the Drupal upgrade I decided to give WordPress a try. The funny thing is to copy the existing posts to the new tables. If you got the same problem, you can use this view:
- CREATE VIEW wp_import AS SELECT a.nid AS ID, 1 AS post_author, FROM_UNIXTIME(a.created) AS post_date, FROM_UNIXTIME(a.created) AS post_date_gmt, b.body AS post_content, b.title AS post_title, 0 AS post_category, b.teaser AS post_except, &#8216;publish&#8217; AS post_status, &#8216;open&#8217; AS comment_status, &#8216;open&#8217; AS ping_status, &#8221; AS post_password, &#8216;post&#8217; + a.</div>
-        <div class="overview-more"><a href="/2008/04/switched-from-drupal-5-to-wordpress-2/">Read more...</a></div>
+        <p class="overview-summary">After having trouble with the Drupal upgrade I decided to give WordPress a try. The funny thing is to copy the existing posts to the new tables. If you got the same problem, you can use this view:
+ CREATE VIEW wp_import AS SELECT a.nid AS ID, 1 AS post_author, FROM_UNIXTIME(a.created) AS post_date, FROM_UNIXTIME(a.created) AS post_date_gmt, b.body AS post_content, b.title AS post_title, 0 AS post_category, b.teaser AS post_except, &#8216;publish&#8217; AS post_status, &#8216;open&#8217; AS comment_status, &#8216;open&#8217; AS ping_status, &#8221; AS post_password, &#8216;post&#8217; + a.</p>
+        <div class="overview-more no-print"><a href="/2008/04/switched-from-drupal-5-to-wordpress-2/">Read more...</a></div>
         
     </div>
 </article>
