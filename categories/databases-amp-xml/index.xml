@@ -68,8 +68,8 @@ At FrOSCon I saw the talk about the NoSQL database Cassandra. The guy was pretty
       <pubDate>Sat, 06 Oct 2007 06:42:21 +0000</pubDate>
       
       <guid>https://blog.liquidbytes.net/2007/10/755/</guid>
-      <description>Just a short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):
-CREATE FUNCION get_authors (@pubId int) RETURNS nvarchar(max) WITH EXECUTE AS CALLER AS BEGIN DECLARE @authorList nvarchar(max); SELECT @authorList = @authorList + &#39;, &#39; + authorFirstName + &#39; &#39; + authorLastName FROM pdb_authors a, pdb_publicationAuthors b WHERE a.authorId = b.authorId AND b.pubId = @pubId; RETURN(SUBSTRING(@authorList, 3, LEN(@authorList) - 2)) END </description>
+      <description>A short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):
+CREATE FUNCION get_authors (@pubId int)RETURNS nvarchar(max)WITH EXECUTE AS CALLER ASBEGIN DECLARE @authorList nvarchar(max);SELECT@authorList = @authorList + &amp;#39;, &amp;#39;+ authorFirstName + &amp;#39; &amp;#39; + authorLastNameFROM pdb_authors a, pdb_publicationAuthors b WHERE a.authorId = b.authorId AND b.pubId = @pubId; RETURN(SUBSTRING(@authorList, 3, LEN(@authorList) - 2)) END </description>
     </item>
     
     <item>
@@ -92,13 +92,13 @@ This is how your queries will look like, if you use the &amp;#8220;dictionary ap
     </item>
     
     <item>
-      <title>Fun with SQL</title>
+      <title>Fun with SQL: Common Table Expressions</title>
       <link>https://blog.liquidbytes.net/2007/06/cte-sql/</link>
       <pubDate>Fri, 08 Jun 2007 10:02:02 +0000</pubDate>
       
       <guid>https://blog.liquidbytes.net/2007/06/cte-sql/</guid>
       <description>I had heaps of fun with SQL today (again). Ever heard of Common Table Expressions? Here is an example of a recursive query:
-WITH nodeCTE (nodeId, nodeName) AS ( SELECT a.nodeId, nodeName = CONVERT(varchar(8000), nodeName) FROM nodeNames a JOIN nodes b ON a.nodeId = b.nodeId AND a.locale = &#39;en&#39; AND b.parentId = 0 UNION ALL SELECT y.nodeId, x.nodeName + &#39; -&amp;gt; &#39; + CONVERT(varchar(8000), z.nodeName) FROM nodeCTE x JOIN nodes y ON y.</description>
+WITHnodeCTE (nodeId, nodeName)AS (SELECT a.nodeId, nodeName = CONVERT(varchar(8000), nodeName)FROM nodeNames aJOIN nodes b ON a.nodeId = b.nodeId AND a.locale = &amp;#39;en&amp;#39; AND b.parentId = 0UNION ALL SELECT y.nodeId, x.nodeName + &amp;#39; -&amp;amp;gt; &amp;#39; + CONVERT(varchar(8000), z.nodeName)FROM nodeCTE x JOIN nodes y ON y.</description>
     </item>
     
     <item>
@@ -120,7 +120,7 @@ The required classes are attached bellow.</description>
       
       <guid>https://blog.liquidbytes.net/2006/11/countries-mysql-dump/</guid>
       <description>I just imported a list of all countries from a CSV file and re-exported it as (My)SQL dump:
-http://www.nulldevice.de/wp-content/uploads/2008/04/countries.sql
+https://blog.liquidbytes.net/wp-content/uploads/2008/04/countries.sql
 Feel free to download and use it! An even more complete list (including TLDs etc) will follow&amp;#8230;</description>
     </item>
     

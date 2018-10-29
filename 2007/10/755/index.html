@@ -7,8 +7,8 @@
 <meta name="theme-color" content="#0074c5">
 
 <meta property="og:title" content="Comma separated list in SQL" />
-<meta property="og:description" content="Just a short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):
-CREATE FUNCION get_authors (@pubId int) RETURNS nvarchar(max) WITH EXECUTE AS CALLER AS BEGIN DECLARE @authorList nvarchar(max); SELECT @authorList = @authorList &#43; &#39;, &#39; &#43; authorFirstName &#43; &#39; &#39; &#43; authorLastName FROM pdb_authors a, pdb_publicationAuthors b WHERE a.authorId = b.authorId AND b.pubId = @pubId; RETURN(SUBSTRING(@authorList, 3, LEN(@authorList) - 2)) END " />
+<meta property="og:description" content="A short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):
+CREATE FUNCION get_authors (@pubId int)RETURNS nvarchar(max)WITH EXECUTE AS CALLER ASBEGIN DECLARE @authorList nvarchar(max);SELECT@authorList = @authorList &#43; &#39;, &#39;&#43; authorFirstName &#43; &#39; &#39; &#43; authorLastNameFROM pdb_authors a, pdb_publicationAuthors b WHERE a.authorId = b.authorId AND b.pubId = @pubId; RETURN(SUBSTRING(@authorList, 3, LEN(@authorList) - 2)) END " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.liquidbytes.net/2007/10/755/" /><meta property="article:published_time" content="2007-10-06T06:42:21&#43;00:00"/>
 <meta property="article:modified_time" content="2007-10-06T06:42:21&#43;00:00"/>
@@ -17,8 +17,8 @@ CREATE FUNCION get_authors (@pubId int) RETURNS nvarchar(max) WITH EXECUTE AS CA
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Comma separated list in SQL"/>
-<meta name="twitter:description" content="Just a short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):
-CREATE FUNCION get_authors (@pubId int) RETURNS nvarchar(max) WITH EXECUTE AS CALLER AS BEGIN DECLARE @authorList nvarchar(max); SELECT @authorList = @authorList &#43; &#39;, &#39; &#43; authorFirstName &#43; &#39; &#39; &#43; authorLastName FROM pdb_authors a, pdb_publicationAuthors b WHERE a.authorId = b.authorId AND b.pubId = @pubId; RETURN(SUBSTRING(@authorList, 3, LEN(@authorList) - 2)) END "/>
+<meta name="twitter:description" content="A short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):
+CREATE FUNCION get_authors (@pubId int)RETURNS nvarchar(max)WITH EXECUTE AS CALLER ASBEGIN DECLARE @authorList nvarchar(max);SELECT@authorList = @authorList &#43; &#39;, &#39;&#43; authorFirstName &#43; &#39; &#39; &#43; authorLastNameFROM pdb_authors a, pdb_publicationAuthors b WHERE a.authorId = b.authorId AND b.pubId = @pubId; RETURN(SUBSTRING(@authorList, 3, LEN(@authorList) - 2)) END "/>
 
 <meta property="twitter:image" content="https://blog.liquidbytes.net/img/thumbnail.jpg">
 
@@ -173,14 +173,18 @@ CREATE FUNCION get_authors (@pubId int) RETURNS nvarchar(max) WITH EXECUTE AS CA
 </p>
         </div>
         <div class="col s12 m8 offset-m2 l6">
-            <p>Just a short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):</p>
+            <p>A short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):</p>
 
-<pre>CREATE FUNCION get_authors (@pubId int) RETURNS nvarchar(max) 
-WITH EXECUTE AS CALLER AS BEGIN DECLARE @authorList nvarchar(max); 
-SELECT @authorList = @authorList + ', ' + authorFirstName + ' ' + authorLastName 
-FROM pdb_authors a, pdb_publicationAuthors b 
-WHERE a.authorId = b.authorId AND b.pubId = @pubId; 
-RETURN(SUBSTRING(@authorList, 3, LEN(@authorList) - 2)) END</pre>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">CREATE</span> <span class="n">FUNCION</span> <span class="n">get_authors</span> <span class="p">(</span><span class="o">@</span><span class="n">pubId</span> <span class="nb">int</span><span class="p">)</span>
+<span class="k">RETURNS</span> <span class="n">nvarchar</span><span class="p">(</span><span class="k">max</span><span class="p">)</span>
+<span class="k">WITH</span> <span class="k">EXECUTE</span> <span class="k">AS</span> <span class="n">CALLER</span> <span class="k">AS</span>
+<span class="k">BEGIN</span> <span class="k">DECLARE</span> <span class="o">@</span><span class="n">authorList</span> <span class="n">nvarchar</span><span class="p">(</span><span class="k">max</span><span class="p">);</span>
+<span class="k">SELECT</span>
+  <span class="o">@</span><span class="n">authorList</span> <span class="o">=</span> <span class="o">@</span><span class="n">authorList</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span>
+  <span class="o">+</span> <span class="n">authorFirstName</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">authorLastName</span>
+<span class="k">FROM</span> <span class="n">pdb_authors</span> <span class="n">a</span><span class="p">,</span> <span class="n">pdb_publicationAuthors</span> <span class="n">b</span> 
+<span class="k">WHERE</span> <span class="n">a</span><span class="p">.</span><span class="n">authorId</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">authorId</span> <span class="k">AND</span> <span class="n">b</span><span class="p">.</span><span class="n">pubId</span> <span class="o">=</span> <span class="o">@</span><span class="n">pubId</span><span class="p">;</span> 
+<span class="k">RETURN</span><span class="p">(</span><span class="k">SUBSTRING</span><span class="p">(</span><span class="o">@</span><span class="n">authorList</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">LEN</span><span class="p">(</span><span class="o">@</span><span class="n">authorList</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span> <span class="k">END</span></code></pre></div>
 
         </div>
     </section>

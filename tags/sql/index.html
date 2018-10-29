@@ -245,8 +245,8 @@ From my experience, the usual way to test database related classes is to use a s
 <span class="article-meta-published-at grey-text text-darken-1">Oct 6, 2007</span>
 </p></div>
         
-        <p class="overview-summary">Just a short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):
-CREATE FUNCION get_authors (@pubId int) RETURNS nvarchar(max) WITH EXECUTE AS CALLER AS BEGIN DECLARE @authorList nvarchar(max); SELECT @authorList = @authorList + ', ' + authorFirstName + ' ' + authorLastName FROM pdb_authors a, pdb_publicationAuthors b WHERE a.authorId = b.authorId AND b.pubId = @pubId; RETURN(SUBSTRING(@authorList, 3, LEN(@authorList) - 2)) END </p>
+        <p class="overview-summary">A short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):
+CREATE FUNCION get_authors (@pubId int)RETURNS nvarchar(max)WITH EXECUTE AS CALLER ASBEGIN DECLARE @authorList nvarchar(max);SELECT@authorList = @authorList + &#39;, &#39;+ authorFirstName + &#39; &#39; + authorLastNameFROM pdb_authors a, pdb_publicationAuthors b WHERE a.authorId = b.authorId AND b.pubId = @pubId; RETURN(SUBSTRING(@authorList, 3, LEN(@authorList) - 2)) END </p>
         <div class="overview-more no-print"><a href="/2007/10/755/">Read more...</a></div>
         
     </div>
@@ -277,7 +277,7 @@ This is how your queries will look like, if you use the &#8220;dictionary approa
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
         <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2007/06/cte-sql/">Fun with SQL</a>
+            <a class="indigo-text text-darken-1" href="/2007/06/cte-sql/">Fun with SQL: Common Table Expressions</a>
         </h3>
         <div class="overview-meta">
 
@@ -286,7 +286,7 @@ This is how your queries will look like, if you use the &#8220;dictionary approa
 </p></div>
         
         <p class="overview-summary">I had heaps of fun with SQL today (again). Ever heard of Common Table Expressions? Here is an example of a recursive query:
-WITH nodeCTE (nodeId, nodeName) AS ( SELECT a.nodeId, nodeName = CONVERT(varchar(8000), nodeName) FROM nodeNames a JOIN nodes b ON a.nodeId = b.nodeId AND a.locale = 'en' AND b.parentId = 0 UNION ALL SELECT y.nodeId, x.nodeName + ' -&gt; ' + CONVERT(varchar(8000), z.nodeName) FROM nodeCTE x JOIN nodes y ON y.</p>
+WITHnodeCTE (nodeId, nodeName)AS (SELECT a.nodeId, nodeName = CONVERT(varchar(8000), nodeName)FROM nodeNames aJOIN nodes b ON a.nodeId = b.nodeId AND a.locale = &#39;en&#39; AND b.parentId = 0UNION ALL SELECT y.nodeId, x.nodeName + &#39; -&amp;gt; &#39; + CONVERT(varchar(8000), z.nodeName)FROM nodeCTE x JOIN nodes y ON y.</p>
         <div class="overview-more no-print"><a href="/2007/06/cte-sql/">Read more...</a></div>
         
     </div>
@@ -328,7 +328,7 @@ The required classes are attached bellow.</p>
 </p></div>
         
         <p class="overview-summary">I just imported a list of all countries from a CSV file and re-exported it as (My)SQL dump:
-http://www.nulldevice.de/wp-content/uploads/2008/04/countries.sql
+https://blog.liquidbytes.net/wp-content/uploads/2008/04/countries.sql
 Feel free to download and use it! An even more complete list (including TLDs etc) will follow&#8230;</p>
         <div class="overview-more no-print"><a href="/2006/11/countries-mysql-dump/">Read more...</a></div>
         

@@ -198,7 +198,7 @@ walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast inst
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
         <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2007/06/plat_forms-2007-results/">plat_forms 2007 results</a>
+            <a class="indigo-text text-darken-1" href="/2007/06/plat_forms-2007-results/">Plat_Forms 2007: Evaluation and Results</a>
         </h3>
         <div class="overview-meta">
 
@@ -206,7 +206,9 @@ walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast inst
 <span class="article-meta-published-at grey-text text-darken-1">Jun 20, 2007</span>
 </p></div>
         
-        <p class="overview-summary">The results of the plat_forms contest are finally published! PHP was the best platform in terms of completeness, maintainablity and security. Also, the differences between the PHP teams were small compared to Perl and Java &#8211; that means, our **Team 8** was quite good, even if OXID (Team 6) is the winning team for PHP: Congratulations :)
+        <p class="overview-summary">PHP was the best platform in terms of completeness, maintainability and security. Also, the differences between the PHP teams were small compared to Perl and Java &#8211; that means, our Team 8 (Zend) was quite good, even if Team 6 (OXID) is the winning team for PHP. Congratulations!
+Download the full report as PDF:
+Plat_Forms 2007: The Web Development Platform Comparison — Evaluation and Results
 I&#8217;d like to mention that we had almost no defects in our solution:</p>
         <div class="overview-more no-print"><a href="/2007/06/plat_forms-2007-results/">Read more...</a></div>
         
@@ -218,7 +220,7 @@ I&#8217;d like to mention that we had almost no defects in our solution:</p>
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
         <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2007/06/cte-sql/">Fun with SQL</a>
+            <a class="indigo-text text-darken-1" href="/2007/06/cte-sql/">Fun with SQL: Common Table Expressions</a>
         </h3>
         <div class="overview-meta">
 
@@ -227,7 +229,7 @@ I&#8217;d like to mention that we had almost no defects in our solution:</p>
 </p></div>
         
         <p class="overview-summary">I had heaps of fun with SQL today (again). Ever heard of Common Table Expressions? Here is an example of a recursive query:
-WITH nodeCTE (nodeId, nodeName) AS ( SELECT a.nodeId, nodeName = CONVERT(varchar(8000), nodeName) FROM nodeNames a JOIN nodes b ON a.nodeId = b.nodeId AND a.locale = 'en' AND b.parentId = 0 UNION ALL SELECT y.nodeId, x.nodeName + ' -&gt; ' + CONVERT(varchar(8000), z.nodeName) FROM nodeCTE x JOIN nodes y ON y.</p>
+WITHnodeCTE (nodeId, nodeName)AS (SELECT a.nodeId, nodeName = CONVERT(varchar(8000), nodeName)FROM nodeNames aJOIN nodes b ON a.nodeId = b.nodeId AND a.locale = &#39;en&#39; AND b.parentId = 0UNION ALL SELECT y.nodeId, x.nodeName + &#39; -&amp;gt; &#39; + CONVERT(varchar(8000), z.nodeName)FROM nodeCTE x JOIN nodes y ON y.</p>
         <div class="overview-more no-print"><a href="/2007/06/cte-sql/">Read more...</a></div>
         
     </div>
@@ -342,7 +344,7 @@ The required classes are attached bellow.</p>
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
         <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2007/05/plat_forms-fotos/">plat_forms photos online</a>
+            <a class="indigo-text text-darken-1" href="/2007/05/plat_forms-fotos/">Plat_Forms 2007: The Web Development Platform Comparison</a>
         </h3>
         <div class="overview-meta">
 
@@ -351,7 +353,8 @@ The required classes are attached bellow.</p>
 </p></div>
         
         <p class="overview-summary">Some of the photos from the plat_forms 2007 contest are published now!
-
+Download the full results as PDF:
+Plat_Forms 2007: The Web Development Platform Comparison — Evaluation and Results
  A short description of plat_forms:
 Software development platforms for web applications (such as Java EE, .NET, Perl, PHP, Python, Ruby on Rails, etc.) are among the most critical factors of development productivity today. The pros and cons of the various platforms are by-and-large known in principle, but how the pros trade off against the cons in one platform and how that compares to another platform is the topic of quasi-religious wars only, not a subject of objective analysis, as almost no data is available that allows such direct comparison.</p>
         <div class="overview-more no-print"><a href="/2007/05/plat_forms-fotos/">Read more...</a></div>

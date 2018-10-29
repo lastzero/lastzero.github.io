@@ -32,12 +32,14 @@
     </item>
     
     <item>
-      <title>plat_forms 2007 results</title>
+      <title>Plat_Forms 2007: Evaluation and Results</title>
       <link>https://blog.liquidbytes.net/2007/06/plat_forms-2007-results/</link>
       <pubDate>Wed, 20 Jun 2007 13:37:02 +0000</pubDate>
       
       <guid>https://blog.liquidbytes.net/2007/06/plat_forms-2007-results/</guid>
-      <description>The results of the plat_forms contest are finally published! PHP was the best platform in terms of completeness, maintainablity and security. Also, the differences between the PHP teams were small compared to Perl and Java &amp;#8211; that means, our **Team 8** was quite good, even if OXID (Team 6) is the winning team for PHP: Congratulations :)
+      <description>PHP was the best platform in terms of completeness, maintainability and security. Also, the differences between the PHP teams were small compared to Perl and Java &amp;#8211; that means, our Team 8 (Zend) was quite good, even if Team 6 (OXID) is the winning team for PHP. Congratulations!
+Download the full report as PDF:
+Plat_Forms 2007: The Web Development Platform Comparison — Evaluation and Results
 I&amp;#8217;d like to mention that we had almost no defects in our solution:</description>
     </item>
     

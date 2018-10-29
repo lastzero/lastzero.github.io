@@ -1150,8 +1150,8 @@ From 2006 until 2009, Michael joined Zend Technologies as a freelance consultant
       <pubDate>Sat, 06 Oct 2007 06:42:21 +0000</pubDate>
       
       <guid>https://blog.liquidbytes.net/2007/10/755/</guid>
-      <description>Just a short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):
-CREATE FUNCION get_authors (@pubId int) RETURNS nvarchar(max) WITH EXECUTE AS CALLER AS BEGIN DECLARE @authorList nvarchar(max); SELECT @authorList = @authorList + &#39;, &#39; + authorFirstName + &#39; &#39; + authorLastName FROM pdb_authors a, pdb_publicationAuthors b WHERE a.authorId = b.authorId AND b.pubId = @pubId; RETURN(SUBSTRING(@authorList, 3, LEN(@authorList) - 2)) END </description>
+      <description>A short example of how to write a stored function that returns a comma separated list of values (Microsoft Transact-SQL):
+CREATE FUNCION get_authors (@pubId int)RETURNS nvarchar(max)WITH EXECUTE AS CALLER ASBEGIN DECLARE @authorList nvarchar(max);SELECT@authorList = @authorList + &amp;#39;, &amp;#39;+ authorFirstName + &amp;#39; &amp;#39; + authorLastNameFROM pdb_authors a, pdb_publicationAuthors b WHERE a.authorId = b.authorId AND b.pubId = @pubId; RETURN(SUBSTRING(@authorList, 3, LEN(@authorList) - 2)) END </description>
     </item>
     
     <item>
@@ -1186,23 +1186,25 @@ walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast inst
     </item>
     
     <item>
-      <title>plat_forms 2007 results</title>
+      <title>Plat_Forms 2007: Evaluation and Results</title>
       <link>https://blog.liquidbytes.net/2007/06/plat_forms-2007-results/</link>
       <pubDate>Wed, 20 Jun 2007 13:37:02 +0000</pubDate>
       
       <guid>https://blog.liquidbytes.net/2007/06/plat_forms-2007-results/</guid>
-      <description>The results of the plat_forms contest are finally published! PHP was the best platform in terms of completeness, maintainablity and security. Also, the differences between the PHP teams were small compared to Perl and Java &amp;#8211; that means, our **Team 8** was quite good, even if OXID (Team 6) is the winning team for PHP: Congratulations :)
+      <description>PHP was the best platform in terms of completeness, maintainability and security. Also, the differences between the PHP teams were small compared to Perl and Java &amp;#8211; that means, our Team 8 (Zend) was quite good, even if Team 6 (OXID) is the winning team for PHP. Congratulations!
+Download the full report as PDF:
+Plat_Forms 2007: The Web Development Platform Comparison — Evaluation and Results
 I&amp;#8217;d like to mention that we had almost no defects in our solution:</description>
     </item>
     
     <item>
-      <title>Fun with SQL</title>
+      <title>Fun with SQL: Common Table Expressions</title>
       <link>https://blog.liquidbytes.net/2007/06/cte-sql/</link>
       <pubDate>Fri, 08 Jun 2007 10:02:02 +0000</pubDate>
       
       <guid>https://blog.liquidbytes.net/2007/06/cte-sql/</guid>
       <description>I had heaps of fun with SQL today (again). Ever heard of Common Table Expressions? Here is an example of a recursive query:
-WITH nodeCTE (nodeId, nodeName) AS ( SELECT a.nodeId, nodeName = CONVERT(varchar(8000), nodeName) FROM nodeNames a JOIN nodes b ON a.nodeId = b.nodeId AND a.locale = &#39;en&#39; AND b.parentId = 0 UNION ALL SELECT y.nodeId, x.nodeName + &#39; -&amp;gt; &#39; + CONVERT(varchar(8000), z.nodeName) FROM nodeCTE x JOIN nodes y ON y.</description>
+WITHnodeCTE (nodeId, nodeName)AS (SELECT a.nodeId, nodeName = CONVERT(varchar(8000), nodeName)FROM nodeNames aJOIN nodes b ON a.nodeId = b.nodeId AND a.locale = &amp;#39;en&amp;#39; AND b.parentId = 0UNION ALL SELECT y.nodeId, x.nodeName + &amp;#39; -&amp;amp;gt; &amp;#39; + CONVERT(varchar(8000), z.nodeName)FROM nodeCTE x JOIN nodes y ON y.</description>
     </item>
     
     <item>
@@ -1260,13 +1262,14 @@ The required classes are attached bellow.</description>
     </item>
     
     <item>
-      <title>plat_forms photos online</title>
+      <title>Plat_Forms 2007: The Web Development Platform Comparison</title>
       <link>https://blog.liquidbytes.net/2007/05/plat_forms-fotos/</link>
       <pubDate>Tue, 29 May 2007 00:42:02 +0000</pubDate>
       
       <guid>https://blog.liquidbytes.net/2007/05/plat_forms-fotos/</guid>
       <description>Some of the photos from the plat_forms 2007 contest are published now!
-
+Download the full results as PDF:
+Plat_Forms 2007: The Web Development Platform Comparison — Evaluation and Results
  A short description of plat_forms:
 Software development platforms for web applications (such as Java EE, .NET, Perl, PHP, Python, Ruby on Rails, etc.) are among the most critical factors of development productivity today. The pros and cons of the various platforms are by-and-large known in principle, but how the pros trade off against the cons in one platform and how that compares to another platform is the topic of quasi-religious wars only, not a subject of objective analysis, as almost no data is available that allows such direct comparison.</description>
     </item>
@@ -1278,7 +1281,7 @@ Software development platforms for web applications (such as Java EE, .NET, Perl
       
       <guid>https://blog.liquidbytes.net/2006/11/countries-mysql-dump/</guid>
       <description>I just imported a list of all countries from a CSV file and re-exported it as (My)SQL dump:
-http://www.nulldevice.de/wp-content/uploads/2008/04/countries.sql
+https://blog.liquidbytes.net/wp-content/uploads/2008/04/countries.sql
 Feel free to download and use it! An even more complete list (including TLDs etc) will follow&amp;#8230;</description>
     </item>
     
@@ -1331,6 +1334,15 @@ Siehe:
       
       <guid>https://blog.liquidbytes.net/p958/</guid>
       <description>Until recently I had my own mail server running&amp;#8230; good old Postfix and dbmail&amp;#8230; as I ran out of time (and administration of a mail server simply takes some time), I had to look for another solution. The evaluation showed, that Google Mail is not more expensive than other services like GMX, but I can continue using my own domains and they have the best Web frontend. Also I assumed, that Google might send some spam to other providers (this is part 1 of the story) but not accept spam&amp;#8230; I was convinced that Google has the best spam filters in the world&amp;#8230; to recongnize spam is related to artificial intelligence and smart alogorithms&amp;#8230; like Web search&amp;#8230; what shall I say?</description>
+    </item>
+    
+    <item>
+      <title>Pictures from San Francisco</title>
+      <link>https://blog.liquidbytes.net/p881/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/p881/</guid>
+      <description></description>
     </item>
     
   </channel>
