@@ -107,7 +107,7 @@ p {
 }
 
 .parallax-container {
-    min-height: 270px;
+    min-height: 280px;
     line-height: 0;
     height: auto;
     color: white;
@@ -124,7 +124,7 @@ p {
     border-radius: 10px;
 
      */
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 1px black;
     font-weight: 400;
     line-height: 2rem;
 
@@ -132,7 +132,7 @@ p {
 }
 
 .parallax-container .section {
-    padding-top: 40px;
+    padding-top: 60px;
     width: 100%;
 }
 
