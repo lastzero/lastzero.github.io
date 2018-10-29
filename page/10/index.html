@@ -11,7 +11,7 @@
 <meta property="og:description" content="Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s. He has more than 20 years of experience in leading teams and building Web applications." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.liquidbytes.net/" />
-<meta property="og:updated_time" content="2008-05-20T20:36:01&#43;00:00"/>
+<meta property="og:updated_time" content="2008-05-11T13:25:11&#43;00:00"/>
 
 <meta property="og:image" content="https://blog.liquidbytes.net/img/thumbnail.jpg">
 
@@ -177,46 +177,6 @@
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
         <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2008/05/google-spam-a-new-product/">Google Spam – a new product?</a>
-        </h3>
-        <div class="overview-meta">
-
-<p class="article-meta">
-<span class="article-meta-published-at grey-text text-darken-1">May 20, 2008</span>
-</p></div>
-        
-        <p class="overview-summary">I know that mail logs are not the most interesting thing on earth, but I&#8217;m not used to get spam from Google Mail&#8230; from Yahoo and MSN maybe, but not from Google&#8230; never ever&#8230; so I try to understand this:
-May 20 21:43:16 mail postfix/smtpd[30948]: connect from qb-out-0506.google.com[72.14.204.235]
-May 20 21:43:17 mail postfix/policyd-weight[2754]: weighted check: NOT_IN_SBL_XBL_SPAMHAUS=-1.5 NOT_IN_SPAMCOP=-1.5 NOT_IN_BL_NJABL=-1.5 CL_IP_EQ_HELO_IP=-2 (check from: .gmail. - helo: .qb-out-0506.google. - helo-domain: .google.) FROM/MX_MATCHES_HELO(DOMAIN)=-2  qb-out-0506.</p>
-        <div class="overview-more no-print"><a href="/2008/05/google-spam-a-new-product/">Read more...</a></div>
-        
-    </div>
-</article>
-    
-
-    
-        <article class="row max-width">
-    <div class="col s12 l10 offset-l1">
-        <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2008/05/updated-version-of-zend_db_adapter_odbtp_mssql/">Updated version of Zend_Db_Adapter_Odbtp_Mssql</a>
-        </h3>
-        <div class="overview-meta">
-
-<p class="article-meta">
-<span class="article-meta-published-at grey-text text-darken-1">May 19, 2008</span>
-</p></div>
-        
-        <p class="overview-summary">As people start asking me about that ODBTP adapter for Zend Framework, I will publish it as attachment to this post now. It should work with the latest version of Zend Framework (as reported by a developer). If you want to use it, just copy the files to your include path (make sure the path comes before the ZF path). Of course, you need to install ODBTP as well and add extension=php_odbtp_mssql.</p>
-        <div class="overview-more no-print"><a href="/2008/05/updated-version-of-zend_db_adapter_odbtp_mssql/">Read more...</a></div>
-        
-    </div>
-</article>
-    
-
-    
-        <article class="row max-width">
-    <div class="col s12 l10 offset-l1">
-        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2008/05/exporting-users-from-dbmail-to-postfix-lookup-table/">Exporting users from DBMail to Postfix lookup table</a>
         </h3>
         <div class="overview-meta">
@@ -367,6 +327,48 @@ I&#8217;ve also done the same test on my Linux notebook (which is of course a bi
         
         <p class="overview-summary">After searching for a suitable Flickr WordPress plugin for ages, I developed my own in less than 40 lines of JavaScript code. It&#8217;s free! You may download and use it for your own blog. I recommend to save it as /wp-content/plugins/flickr/flickr.js, if you are using WordPress. As the plugin does not depend on WordPress, you can use it with any other CMS like Drupal too. Even with plain HTML, if you like.</p>
         <div class="overview-more no-print"><a href="/2008/05/flickr-rss-feed-plugin-for-jquery-and-wordpress/">Read more...</a></div>
+        
+    </div>
+</article>
+    
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3 class="overview-title">
+            <a class="indigo-text text-darken-1" href="/2008/05/using-gdata-with-jquery/">Using Gdata with jQuery</a>
+        </h3>
+        <div class="overview-meta">
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">May 6, 2008</span>
+</p></div>
+        
+        <p class="overview-summary">This morning, I had the unbearable desire to find out why I can&#8217;t call Google&#8217;s AJAX Feed API with jQuery 1.2.3 directly, but using a small proxy script. In theory, it&#8217;s just including a script tag which then loads the remote JavaScript and executes a callback function (thus, bypassing the same-origin policy of JavaScript, which would apply for a normal XMLHttpRequest):
+ $.getScript(&#8216;http://adwordsapi.blogspot.com/atom.xml?alt=json-in-script&amp;callback=someCallbackFunction&amp;#8217;);
+ or
+ $.get(&#8216;http://adwordsapi.blogspot.com/atom.xml?alt=json-in-script&amp;#8217;, null, someCallbackFunction, &#8216;jsonp&#8217;);</p>
+        <div class="overview-more no-print"><a href="/2008/05/using-gdata-with-jquery/">Read more...</a></div>
+        
+    </div>
+</article>
+    
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3 class="overview-title">
+            <a class="indigo-text text-darken-1" href="/2008/04/switched-from-drupal-5-to-wordpress-2/">Switched from Drupal 5 to WordPress 2.5</a>
+        </h3>
+        <div class="overview-meta">
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">Apr 30, 2008</span>
+</p></div>
+        
+        <p class="overview-summary">After having trouble with the Drupal upgrade I decided to give WordPress a try. The funny thing is to copy the existing posts to the new tables. If you got the same problem, you can use this view:
+ CREATE VIEW wp_import AS SELECT a.nid AS ID, 1 AS post_author, FROM_UNIXTIME(a.created) AS post_date, FROM_UNIXTIME(a.created) AS post_date_gmt, b.body AS post_content, b.title AS post_title, 0 AS post_category, b.teaser AS post_except, &#8216;publish&#8217; AS post_status, &#8216;open&#8217; AS comment_status, &#8216;open&#8217; AS ping_status, &#8221; AS post_password, &#8216;post&#8217; + a.</p>
+        <div class="overview-more no-print"><a href="/2008/04/switched-from-drupal-5-to-wordpress-2/">Read more...</a></div>
         
     </div>
 </article>

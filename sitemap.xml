@@ -919,6 +919,10 @@
   </url>
   
   <url>
+    <loc>https://blog.liquidbytes.net/p958/</loc>
+  </url>
+  
+  <url>
     <loc>https://blog.liquidbytes.net/tags/hardware-amp-gadgets/</loc>
     <lastmod>2010-06-19T13:08:06+00:00</lastmod>
     <priority>0</priority>
@@ -1377,6 +1381,11 @@
   <url>
     <loc>https://blog.liquidbytes.net/tags/ubuntu/</loc>
     <lastmod>2012-10-23T19:10:12+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liquidbytes.net/categories/uncategorized/</loc>
     <priority>0</priority>
   </url>
   

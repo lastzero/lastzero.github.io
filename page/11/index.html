@@ -11,7 +11,7 @@
 <meta property="og:description" content="Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s. He has more than 20 years of experience in leading teams and building Web applications." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.liquidbytes.net/" />
-<meta property="og:updated_time" content="2008-05-06T06:12:32&#43;00:00"/>
+<meta property="og:updated_time" content="2007-10-06T06:42:21&#43;00:00"/>
 
 <meta property="og:image" content="https://blog.liquidbytes.net/img/thumbnail.jpg">
 
@@ -177,48 +177,6 @@
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
         <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2008/05/using-gdata-with-jquery/">Using Gdata with jQuery</a>
-        </h3>
-        <div class="overview-meta">
-
-<p class="article-meta">
-<span class="article-meta-published-at grey-text text-darken-1">May 6, 2008</span>
-</p></div>
-        
-        <p class="overview-summary">This morning, I had the unbearable desire to find out why I can&#8217;t call Google&#8217;s AJAX Feed API with jQuery 1.2.3 directly, but using a small proxy script. In theory, it&#8217;s just including a script tag which then loads the remote JavaScript and executes a callback function (thus, bypassing the same-origin policy of JavaScript, which would apply for a normal XMLHttpRequest):
- $.getScript(&#8216;http://adwordsapi.blogspot.com/atom.xml?alt=json-in-script&amp;callback=someCallbackFunction&amp;#8217;);
- or
- $.get(&#8216;http://adwordsapi.blogspot.com/atom.xml?alt=json-in-script&amp;#8217;, null, someCallbackFunction, &#8216;jsonp&#8217;);</p>
-        <div class="overview-more no-print"><a href="/2008/05/using-gdata-with-jquery/">Read more...</a></div>
-        
-    </div>
-</article>
-    
-
-    
-        <article class="row max-width">
-    <div class="col s12 l10 offset-l1">
-        <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2008/04/switched-from-drupal-5-to-wordpress-2/">Switched from Drupal 5 to WordPress 2.5</a>
-        </h3>
-        <div class="overview-meta">
-
-<p class="article-meta">
-<span class="article-meta-published-at grey-text text-darken-1">Apr 30, 2008</span>
-</p></div>
-        
-        <p class="overview-summary">After having trouble with the Drupal upgrade I decided to give WordPress a try. The funny thing is to copy the existing posts to the new tables. If you got the same problem, you can use this view:
- CREATE VIEW wp_import AS SELECT a.nid AS ID, 1 AS post_author, FROM_UNIXTIME(a.created) AS post_date, FROM_UNIXTIME(a.created) AS post_date_gmt, b.body AS post_content, b.title AS post_title, 0 AS post_category, b.teaser AS post_except, &#8216;publish&#8217; AS post_status, &#8216;open&#8217; AS comment_status, &#8216;open&#8217; AS ping_status, &#8221; AS post_password, &#8216;post&#8217; + a.</p>
-        <div class="overview-more no-print"><a href="/2008/04/switched-from-drupal-5-to-wordpress-2/">Read more...</a></div>
-        
-    </div>
-</article>
-    
-
-    
-        <article class="row max-width">
-    <div class="col s12 l10 offset-l1">
-        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2007/10/755/">Comma separated list in SQL</a>
         </h3>
         <div class="overview-meta">
@@ -269,28 +227,6 @@ This is how your queries will look like, if you use the &#8220;dictionary approa
         
         <p class="overview-summary">Wer sich fuer mehrsprachige Unternehmens-Anwendungen mit Zend Framework interessiert, findet im aktuellen PHP Magazin (5.07) einen Artikel von mir. Anhand eines Fallbeispiels wurde gezeigt, wie die Neuentwicklung einer PHP Anwendung mit modernen Technologien ablaufen kann und was es zu beachten gibt. </p>
         <div class="overview-more no-print"><a href="/2007/07/php-magazin-zend-framework/">Read more...</a></div>
-        
-    </div>
-</article>
-    
-
-    
-        <article class="row max-width">
-    <div class="col s12 l10 offset-l1">
-        <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2007/06/vsftpd-mit-virtuellen-usern/">Howto: vsftpd mit virtuellen Usern einrichten</a>
-        </h3>
-        <div class="overview-meta">
-
-<p class="article-meta">
-<span class="article-meta-published-at grey-text text-darken-1">Jun 22, 2007</span>
-</p></div>
-        
-        <p class="overview-summary">This is a small vsftpd howto I wrote some months ago, while installing it on a SuSE Linux 10 server &#8211; sorry to those who don&#8217;t understand German or use another Linux distribution! Some hints may be useful anyways&#8230;
-The official vsftpd home page is: http://vsftpd.beasts.org/
-vsftpd installieren und anpassen Zunaechst sollte man sicherstellen, dass man vsftpd ueberhaupt installiert hat:
-walrus:~ # rpm -q vsftpd vsftpd-2.0.2-3 Falls nicht, wie gewohnt ueber yast installieren (die Suchfunktion erspart Scrollen in der Paketliste!</p>
-        <div class="overview-more no-print"><a href="/2007/06/vsftpd-mit-virtuellen-usern/">Read more...</a></div>
         
     </div>
 </article>
@@ -374,6 +310,67 @@ cp vmmon.tar vmmon.tar.orig tar -cf vmmon.tar vmmon-only Now, you should be able
         <p class="overview-summary">I&#8217;ve been on the LinuxTag in Berlin during the past days. It was a fun event and I met lots of nice people &#8211; also the recruiting staff of Google, which gave me a nice notepad, some other toys and an invitation for lunch at the headquarters in Mountain View.
 I&#8217;ve also had quick look into &#8220;Einstieg in SQL&#8221; (&#8220;SQL for beginners&#8221;) of Galileo Press. The cool thing about that book is, that it is supposed to cover all SQL dialects.</p>
         <div class="overview-more no-print"><a href="/2007/06/linux-tag-2007/">Read more...</a></div>
+        
+    </div>
+</article>
+    
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3 class="overview-title">
+            <a class="indigo-text text-darken-1" href="/2007/06/cybernetic-view-on-web-search/">A cybernetic view on Web search</a>
+        </h3>
+        <div class="overview-meta">
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">Jun 2, 2007</span>
+</p></div>
+        
+        <p class="overview-summary">When it comes to Web search, everybody thinks of Google nowadays. But there are shortcomings: Google has just one large index for all users. This is why search engine optimization has become so popular and why you sometimes don&#8217;t find what you&#8217;re looking for. A possible solution would be to have different indexes, maintained by the users, that cover the various needs (e.g. topics, regions, content quality,&#8230;). That way, a user can decide to only get search results from Germany without ads, for example.</p>
+        <div class="overview-more no-print"><a href="/2007/06/cybernetic-view-on-web-search/">Read more...</a></div>
+        
+    </div>
+</article>
+    
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3 class="overview-title">
+            <a class="indigo-text text-darken-1" href="/2007/05/hamburg-google-developer-day-2007/">Google Developer Day 2007</a>
+        </h3>
+        <div class="overview-meta">
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">May 31, 2007</span>
+</p></div>
+        
+        <p class="overview-summary">Heute ist der Google Entwickler Tag. Ich wurde eingeladen hier im Side Hotel in Hamburg teilzunehmen. Die Firma mit den bunten Buchstaben will heute ueber ihre API sprechen (und etwas zu Essen gibt es angeblich auch, was sicher mit ein Grund war die Einladung anzunehnmen).
+Da ich seit gestern eine Vodafone UMTS Karte in meinem Notebook habe, werde ich so frei sein und live ueber den Event schreiben. Ich glaube zwar nicht, dass der Tag heute in die Geschichte eingehen wird, aber was macht man sonst mit einer UMTS-Flatrate?</p>
+        <div class="overview-more no-print"><a href="/2007/05/hamburg-google-developer-day-2007/">Read more...</a></div>
+        
+    </div>
+</article>
+    
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3 class="overview-title">
+            <a class="indigo-text text-darken-1" href="/2007/05/odbtp-adapter-zend-framework/">Zend Framework: Unicode DB adapter for SQL Server</a>
+        </h3>
+        <div class="overview-meta">
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">May 31, 2007</span>
+</p></div>
+        
+        <p class="overview-summary">Yeah, I finally got it managed to publish my proposal for the Zend Framwork ODBTP database adapter component:
+http://framework.zend.com/wiki/display/ZFPROP/Zend_Db_Adapter_Odbtp_Mssql
+The default MS SQL database driver does not work with Unicode, as SQL Server expects Unicode strings in the UCS-2 encoding (UCS-2 contains null bytes and the driver is not binary-safe). ODBTP works as layer between PHP and SQL Server and accepts Unicode strings in the UTF-8 encoding.
+The required classes are attached bellow.</p>
+        <div class="overview-more no-print"><a href="/2007/05/odbtp-adapter-zend-framework/">Read more...</a></div>
         
     </div>
 </article>

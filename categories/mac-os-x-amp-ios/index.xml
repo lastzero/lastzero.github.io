@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>Howto: Install PHP, PHPUnit and Composer on Mac OS X</title>
+      <title>How to install PHP, PHPUnit and Composer on Mac OS X</title>
       <link>https://blog.liquidbytes.net/2015/10/howto-install-php-5-6-and-phpunit-5-0-on-mac-os-x/</link>
       <pubDate>Thu, 29 Oct 2015 13:24:18 +0000</pubDate>
       
@@ -46,7 +46,7 @@ sudo port -f uninstall installed sudo rm -rf /opt/local sudo rm -rf /Application
     </item>
     
     <item>
-      <title>Howto: Write an iPhone app with PhoneGap</title>
+      <title>How to write an iPhone app with PhoneGap</title>
       <link>https://blog.liquidbytes.net/2012/10/howto-write-an-iphone-app-with-phonegap/</link>
       <pubDate>Thu, 18 Oct 2012 07:32:04 +0000</pubDate>
       

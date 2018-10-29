@@ -11,7 +11,7 @@
 <meta property="og:description" content="Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s. He has more than 20 years of experience in leading teams and building Web applications." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.liquidbytes.net/" />
-<meta property="og:updated_time" content="2012-08-22T10:09:39&#43;00:00"/>
+<meta property="og:updated_time" content="2012-05-05T09:56:12&#43;00:00"/>
 
 <meta property="og:image" content="https://blog.liquidbytes.net/img/thumbnail.jpg">
 
@@ -177,47 +177,6 @@
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
         <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2012/08/storing-historized-data-in-a-relational-database/">Storing historized data in a relational database</a>
-        </h3>
-        <div class="overview-meta">
-
-<p class="article-meta">
-<span class="article-meta-published-at grey-text text-darken-1">Aug 22, 2012</span>
-</p></div>
-        
-        <p class="overview-summary">There are quite a few concepts that deal with storing historized data in a relational database; that means creating an archive copy or journal when data is updated or deleted.
-Spontaneously, these options come into my mind:
- Using the built-in functionality (for example, in the latest Oracle database).  Using black-box technology is dangerous, if you don&#8217;t understand it. It might also be hard to customize for your own needs.</p>
-        <div class="overview-more no-print"><a href="/2012/08/storing-historized-data-in-a-relational-database/">Read more...</a></div>
-        
-    </div>
-</article>
-    
-
-    
-        <article class="row max-width">
-    <div class="col s12 l10 offset-l1">
-        <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2012/08/sql-fixtures-for-unit-tests/">Using SQL fixtures for database related unit tests</a>
-        </h3>
-        <div class="overview-meta">
-
-<p class="article-meta">
-<span class="article-meta-published-at grey-text text-darken-1">Aug 21, 2012</span>
-</p></div>
-        
-        <p class="overview-summary">This is a short tutorial to show how to use fixtures for database related unit tests. The inspiration for this post came from a conversation I had at the recent PHP Unconference in Hamburg, Germany.
-From my experience, the usual way to test database related classes is to use a special test database, that needs a reset before each run (drop the existing tables and import the test dump). That approach has several severe drawbacks, all observed in real life projects many, many times:</p>
-        <div class="overview-more no-print"><a href="/2012/08/sql-fixtures-for-unit-tests/">Read more...</a></div>
-        
-    </div>
-</article>
-    
-
-    
-        <article class="row max-width">
-    <div class="col s12 l10 offset-l1">
-        <h3 class="overview-title">
             <a class="indigo-text text-darken-1" href="/2012/05/exceptions-andrew-hunt-vs-robert-c-martin/">Exceptions: Andrew Hunt/David Thomas vs Robert C. Martin</a>
         </h3>
         <div class="overview-meta">
@@ -362,6 +321,45 @@ Guess what&#8217;s bothering me the most is that the popular PEAR/Zend Framework
         
         <p class="overview-summary">Cargo cult means that you copy some (previously) successful behavior from others and expect something good to happen to you (or your project) as well. For coding standards, that&#8217;s a very good starting point. Especially since formatting standards are often not based on any science &#8211; life is just easier, if everyone is using the same formatting for source code and we all hate the discussions at the start of projects, when some junior developer tries to promote it&#8217;s own fancy ideas.</p>
         <div class="overview-more no-print"><a href="/2012/04/cargo-cult-coding-standards-cccs-for-php/">Read more...</a></div>
+        
+    </div>
+</article>
+    
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3 class="overview-title">
+            <a class="indigo-text text-darken-1" href="/2012/03/replacing-openjdk-with-oracle-jdk/">Replacing OpenJDK with Oracle JDK</a>
+        </h3>
+        <div class="overview-meta">
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">Mar 6, 2012</span>
+</p></div>
+        
+        <p class="overview-summary">Since I can&#8217;t use OpenJDK for most applications (see last post), I was looking for a way to easily replace it with the original JDK. Thankfully I found a good howto. The short version:
+# Download Java from Oracle * and extract the contents of the tar.gz archive to "java-7-oracle" sudo mv java-7-oracle/ /usr/lib/jvm/ sudo add-apt-repository ppa:nilarimogard/webupd8 sudo apt-get update sudo apt-get install update-java sudo update-java  http://www.oracle.com/technetwork/java/javase/downloads/java-se-jdk-7-download-432154.html  This should work for Ubuntu 11.</p>
+        <div class="overview-more no-print"><a href="/2012/03/replacing-openjdk-with-oracle-jdk/">Read more...</a></div>
+        
+    </div>
+</article>
+    
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3 class="overview-title">
+            <a class="indigo-text text-darken-1" href="/2012/03/openjdk/">OpenJDK</a>
+        </h3>
+        <div class="overview-meta">
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">Mar 6, 2012</span>
+</p></div>
+        
+        <p class="overview-summary">When OpenJDK as a Free Software alternative to Sun/Oracle Java was announced I thought this is a great idea. I don&#8217;t like proprietary software too much and since I&#8217;m a PHP, JavaScript and SQL developer, I didn&#8217;t expect any &#8220;bad&#8221; consequences for my work. It&#8217;s not like you expect any fancy or enterprise features, if you use the &#8220;free&#8221; version of some commercial software. That said, there are a lot of useful Java tools that you frequently need as a Web developer, such as</p>
+        <div class="overview-more no-print"><a href="/2012/03/openjdk/">Read more...</a></div>
         
     </div>
 </article>

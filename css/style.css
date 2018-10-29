@@ -216,8 +216,11 @@ article img.alignright {
     float: right !important;
 }
 
-article img.left {
+article img.left,
+article img.alignleft
+{
     margin: 0 8px 8px 0;
+    float: left !important;
 }
 
 article p a {
