@@ -210,8 +210,10 @@ article img {
     height: auto;
 }
 
-article img.right {
+article img.right,
+article img.alignright {
     margin: 0 0 8px 8px;
+    float: right !important;
 }
 
 article img.left {
