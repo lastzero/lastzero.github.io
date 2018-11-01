@@ -189,92 +189,103 @@ From my experience, the usual way to test database related classes is to use a s
 
 <p>How does that look like in reality? First, you should use some fixture class to compose the fixture file name and to read/write/serialize the data (for example source code, see <a title="Opens github.com in a new window" href="https://github.com/smashedpumpkin/liquidlibrary/blob/master/Liquid/Fixture.php" target="_blank">Liquid_Fixture</a> on github). Second, you must modify your database adapter class to support optional fixtures:</p>
 
-<pre class="code">$fixturePath = dirname(__FILE__) . '/_fixtures/';
-$db = new My_Db();
-$db-&gt;useFixtures($fixturePath);
-</pre>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="nv">$fixturePath</span> <span class="o">=</span> <span class="nx">dirname</span><span class="p">(</span><span class="no">__FILE__</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;/_fixtures/&#39;</span><span class="p">;</span>
+<span class="nv">$db</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">My_Db</span><span class="p">();</span>
+<span class="nv">$db</span><span class="o">-&gt;</span><span class="na">useFixtures</span><span class="p">(</span><span class="nv">$fixturePath</span><span class="p">);</span>
+</code></pre></div>
 
 <p>Internally, the database adapter might look something like this (the example &#8211; which you can of course copy &amp; paste into your application &#8211; is based on Zend_Db, but most adapters are similar):</p>
 
-<pre class="code">class Liquid_Db extends Zend_Db_Adapter_* {
-    private $_fixturePath = false;
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">Liquid_Db</span> <span class="k">extends</span> <span class="nx">Zend_Db_Adapter_</span><span class="o">*</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$_fixturePath</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
 
-    public function __construct ($config) {
-        parent::__construct ($config);
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span> <span class="p">(</span><span class="nv">$config</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span> <span class="p">(</span><span class="nv">$config</span><span class="p">);</span>
 
-        if(isset($config['fixtures'])) {
-            $this-&gt;useFixtures($config['fixtures']);
-        }
-    }
+        <span class="k">if</span><span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;fixtures&#39;</span><span class="p">]))</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">useFixtures</span><span class="p">(</span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;fixtures&#39;</span><span class="p">]);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-    public function useFixtures ($fixturePath) {
-        $this-&gt;_fixturePath = Liquid_Fixture::normalizePath($fixturePath);
-    }
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">useFixtures</span> <span class="p">(</span><span class="nv">$fixturePath</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_fixturePath</span> <span class="o">=</span> <span class="nx">Liquid_Fixture</span><span class="o">::</span><span class="na">normalizePath</span><span class="p">(</span><span class="nv">$fixturePath</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    public function disableFixtures () {
-        $this-&gt;_fixturePath = false;
-    }
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">disableFixtures</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_fixturePath</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    protected function callWithFixtures ($functionName, $params) {
-        if($this-&gt;_fixturePath) {
-            $fixture = new Liquid_Fixture($this-&gt;_fixturePath . Liquid_Fixture::getFilename($functionName, $params));
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">callWithFixtures</span> <span class="p">(</span><span class="nv">$functionName</span><span class="p">,</span> <span class="nv">$params</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_fixturePath</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$fixture</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Liquid_Fixture</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_fixturePath</span>
+                <span class="o">.</span> <span class="nx">Liquid_Fixture</span><span class="o">::</span><span class="na">getFilename</span><span class="p">(</span><span class="nv">$functionName</span><span class="p">,</span> <span class="nv">$params</span><span class="p">));</span>
 
-            try {
-                $result = $fixture-&gt;getData();
-                return $result;
-            } catch (Liquid_Fixture_Exception $e) {
-                // No fixture found, the query has to be executed
-            }
-        }
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$fixture</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">();</span>
+                <span class="k">return</span> <span class="nv">$result</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Liquid_Fixture_Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// No fixture found, the query has to be executed
+</span><span class="c1"></span>            <span class="p">}</span>
+        <span class="p">}</span>
 
-        $result = call_user_func_array(array('parent', $functionName), $params);
+        <span class="nv">$result</span> <span class="o">=</span> <span class="nx">call_user_func_array</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;parent&#39;</span><span class="p">,</span> <span class="nv">$functionName</span><span class="p">),</span> <span class="nv">$params</span><span class="p">);</span>
 
-        if($this-&gt;_fixturePath) {
-            $fixture-&gt;setData($result);
-        }
+        <span class="k">if</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_fixturePath</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$fixture</span><span class="o">-&gt;</span><span class="na">setData</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
+        <span class="p">}</span>
 
-        return $result;
-    }
+        <span class="k">return</span> <span class="nv">$result</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    public function fetchAll ($sql, $bind = array(), $fetchMode = null) {
-        return $this-&gt;callWithFixtures('fetchAll', array($sql, $bind, $fetchMode));
-    }
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">fetchAll</span> <span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$bind</span> <span class="o">=</span> <span class="k">array</span><span class="p">(),</span> <span class="nv">$fetchMode</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">callWithFixtures</span><span class="p">(</span>
+            <span class="s1">&#39;fetchAll&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$bind</span><span class="p">,</span> <span class="nv">$fetchMode</span><span class="p">));</span>
+    <span class="p">}</span>
 
-    public function fetchPairs ($sql, $bind = array()) {
-        return $this-&gt;callWithFixtures('fetchPairs', array($sql, $bind));
-    }
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">fetchPairs</span> <span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$bind</span> <span class="o">=</span> <span class="k">array</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">callWithFixtures</span><span class="p">(</span>
+            <span class="s1">&#39;fetchPairs&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$bind</span><span class="p">));</span>
+    <span class="p">}</span>
 
-    public function fetchAssoc ($sql, $bind = array()) {
-        return $this-&gt;callWithFixtures('fetchAssoc', array($sql, $bind));
-    }
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">fetchAssoc</span> <span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$bind</span> <span class="o">=</span> <span class="k">array</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">callWithFixtures</span><span class="p">(</span>
+            <span class="s1">&#39;fetchAssoc&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$bind</span><span class="p">));</span>
+    <span class="p">}</span>
 
-    public function fetchOne ($sql, $bind = array()) {
-        return $this-&gt;callWithFixtures('fetchOne', array($sql, $bind));
-    }
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">fetchOne</span> <span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$bind</span> <span class="o">=</span> <span class="k">array</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">callWithFixtures</span><span class="p">(</span>
+            <span class="s1">&#39;fetchOne&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$bind</span><span class="p">));</span>
+    <span class="p">}</span>
 
-    public function fetchRow ($sql, $bind = array(), $fetchMode = null) {
-        return $this-&gt;callWithFixtures('fetchRow', array($sql, $bind, $fetchMode));
-    }
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">fetchRow</span> <span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$bind</span> <span class="o">=</span> <span class="k">array</span><span class="p">(),</span> <span class="nv">$fetchMode</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">callWithFixtures</span><span class="p">(</span>
+            <span class="s1">&#39;fetchRow&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$bind</span><span class="p">,</span> <span class="nv">$fetchMode</span><span class="p">));</span>
+    <span class="p">}</span>
 
-    public function fetchCol ($sql, $bind = array()) {
-        return $this-&gt;callWithFixtures('fetchCol', array($sql, $bind));
-    }
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">fetchCol</span> <span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$bind</span> <span class="o">=</span> <span class="k">array</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">callWithFixtures</span><span class="p">(</span>
+            <span class="s1">&#39;fetchCol&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$bind</span><span class="p">));</span>
+    <span class="p">}</span>
 
-    public function insert ($table, array $bind) {
-        return $this-&gt;callWithFixtures('insert', array($table, $bind));
-    }
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">insert</span> <span class="p">(</span><span class="nv">$table</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$bind</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">callWithFixtures</span><span class="p">(</span>
+            <span class="s1">&#39;insert&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="nv">$table</span><span class="p">,</span> <span class="nv">$bind</span><span class="p">));</span>
+    <span class="p">}</span>
 
-    public function update ($table, array $bind, $where = '') {
-        return $this-&gt;callWithFixtures('update', array($table, $bind, $where));
-    }
-}
-</pre>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">update</span> <span class="p">(</span><span class="nv">$table</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$bind</span><span class="p">,</span> <span class="nv">$where</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">callWithFixtures</span><span class="p">(</span>
+            <span class="s1">&#39;update&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="nv">$table</span><span class="p">,</span> <span class="nv">$bind</span><span class="p">,</span> <span class="nv">$where</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
-<p>Also see this general PHPUnit guide I wrote a while ago (German): <a href="http://www.chaoticpattern.net/#wiki/PHP%20Unit-Tests" target="_blank"><a href="http://www.chaoticpattern.net/#wiki/PHP%20Unit-Tests">http://www.chaoticpattern.net/#wiki/PHP%20Unit-Tests</a></a></p>
+<blockquote>
+<p>There is no time to save time.</p>
 
-<ul>
-<li><em>&#8220;There is no time to save time.&#8221; (Gaylord Aulke)</em></li>
-</ul>
+<p><em>Gaylord Aulke</em></p>
+</blockquote>
 
         </div>
     </section>

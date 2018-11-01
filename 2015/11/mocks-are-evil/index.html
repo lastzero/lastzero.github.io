@@ -223,25 +223,27 @@ Despite the success of this approach, many developers are still plagued by conce
 
 <p><img class="wp-image-3273 size-large aligncenter" src="/wp-content/uploads/2015/11/testtools-2-1024x555.png" width="1024" height="555" srcset="/wp-content/uploads/2015/11/testtools-2-1024x555.png 1024w, /wp-content/uploads/2015/11/testtools-2-500x271.png 500w, /wp-content/uploads/2015/11/testtools-2-768x416.png 768w, /wp-content/uploads/2015/11/testtools-2.png 1152w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
 
-<p>Here&#8217;s an example of a test case &#8211; note the <strong>setUp()</strong> method, which get&#8217;s the ready-to-use object from the dependency injection container:</p>
+<p>Here&#8217;s an example of a test case &#8211; note the <strong>setUp()</strong> method, which get&#8217;s the ready-to-use object from the service container:</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">use TestTools\TestCase\UnitTestCase;
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">TestTools\TestCase\UnitTestCase</span><span class="p">;</span>
 
-class FooTest extends UnitTestCase
-{
-    protected $foo;
+<span class="k">class</span> <span class="nc">FooTest</span> <span class="k">extends</span> <span class="nx">UnitTestCase</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$foo</span><span class="p">;</span>
 
-    public function setUp()
-    {
-        $this-&gt;foo = <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>$this-&gt;get(&#39;foo&#39;)<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>;
-    }
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">setUp</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">foo</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    public function testBar()
-    {
-        $result = $this-&gt;foo-&gt;bar(&#39;Pi&#39;, 2);
-        $this-&gt;assertEquals(3.14, $result);
-    }
-}</code></pre></div>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">testBar</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span><span class="s1">&#39;Pi&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertEquals</span><span class="p">(</span><span class="mf">3.14</span><span class="p">,</span> <span class="nv">$result</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <p>You&#8217;ll get <strong>fresh instances</strong> in every test, so there is <strong>no global state</strong> that could harm our tests. From that point of view, they run in isolation. The compiled service definitions in the container are reused however for performance reasons.</p>
 
@@ -253,17 +255,19 @@ class FooTest extends UnitTestCase
 
 <p><code>SelfInitializingFixtureTrait</code> enables existing classes to work with file based fixtures (record and playback):</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">use TestTools\Fixture\SelfInitializingFixtureTrait;
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">TestTools\Fixture\SelfInitializingFixtureTrait</span><span class="p">;</span>
 
-class Foo extends SomeBaseClass
-{
-    use SelfInitializingFixtureTrait;
+<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nx">SomeBaseClass</span>
+<span class="p">{</span>
+    <span class="k">use</span> <span class="nx">SelfInitializingFixtureTrait</span><span class="p">;</span>
 
-    public function bar($name, $type, array $baz = array())
-    {
-        return $this-&gt;callWithFixtures(&#39;bar&#39;, func_get_args());
-    }
-}</code></pre></div>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">bar</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$type</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$baz</span> <span class="o">=</span> <span class="k">array</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">callWithFixtures</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="nx">func_get_args</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <p>To cover some of the most common use cases, <strong>Doctrine DBAL</strong> (SQL) is supported out of the box.</p>
 
