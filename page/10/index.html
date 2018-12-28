@@ -11,7 +11,7 @@
 <meta property="og:description" content="Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s. He has more than 20 years of experience in leading teams and building Web applications." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.liquidbytes.net/" />
-<meta property="og:updated_time" content="2008-05-11T13:25:11&#43;00:00"/>
+<meta property="og:updated_time" content="2008-05-19T14:16:08&#43;00:00"/>
 
 <meta property="og:image" content="https://blog.liquidbytes.net/img/thumbnail.jpg">
 
@@ -171,6 +171,25 @@
 
 
 
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3 class="overview-title">
+            <a class="indigo-text text-darken-1" href="/2008/05/updated-version-of-zend_db_adapter_odbtp_mssql/">Updated version of Zend_Db_Adapter_Odbtp_Mssql</a>
+        </h3>
+        <div class="overview-meta">
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">May 19, 2008</span>
+</p></div>
+        
+        <p class="overview-summary">As people start asking me about that ODBTP adapter for Zend Framework, I will publish it as attachment to this post now. It should work with the latest version of Zend Framework (as reported by a developer). If you want to use it, just copy the files to your include path (make sure the path comes before the ZF path). Of course, you need to install ODBTP as well and add extension=php_odbtp_mssql.</p>
+        <div class="overview-more no-print"><a href="/2008/05/updated-version-of-zend_db_adapter_odbtp_mssql/">Read more...</a></div>
+        
+    </div>
+</article>
+    
 
     
         <article class="row max-width">
@@ -353,26 +372,6 @@ I&#8217;ve also done the same test on my Linux notebook (which is of course a bi
 </article>
     
 
-    
-        <article class="row max-width">
-    <div class="col s12 l10 offset-l1">
-        <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2008/04/switched-from-drupal-5-to-wordpress-2/">Switched from Drupal 5 to WordPress 2.5</a>
-        </h3>
-        <div class="overview-meta">
-
-<p class="article-meta">
-<span class="article-meta-published-at grey-text text-darken-1">Apr 30, 2008</span>
-</p></div>
-        
-        <p class="overview-summary">After having trouble with the Drupal upgrade I decided to give WordPress a try. The funny thing is to copy the existing posts to the new tables. If you got the same problem, you can use this view:
- CREATE VIEW wp_import AS SELECT a.nid AS ID, 1 AS post_author, FROM_UNIXTIME(a.created) AS post_date, FROM_UNIXTIME(a.created) AS post_date_gmt, b.body AS post_content, b.title AS post_title, 0 AS post_category, b.teaser AS post_except, &#8216;publish&#8217; AS post_status, &#8216;open&#8217; AS comment_status, &#8216;open&#8217; AS ping_status, &#8221; AS post_password, &#8216;post&#8217; + a.</p>
-        <div class="overview-more no-print"><a href="/2008/04/switched-from-drupal-5-to-wordpress-2/">Read more...</a></div>
-        
-    </div>
-</article>
-    
-
 
 
 
@@ -506,6 +505,19 @@ I&#8217;ve also done the same test on my Linux notebook (which is of course a bi
         
             <li class="waves-effect ">
                 <a href="/page/11/">11</a>
+            </li>
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect ">
+                <a href="/page/12/">12</a>
             </li>
         
     

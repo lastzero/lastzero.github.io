@@ -10,7 +10,7 @@
 <meta property="og:description" content="Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s. He has more than 20 years of experience in leading teams and building Web applications." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.liquidbytes.net/posts/" />
-<meta property="og:updated_time" content="2007-07-11T13:10:58&#43;00:00"/>
+<meta property="og:updated_time" content="2007-09-18T15:37:42&#43;00:00"/>
 
 <meta property="og:image" content="https://blog.liquidbytes.net/img/thumbnail.jpg">
 
@@ -152,6 +152,26 @@
 
 
 
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3 class="overview-title">
+            <a class="indigo-text text-darken-1" href="/2007/09/multi-lingual-sql/">Optimizing SQL – Part 1</a>
+        </h3>
+        <div class="overview-meta">
+
+<p class="article-meta">
+<span class="article-meta-published-at grey-text text-darken-1">Sep 18, 2007</span>
+</p></div>
+        
+        <p class="overview-summary">Design approaches for multi-lingual data In this example, we&#8217;re assuming a dataset consisting of 6 multi-lingual fields. Each field holds strings with an average length of 200 characters in the 4 locales en, de, zh and ru. A fallback function is implemented using the CASE expression (doesn&#8217;t add much overhead and is faster than fetching data in two locales and implementing the fallback at application level).
+This is how your queries will look like, if you use the &#8220;dictionary approach&#8221; (master data in dict_books and locale specific strings in the general table dict_dictionary, which is shared between all master tables):</p>
+        <div class="overview-more no-print"><a href="/2007/09/multi-lingual-sql/">Read more...</a></div>
+        
+    </div>
+</article>
+    
 
     
         <article class="row max-width">
@@ -335,29 +355,6 @@ http://framework.zend.com/wiki/display/ZFPROP/Zend_Db_Adapter_Odbtp_Mssql
 The default MS SQL database driver does not work with Unicode, as SQL Server expects Unicode strings in the UCS-2 encoding (UCS-2 contains null bytes and the driver is not binary-safe). ODBTP works as layer between PHP and SQL Server and accepts Unicode strings in the UTF-8 encoding.
 The required classes are attached bellow.</p>
         <div class="overview-more no-print"><a href="/2007/05/odbtp-adapter-zend-framework/">Read more...</a></div>
-        
-    </div>
-</article>
-    
-
-    
-        <article class="row max-width">
-    <div class="col s12 l10 offset-l1">
-        <h3 class="overview-title">
-            <a class="indigo-text text-darken-1" href="/2007/05/plat_forms-fotos/">Plat_Forms 2007: The Web Development Platform Comparison</a>
-        </h3>
-        <div class="overview-meta">
-
-<p class="article-meta">
-<span class="article-meta-published-at grey-text text-darken-1">May 29, 2007</span>
-</p></div>
-        
-        <p class="overview-summary">Some of the photos from the plat_forms 2007 contest are published now!
-Download the full results as PDF:
-Plat_Forms 2007: The Web Development Platform Comparison — Evaluation and Results
- A short description of plat_forms:
-Software development platforms for web applications (such as Java EE, .NET, Perl, PHP, Python, Ruby on Rails, etc.) are among the most critical factors of development productivity today. The pros and cons of the various platforms are by-and-large known in principle, but how the pros trade off against the cons in one platform and how that compares to another platform is the topic of quasi-religious wars only, not a subject of objective analysis, as almost no data is available that allows such direct comparison.</p>
-        <div class="overview-more no-print"><a href="/2007/05/plat_forms-fotos/">Read more...</a></div>
         
     </div>
 </article>

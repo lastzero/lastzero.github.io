@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>You are free to share</copyright>
-    <lastBuildDate>Wed, 12 Sep 2018 12:21:50 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.liquidbytes.net/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Personal Photo Management using Go and TensorFlow</title>
+      <link>https://blog.liquidbytes.net/2018/12/personal-photo-management/</link>
+      <pubDate>Fri, 28 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.liquidbytes.net/2018/12/personal-photo-management/</guid>
+      <description>We love taking photos. Privacy concerns - and the wish to properly archive them for the next generation - brought us to the conclusion that existing cloud solutions are not the right tool to keep them organized. That&amp;rsquo;s why we started working on an easy-to-use application that can be hosted at home or on a private server.
+About PhotoPrism.org Our first proof-of-concept was a simple demo app that could find cat pictures in a directory.</description>
+    </item>
     
     <item>
       <title>The nightmare world of Agile we created</title>
