@@ -648,14 +648,14 @@
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/tags/acm/</loc>
-    <lastmod>2011-02-28T17:29:13+00:00</lastmod>
+    <loc>https://blog.liquidbytes.net/categories/acm/</loc>
+    <lastmod>2013-07-14T20:37:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/categories/acm/</loc>
-    <lastmod>2013-07-14T20:37:53+00:00</lastmod>
+    <loc>https://blog.liquidbytes.net/tags/acm/</loc>
+    <lastmod>2011-02-28T17:29:13+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -870,14 +870,14 @@
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/tags/fun-stuff/</loc>
-    <lastmod>2010-08-24T01:36:06+00:00</lastmod>
+    <loc>https://blog.liquidbytes.net/categories/fun-stuff/</loc>
+    <lastmod>2010-08-20T06:49:38+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/categories/fun-stuff/</loc>
-    <lastmod>2010-08-20T06:49:38+00:00</lastmod>
+    <loc>https://blog.liquidbytes.net/tags/fun-stuff/</loc>
+    <lastmod>2010-08-24T01:36:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -912,13 +912,13 @@
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/tags/google/</loc>
+    <loc>https://blog.liquidbytes.net/categories/google/</loc>
     <lastmod>2011-11-18T16:57:24+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/categories/google/</loc>
+    <loc>https://blog.liquidbytes.net/tags/google/</loc>
     <lastmod>2011-11-18T16:57:24+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -928,13 +928,13 @@
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/tags/hardware-amp-gadgets/</loc>
+    <loc>https://blog.liquidbytes.net/categories/hardware-amp-gadgets/</loc>
     <lastmod>2010-06-19T13:08:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/categories/hardware-amp-gadgets/</loc>
+    <loc>https://blog.liquidbytes.net/tags/hardware-amp-gadgets/</loc>
     <lastmod>2010-06-19T13:08:06+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -952,14 +952,14 @@
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/tags/ieee/</loc>
-    <lastmod>2011-11-18T16:57:24+00:00</lastmod>
+    <loc>https://blog.liquidbytes.net/categories/ieee/</loc>
+    <lastmod>2013-04-10T21:58:13+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/categories/ieee/</loc>
-    <lastmod>2013-04-10T21:58:13+00:00</lastmod>
+    <loc>https://blog.liquidbytes.net/tags/ieee/</loc>
+    <lastmod>2011-11-18T16:57:24+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1024,14 +1024,14 @@
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/tags/linux/</loc>
-    <lastmod>2010-06-19T13:08:06+00:00</lastmod>
+    <loc>https://blog.liquidbytes.net/categories/linux/</loc>
+    <lastmod>2013-06-20T14:18:02+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/categories/linux/</loc>
-    <lastmod>2013-06-20T14:18:02+00:00</lastmod>
+    <loc>https://blog.liquidbytes.net/tags/linux/</loc>
+    <lastmod>2010-06-19T13:08:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1054,14 +1054,14 @@
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/tags/mac-os-x-amp-ios/</loc>
-    <lastmod>2008-05-10T14:41:34+00:00</lastmod>
+    <loc>https://blog.liquidbytes.net/categories/mac-os-x-amp-ios/</loc>
+    <lastmod>2015-10-29T13:24:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/categories/mac-os-x-amp-ios/</loc>
-    <lastmod>2015-10-29T13:24:18+00:00</lastmod>
+    <loc>https://blog.liquidbytes.net/tags/mac-os-x-amp-ios/</loc>
+    <lastmod>2008-05-10T14:41:34+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1114,14 +1114,14 @@
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/tags/open-source/</loc>
-    <lastmod>2010-08-15T19:03:46+00:00</lastmod>
+    <loc>https://blog.liquidbytes.net/categories/open-source/</loc>
+    <lastmod>2013-06-20T14:18:02+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/categories/open-source/</loc>
-    <lastmod>2013-06-20T14:18:02+00:00</lastmod>
+    <loc>https://blog.liquidbytes.net/tags/open-source/</loc>
+    <lastmod>2010-08-15T19:03:46+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1150,19 +1150,13 @@
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/tags/php/</loc>
-    <lastmod>2012-08-21T11:19:03+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.liquidbytes.net/categories/php/</loc>
     <lastmod>2015-12-04T23:28:34+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/tags/phpunit/</loc>
+    <loc>https://blog.liquidbytes.net/tags/php/</loc>
     <lastmod>2012-08-21T11:19:03+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -1170,6 +1164,12 @@
   <url>
     <loc>https://blog.liquidbytes.net/categories/phpunit/</loc>
     <lastmod>2015-11-21T05:39:16+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liquidbytes.net/tags/phpunit/</loc>
+    <lastmod>2012-08-21T11:19:03+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1244,13 +1244,13 @@
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/tags/science-amp-philosophy/</loc>
+    <loc>https://blog.liquidbytes.net/categories/science-amp-philosophy/</loc>
     <lastmod>2011-03-01T15:59:07+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/categories/science-amp-philosophy/</loc>
+    <loc>https://blog.liquidbytes.net/tags/science-amp-philosophy/</loc>
     <lastmod>2011-03-01T15:59:07+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -1429,13 +1429,13 @@
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/tags/windows/</loc>
+    <loc>https://blog.liquidbytes.net/categories/windows/</loc>
     <lastmod>2008-09-01T12:05:52+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/categories/windows/</loc>
+    <loc>https://blog.liquidbytes.net/tags/windows/</loc>
     <lastmod>2008-09-01T12:05:52+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -1459,13 +1459,13 @@
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/tags/zend-framework/</loc>
+    <loc>https://blog.liquidbytes.net/categories/zend-framework/</loc>
     <lastmod>2008-05-19T14:16:08+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.liquidbytes.net/categories/zend-framework/</loc>
+    <loc>https://blog.liquidbytes.net/tags/zend-framework/</loc>
     <lastmod>2008-05-19T14:16:08+00:00</lastmod>
     <priority>0</priority>
   </url>
