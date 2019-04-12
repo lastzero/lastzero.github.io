@@ -10,7 +10,8 @@
 <meta property="og:description" content="I had heaps of fun with SQL today (again). Ever heard of Common Table Expressions? Here is an example of a recursive query:
 WITHnodeCTE (nodeId, nodeName)AS (SELECT a.nodeId, nodeName = CONVERT(varchar(8000), nodeName)FROM nodeNames aJOIN nodes b ON a.nodeId = b.nodeId AND a.locale = &#39;en&#39; AND b.parentId = 0UNION ALL SELECT y.nodeId, x.nodeName &#43; &#39; -&amp;gt; &#39; &#43; CONVERT(varchar(8000), z.nodeName)FROM nodeCTE x JOIN nodes y ON y." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.liquidbytes.net/2007/06/cte-sql/" /><meta property="article:published_time" content="2007-06-08T10:02:02&#43;00:00"/>
+<meta property="og:url" content="https://blog.liquidbytes.net/2007/06/cte-sql/" />
+<meta property="article:published_time" content="2007-06-08T10:02:02&#43;00:00"/>
 <meta property="article:modified_time" content="2007-06-08T10:02:02&#43;00:00"/>
 
 <meta property="og:image" content="https://blog.liquidbytes.net/img/thumbnail.jpg">
